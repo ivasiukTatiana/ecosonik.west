@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ecosonik.west/precache-manifest.cf8e06aa912dafef1ab630491541dfd5.js"
+  "/ecosonik.west/precache-manifest.9296ea5c475ccdd15a0170cc5f0e1dc4.js"
 );
 
 self.addEventListener('message', (event) => {
