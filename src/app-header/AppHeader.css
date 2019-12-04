@@ -1,0 +1,97 @@
+.App-header {
+  /*position: sticky;
+  top: 0;*/
+  background-color: rgba(52, 74, 97, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #000038;
+  line-height: 1.2;
+  /*box-shadow: 0 1px 5px #000038;*/
+}
+.Logo {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-image: url(../assets/images/logo.jpg);
+  background-position: top right;
+  background-color: #7c8cad;
+  background-size: cover;
+  min-width: 10rem;
+  max-height: 6.9rem;
+  border-radius: 50%;
+  margin: 0.6rem;
+  margin-bottom: -1rem;
+  padding: 2.2rem 0;
+  color: #fc0;
+  box-shadow: 1px 2px 10px #000038;
+  font-size: 1.6rem;
+  text-align: center;
+  text-shadow: 2px 2px 1px #000;
+  display: flex;
+  flex-direction: column;
+}
+.Logo span:first-child {
+  margin-left: -2rem;
+}
+.Logo span:last-child {
+  margin-right: -8.2rem;
+  margin-top: -1.2rem;
+}
+.Header-title {
+  display: flex;
+  justify-content: space-between;
+}
+.Header-center {
+  margin: 0.5rem auto 0.2rem;
+  padding-left: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+}
+.Header-center span:nth-child(1){
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 1px #d0d0d0;
+}
+.Header-center span:nth-child(2){
+  font-size: 2.1rem;
+  text-shadow: 2px 2px 1px #fc0;
+}
+.Header-right {
+  margin: 1rem;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+.Header-right img {
+  margin-right: -1.4rem;
+}
+.Header-center hr {
+  height: 2px;
+  width: 100%;
+  border: 0;
+  margin: 0.2rem 0 0;
+  background-color: rgba(52, 74, 97, 0.8);
+  box-shadow: 1px 1px 1px rgb(24, 35, 46);
+}
+
+@media screen and (max-width: 987px) {
+  /* start of large tablet styles */
+}
+@media screen and (max-width: 767px) {
+  /* start of medium tablet styles */
+  .Logo {
+    min-width: 9rem;
+    font-size: 1.2rem;
+  }
+  .Logo span:first-child {
+    margin-left: -2.4rem;
+  }
+  .Logo span:last-child {
+    margin-right: -5.2rem;
+    margin-top: -0.8rem;
+  }
+}

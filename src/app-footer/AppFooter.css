@@ -1,0 +1,36 @@
+.App-footer {
+  min-height: 5rem;
+  position: sticky;
+  bottom: -10rem;
+  background-color: rgba(52, 74, 97, 0.4);
+  color: #000038;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+  /*box-shadow: 0 -1px 5px #000038;*/
+}
+.Footer-left {
+  padding: 2rem;
+  padding-right: 0;
+}
+.Footer-nav {
+  padding: 1rem;
+  padding-right: 0;
+}
+.Footer-nav .Link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #000038;
+}
+.Footer-right{
+  padding: 1.5rem;
+  padding-right: 0;
+}
+.Footer-right strong{
+  padding-left: 0.8rem;
+  font-size: 0.9rem;
+}
+.Footer-right a {
+  color: #000038;
+  padding-left: 0.6rem;
+}
