@@ -124,15 +124,15 @@
           "images": [
             {
               "text": "До модернізації:",
-              "image": "./docs/images/pr21.jpg"
+              "image": "docs/images/pr21.jpg"
             },
             {
               "text": "Після модернізації:",
-              "image": "./docs/images/pr22.jpg"
+              "image": "docs/images/pr22.jpg"
             },
             {
               "text": "Процес уточнення обсягів:",
-              "image": "./docs/images/pr23.jpg"
+              "image": "/docs/images/pr23.jpg"
             }
           ]
         },
