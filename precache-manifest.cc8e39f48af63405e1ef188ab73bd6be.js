@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "efb830949cd2e2604860fe56ee5c6c72",
+    "revision": "8a80d11438f831d7b96c9e5d562b30ee",
     "url": "/ecosonik.west/index.html"
   },
   {
-    "revision": "fe7e5c789f5a74883159",
+    "revision": "efa67141174cc5c3def6",
     "url": "/ecosonik.west/static/css/main.0f9b589a.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ecosonik.west/static/js/2.87d1adf6.chunk.js"
   },
   {
-    "revision": "fe7e5c789f5a74883159",
-    "url": "/ecosonik.west/static/js/main.f8888250.chunk.js"
+    "revision": "efa67141174cc5c3def6",
+    "url": "/ecosonik.west/static/js/main.005059bf.chunk.js"
   },
   {
     "revision": "f108cfa8dcf91efadb52",
