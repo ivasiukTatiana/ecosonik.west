@@ -1,0 +1,43 @@
+{
+  "routes" : ["home", "products", "services", "projects", "contacts"],
+  "header": {
+    "ua": {
+      "language": "ua",
+      "img": "./docs/images/ua.png",
+      "translation": "українська",
+      "title1": "ТОВ НАУКОВО-ВИРОБНИЧА ФІРМА",
+      "title2": "ЕКОСОНІК-ВЕСТ",
+      "navigation": ["Про нас", "Продукція", "Послуги", "Наші проекти", "Контакти"]
+    },
+    "ru": {
+      "language": "ru",
+      "img": "./docs/images/ru.png",
+      "translation": "русский",
+      "title1": "ООО Научно–производственная фирма",
+      "title2": "ЭКОСОНИК - ВЕСТ",
+      "navigation": ["О нас", "Продукция", "Услуги", "Наши проекты", "Контакты"]
+    },
+    "en": {
+      "language": "en",
+      "img": "./docs/images/en.png",
+      "translation": "english",
+      "title1": "SCIENTIFIC AND PRODUCTION FIRM LLC",
+      "title2": "ECOSONIC - WEST",
+      "navigation": ["About us", "Products", "Services", "Our projects", "Contacts"]
+    }
+  },
+  "footer": {
+    "ua": {
+      "copyright": ["2019 \"НВФ Екосонік-Вест\" ТОВ", "Всі права захищені."],
+      "address": ["76006 Україна", "м. Івано-Франківськ", "вул. 24 Серпня, 16"]
+    },
+    "ru": {
+      "copyright": ["2019 \"НПФ Екосоник-Вест\" ООО", "Все права защищены."],
+      "address": ["76006 Украина", "г. Ивано-Франковск", "ул. 24 Серпня, 16"]
+    },
+    "en": {
+      "copyright": ["2019 \"Ecosonic-West SPF\" LLC", "All rights reserved"],
+      "address": ["76006 Ukraine", "Ivano–Frankivs’k", "24 Serpna str, 16"]
+    }
+  }
+}
