@@ -5,6 +5,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
+import Table from './Table';
+
 const useStyles = makeStyles({
   card: {
     //backgroundColor: 'rgba(52, 74, 97, 0.1)',
@@ -22,12 +24,11 @@ const useStyles = makeStyles({
     lineHeight: 1.4,
     marginBottom: '0.6rem',
     backgroundColor: 'rgba(52, 74, 97, 0.1)',
-
   },
   text: {
     textAlign: 'justify',
-    lineHeight: 1.3,
-    fontSize: '1rem',
+    lineHeight: 1.35,
+    fontSize: '0.95rem',
     marginTop: '0.6rem',
   },
   media: {
@@ -39,20 +40,47 @@ const useStyles = makeStyles({
 export default function CardWithImage(props) {
   const classes = useStyles();
 
+  const CardTable = () => {
+    if (props.cardBody.hasOwnProperty('table')) {
+      return <Table table={props.cardBody.table} />
+    } else {
+      return <React.Fragment />
+    }
+  }
+
+
+  const CardText = () => {
+    if (typeof(props.cardBody.text) === 'object') {
+      return (
+        props.cardBody.text.map((item, index) => {
+          return (
+            <Typography key={index} className={classes.text} variant="body1" component="p">
+              {item}
+            </Typography>
+          )
+        })
+      )
+    } else {
+      return (
+        <Typography className={classes.text} variant="body1" component="p">
+          {props.cardBody.text}
+        </Typography>
+      )
+    }
+  }
+
   return (
-    <Card className={classes.card} elevation={3}>
+    <Card className={classes.card} elevation={2}>
       <Typography component="p" className={classes.anchor} id={props.cardBody.link}/>
       <CardContent >
-        <Typography className={classes.title} variant="subtitle2" component="h2"
-         >
+        <Typography className={classes.title} variant="subtitle2" component="h2" >
           {props.cardBody.title}
         </Typography>
         <Typography variant="subtitle2" component="h3">
           {props.cardBody.customer}
         </Typography>
-        <Typography className={classes.text} variant="body1" component="p">
-          {props.cardBody.text}
-        </Typography>
+        <CardTable />
+        <CardText />
 
         {props.cardBody.images.map((image, index) => {
           return (

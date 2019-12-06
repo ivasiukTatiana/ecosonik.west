@@ -5,8 +5,8 @@ import Typography from '@material-ui/core/Typography';
 
 import { LanguageConsumer } from '../providers/LanguageProvider';
 import ContentNav from './ContentNav';
-//import CardWithImage from './CardWithImage';
-import useStyles from './css/useStyles';
+import CardWithImage from './CardWithImage';
+import useStyles from './css/pageStyles';
 
 export default function Products() {
   const classes = useStyles();
@@ -18,16 +18,20 @@ export default function Products() {
           <Grid item xs={3}>
             <ContentNav
               title={context.header.navigation[1]}
-              navigation={[]}
+              navigation={context.products.navigation}
               classItem="navItem" />
           </Grid>
 
           <Grid item xs={9} className={classes.gridContent}>
             <Paper className={classes.paperContent} elevation={7}>
               <Typography className={classes.title} variant="subtitle2" component="h2" id="products">
-                Products
+                {context.products.h2}
               </Typography>
-
+              {context.products.cards.map((card, index) => {
+                return (
+                  <CardWithImage key={index} cardBody={card} />
+                )
+              })}
 
             </Paper>
           </Grid>

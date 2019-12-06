@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { LanguageConsumer } from '../providers/LanguageProvider';
 import ContentNav from './ContentNav';
 import CardWithImage from './CardWithImage';
-import useStyles from './css/useStyles';
+import useStyles from './css/pageStyles';
 
 export default function Projects() {
   const classes = useStyles();

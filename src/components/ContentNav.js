@@ -3,7 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-import useStyles from './css/useStyles';
+import useStyles from './css/pageStyles';
 
 export default function ContentNav(props) {
   const classes = useStyles();

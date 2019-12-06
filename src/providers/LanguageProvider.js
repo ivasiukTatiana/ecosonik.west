@@ -17,10 +17,21 @@ class LanguageProvider extends Component {
       home: {
         navigation: [],
         ulContent: [],
-        cards: [{ link: "", title: "", text: "" }],
+        cards: [
+          { link: "", title: "", text: "", images: [] },
+          { link: "", title: "", text: "", images: [] }
+        ],
         button: "дізнатись більше ..."
       },
       projects: {
+        navigation: [],
+        cards: [
+          {
+            images: [],
+          }
+        ],
+      },
+      products: {
         navigation: [],
         cards: [
           {
@@ -70,6 +81,7 @@ class LanguageProvider extends Component {
         this.setState({
           data: response.data,
         })
+        console.log(this.state.data);
       })
       .catch(err => {
         console.log(err);
@@ -110,6 +122,7 @@ class LanguageProvider extends Component {
         updateLanguage: this.updateLanguage,
         home: this.state.data.home,
         projects: this.state.data.projects,
+        products: this.state.data.products,
       }}>
         {this.props.children}
       </LanguageContext.Provider>

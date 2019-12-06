@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(theme => ({
+const pageStyles = makeStyles(theme => ({
   stickyNav: {
     position: "sticky",
     top: "7.7rem",
@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   paperContent: {
-    padding: theme.spacing(3),
+    padding: theme.spacing(1),
   },
   title: {
     fontSize: '1rem',
@@ -48,6 +48,7 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     marginTop: '0.6rem',
+    padding: '1rem',
     textAlign: 'justify',
     lineHeight: 1.3,
     fontSize: '1rem',
@@ -59,4 +60,4 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default useStyles;
+export default pageStyles;

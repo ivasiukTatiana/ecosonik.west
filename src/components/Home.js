@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { LanguageConsumer } from '../providers/LanguageProvider';
 import ContentNav from './ContentNav';
 import ContentCard from './ContentCard';
-import useStyles from './css/useStyles';
+import useStyles from './css/pageStyles';
 
 export default function Home() {
 
@@ -51,18 +51,19 @@ export default function Home() {
                 {context.home.p2}
               </Typography>
 
-              {context.home.cards.map((card, index) => {
-                if (index > 0) {
-                  return (
-                    <ContentCard key={index}
-                    link={card.link}
-                    cardBody = {card}
-                    button={context.home.button} />
-                  )
-                } else {
-                  return <React.Fragment key={index} />
-                }
+              {context.projects.cards.map((card, index) => {
+                return (
+                  <ContentCard key={index}
+                  link={`/projects#${card.link}`}
+                  cardBody = {card}
+                  button={context.home.button} />
+                )
               })}
+
+              <ContentCard
+                link={context.home.cards[1].link}
+                cardBody={context.home.cards[1]}
+                button={context.home.button} />
 
               <Typography className={classes.text} variant="body1" component="p" gutterBottom>
                 {context.home.p3}
