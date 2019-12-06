@@ -39,7 +39,6 @@ const useStyles = makeStyles({
 
 export default function CardWithImage(props) {
   const classes = useStyles();
-
   const CardTable = () => {
     if (props.cardBody.hasOwnProperty('table')) {
       return <Table table={props.cardBody.table} />
@@ -47,8 +46,6 @@ export default function CardWithImage(props) {
       return <React.Fragment />
     }
   }
-
-
   const CardText = () => {
     if (typeof(props.cardBody.text) === 'object') {
       return (
@@ -77,7 +74,7 @@ export default function CardWithImage(props) {
           {props.cardBody.title}
         </Typography>
         <Typography variant="subtitle2" component="h3">
-          {props.cardBody.customer}
+          {props.cardBody.hasOwnProperty('customer') ? props.cardBody.customer : ""}
         </Typography>
         <CardTable />
         <CardText />
