@@ -14,15 +14,19 @@ export default function Projects() {
   return (
     <LanguageConsumer>
       {(context) => (
-        <Grid container spacing={1} justify="space-between" alignItems="stretch">
+        <Grid container spacing={1} justify="space-between">
           <Grid item xs={3}>
             <ContentNav
-              title={context.header.navigation[3]}
+              title={
+                context.header.navigation.filter((item) => {
+                  return item.hasOwnProperty("projects");
+                }).map((item) => { return item.projects; })
+              }
               navigation={context.projects.navigation}
               classItem="fontSmall" />
           </Grid>
 
-          <Grid item xs={9} className={classes.gridContent}>
+          <Grid item xs={9}>
             <Paper className={classes.paperContent} elevation={7}>
               <Typography className={classes.title} variant="subtitle2" component="h2" id="projects">
                 {context.projects.h2}

@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
 
 import './AppFooter.css';
 import {LanguageConsumer} from '../providers/LanguageProvider';
+import AppNav from '../components/AppNav';
 
 class AppFooter extends Component {
   render(){
@@ -24,11 +24,9 @@ class AppFooter extends Component {
                 })}
               </Grid>
               <Grid container item xs={5} direction="column" alignItems="flex-start" justify="space-around" className="Footer-nav">
-                {context.header.navigation.map((item, index) => {
-                  return (
-                    <Link key={index} to={`/${context.routes[index]}`} className="Link">{item}</Link>
-                  )
-                })}
+                  <AppNav
+                    links={context.header.navigation}
+                    routes={context.routes} />
               </Grid>
               <Grid container item xs={3} direction="column" alignItems="flex-start" justify="space-between" className="Footer-right">
                 <Grid container alignItems="center">

@@ -10,7 +10,7 @@ class LanguageProvider extends Component {
     },
     languages: [],
     header: {
-      language: "ua",
+      language: "ru",
       navigation: []
     },
     data: {
@@ -38,11 +38,15 @@ class LanguageProvider extends Component {
             images: [],
           }
         ],
+      },
+      contacts: {
+
       }
     },
     footer: {
       copyright: [],
-      address: []
+      address: [],
+      head: []
     },
   }
 
@@ -81,7 +85,7 @@ class LanguageProvider extends Component {
         this.setState({
           data: response.data,
         })
-        console.log(this.state.data);
+        //console.log(this.state.data);
       })
       .catch(err => {
         console.log(err);
@@ -123,6 +127,7 @@ class LanguageProvider extends Component {
         home: this.state.data.home,
         projects: this.state.data.projects,
         products: this.state.data.products,
+        contacts: this.state.data.contacts
       }}>
         {this.props.children}
       </LanguageContext.Provider>

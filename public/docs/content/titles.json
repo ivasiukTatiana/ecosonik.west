@@ -7,7 +7,13 @@
       "translation": "українська",
       "title1": "ТОВ НАУКОВО-ВИРОБНИЧА ФІРМА",
       "title2": "ЕКОСОНІК-ВЕСТ",
-      "navigation": ["Про нас", "Продукція", "Послуги", "Наші проекти", "Контакти"]
+      "navigation": [
+        {"home": "Про нас"},
+        {"products": "Продукція"},
+        {"services": "Послуги"},
+        {"projects": "Наші проекти"},
+        {"contacts": "Контакти"}
+      ]
     },
     "ru": {
       "language": "ru",
@@ -15,7 +21,13 @@
       "translation": "русский",
       "title1": "ООО Научно–производственная фирма",
       "title2": "ЭКОСОНИК - ВЕСТ",
-      "navigation": ["О нас", "Продукция", "Услуги", "Наши проекты", "Контакты"]
+      "navigation": [
+        {"home": "О нас"},
+        {"products": "Продукция"},
+        {"services": "Услуги"},
+        {"projects": "Наши проекты"},
+        {"contacts": "Контакты"}
+      ]
     },
     "en": {
       "language": "en",
@@ -23,21 +35,36 @@
       "translation": "english",
       "title1": "SCIENTIFIC AND PRODUCTION FIRM LLC",
       "title2": "ECOSONIC - WEST",
-      "navigation": ["About us", "Products", "Services", "Our projects", "Contacts"]
+      "navigation": [
+        {"home": "About us"},
+        {"products": "Products"},
+        {"services": "Services"},
+        {"projects": "Our projects"},
+        {"contacts": "Contacts"}
+      ]
     }
   },
   "footer": {
     "ua": {
       "copyright": ["2019 \"НВФ Екосонік-Вест\" ТОВ", "Всі права захищені."],
-      "address": ["76006 Україна", "м. Івано-Франківськ", "вул. 24 Серпня, 16"]
+      "address": ["76006 Україна", "м. Івано-Франківськ", "вул. 24 Серпня, 16"],
+      "email": "ekosonicwest@ukr.net",
+      "phone": "+38 099 336 21 63",
+      "head" : ["Директор", "Бойко Сергій Степанович"]
     },
     "ru": {
       "copyright": ["2019 \"НПФ Екосоник-Вест\" ООО", "Все права защищены."],
-      "address": ["76006 Украина", "г. Ивано-Франковск", "ул. 24 Серпня, 16"]
+      "address": ["76006 Украина", "г. Ивано-Франковск", "ул. 24 Серпня, 16"],
+      "email": "ekosonicwest@ukr.net",
+      "phone": "+38 099 336 21 63",
+      "head" : ["Директор", "Бойко Сергей Степанович"]
     },
     "en": {
       "copyright": ["2019 \"Ecosonic-West SPF\" LLC", "All rights reserved"],
-      "address": ["76006 Ukraine", "Ivano–Frankivs’k", "24 Serpna str, 16"]
+      "address": ["76006 Ukraine", "Ivano–Frankivs’k", "24 Serpna str, 16"],
+      "email": "ekosonicwest@ukr.net",
+      "phone": "+38 099 336 21 63",
+      "head" : ["Head of the company", "Sergii Boyko"]
     }
   }
 }

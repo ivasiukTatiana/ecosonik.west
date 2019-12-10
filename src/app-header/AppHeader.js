@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 import './AppHeader.css';
 import {LanguageConsumer} from '../providers/LanguageProvider';
-import AppNav from '../components/app-nav/AppNav';
+import AppNav from '../components/AppNav';
 import LaguageSelect from '../components/LanguageSelect';
 
 class AppHeader extends Component {
@@ -13,7 +13,7 @@ class AppHeader extends Component {
         {(context) => (
           <header className="App-header">
             <Link to="/" className="Logo" >
-              <span>ECOSONIC&nbsp;-</span>
+              <span>EKOSONIC&nbsp;-</span>
               <span>WEST</span>
             </Link>
             <div className="Header-title">
@@ -27,10 +27,11 @@ class AppHeader extends Component {
                 <LaguageSelect languages={context.languages} />
               </div>
             </div>
-            <AppNav
-              links={context.header.navigation}
-              routes={context.routes}
-              className="Header-right" />
+            <nav>
+              <AppNav
+                links={context.header.navigation}
+                routes={context.routes} />
+            </nav>
           </header>
         )}
       </LanguageConsumer>

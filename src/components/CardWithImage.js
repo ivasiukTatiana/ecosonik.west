@@ -34,7 +34,7 @@ const useStyles = makeStyles({
   media: {
     maxWidth: '26rem',
     margin: '0.6rem auto',
-  },
+  }
 });
 
 export default function CardWithImage(props) {

@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { LanguageConsumer } from '../providers/LanguageProvider';
 import ContentNav from './ContentNav';
 import ContentCard from './ContentCard';
-import useStyles from './css/pageStyles';
+import pageStyles from './css/pageStyles';
 
 export default function Home() {
 
@@ -15,20 +15,24 @@ export default function Home() {
     setSpacing(Number(event.target.value));
   };*/
 
-  const classes = useStyles();
+  const classes = pageStyles();
 
   return (
     <LanguageConsumer>
       {(context) => (
-        <Grid container spacing={1} justify="space-between" alignItems="stretch">
+        <Grid container spacing={1} justify="space-between">
           <Grid item xs={3}>
             <ContentNav
-              title={context.header.navigation[0]}
+              title={
+                context.header.navigation.filter((item) => {
+                  return item.hasOwnProperty("home");
+                }).map((item) => { return item.home; })
+              }
               navigation={context.home.navigation}
               classItem="navItem" />
           </Grid>
 
-          <Grid item xs={9} className={classes.gridContent}>
+          <Grid item xs={9}>
             <Paper className={classes.paperContent} elevation={7}>
               <Typography className={classes.text} variant="body1" component="p" gutterBottom>
                 {context.home.p1}

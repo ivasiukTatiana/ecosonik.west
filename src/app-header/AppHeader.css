@@ -77,6 +77,26 @@
   background-color: rgba(52, 74, 97, 0.8);
   box-shadow: 1px 1px 1px rgb(24, 35, 46);
 }
+nav {
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+nav .Link{
+  margin-right: 1rem;
+  margin-bottom: 0.1rem;
+  padding: 0.1rem 0.5rem;
+  color: #000038;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav .Link:hover{
+  border-radius: 5px;
+  box-shadow: 1px 2px 1px #000038;
+}
 
 @media screen and (max-width: 987px) {
   /* start of large tablet styles */
