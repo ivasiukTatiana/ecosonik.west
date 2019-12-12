@@ -4,7 +4,7 @@ export const InitialState = {
   },
   languages: [],
   header: {
-    language: "ru",
+    language: "ua",
     navigation: []
   },
   data: {

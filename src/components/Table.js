@@ -20,7 +20,6 @@ const useStyles = makeStyles({
     padding: '0.2rem 0.4rem',
   },
   cell: {
-    //borderBottom: '1px solid rgba(0, 0, 56, 0.6)',
     padding: '0.2rem 0.4rem',
   },
   evenRow: {

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import './AppHeader.css';
 import {LanguageConsumer} from '../providers/LanguageProvider';
 import AppNav from '../components/AppNav';
-import LaguageSelect from '../components/LanguageSelect';
+import LaguageSelect from './LanguageSelect';
 
 class AppHeader extends Component {
   render(){

@@ -22,10 +22,13 @@ const pageStyles = makeStyles(theme => ({
   },
   navItem: {
     padding: '0.6rem 1.1rem',
-    fontSize: '1rem',
+    fontSize: '0.95rem',
     textShadow: '1px 1px 1px rgb(143, 164, 183)',
     "&:hover": {
       backgroundColor: 'rgba(52, 74, 97, 0.1)',
+    },
+    "& strong": {
+      paddingLeft: '0.5rem',
     },
   },
   fontSmall: {
@@ -56,7 +59,14 @@ const pageStyles = makeStyles(theme => ({
   listItem: {
     marginTop: '0.6rem',
     marginBottom: '0.6rem',
-    fontSize: '1rem',
+    fontSize: '0.95rem',
+  },
+  userForm: {
+    padding: '1.2rem',
+    textAlign: 'center',
+    "& .smallField": {
+      width: '48%',
+    },
   },
 }));
 

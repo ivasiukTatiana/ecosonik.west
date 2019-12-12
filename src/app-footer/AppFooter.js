@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Grid from '@material-ui/core/Grid';
-import Icon from '@material-ui/core/Icon';
+import CallIcon from '@material-ui/icons/Call';
+import MailIcon from '@material-ui/icons/Mail';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 import './AppFooter.css';
 import {LanguageConsumer} from '../providers/LanguageProvider';
@@ -30,18 +32,19 @@ class AppFooter extends Component {
               </Grid>
               <Grid container item xs={3} direction="column" alignItems="flex-start" justify="space-between" className="Footer-right">
                 <Grid container alignItems="center">
-                  <Icon className="fas fa-envelope" />
+                  <MailIcon />
                   <strong>ekosonicwest@ukr.net</strong>
                 </Grid>
                 <Grid container alignItems="center">
-                  <Icon className="fas fa-phone-alt" />
+                  <CallIcon />
                   <strong>+38 099 336 21 63</strong>
                 </Grid>
                 <br />
                 <Grid container direction="column" alignItems="flex-start">
                   <Grid container item alignItems="center">
                     <span>Developer: Tatiana Mysiuk</span>
-                    <a href="https://www.linkedin.com/in/tatiana-mysiuk/" target="_blank" rel="noopener noreferrer"><Icon className="fab fa-linkedin" /></a>
+                    <a href="https://www.linkedin.com/in/tatiana-mysiuk/" target="_blank" rel="noopener noreferrer"><LinkedInIcon /></a>
+
                   </Grid>
                 </Grid>
               </Grid>

@@ -43,7 +43,6 @@ class LanguageProvider extends Component {
         this.setState({
           data: response.data,
         })
-        //console.log(this.state.data);
       })
       .catch(err => {
         console.log(err);
@@ -59,11 +58,9 @@ class LanguageProvider extends Component {
     const urlContent = `./docs/content/${language}.json`;
     fetch(urlContent)
       .then(response => {
-        //console.log(response);
         return response.json()
       })
       .then(response => {
-        //console.log(response.data["home"]);
         this.setState({
           header: updatedHeader,
           data: response.data,
