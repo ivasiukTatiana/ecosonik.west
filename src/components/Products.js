@@ -36,7 +36,6 @@ export default function Products() {
                   <CardWithImage key={index} cardBody={card} />
                 )
               })}
-
             </Paper>
           </Grid>
         </Grid>

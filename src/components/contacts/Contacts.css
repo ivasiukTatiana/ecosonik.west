@@ -18,9 +18,30 @@
 }
 .navItem {
   padding: 0.6rem 1.1rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   text-shadow: 1px 1px 1px rgb(143, 164, 183);
 }
 .navItem strong {
   padding-left: 0.5rem;
+}
+.text {
+  padding-top: 1rem;
+  padding-left: 1rem;
+
+
+}
+/*.title {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: -7.6rem;
+  padding-top: 7.6rem;
+  margin-bottom: 0.6rem;
+}*/
+.userform {
+  padding: 1.2rem;
+  text-align: center;
+}
+.smallField {
+  width: 48%;
+
 }

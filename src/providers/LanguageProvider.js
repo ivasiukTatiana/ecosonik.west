@@ -1,54 +1,12 @@
 import React, {Component} from 'react';
 
+import {InitialState} from './InitialState'
+
 const LanguageContext = React.createContext();
 const LanguageConsumer = LanguageContext.Consumer;
 
 class LanguageProvider extends Component {
-  state = {
-    titles: {
-      routes: [],
-    },
-    languages: [],
-    header: {
-      language: "ru",
-      navigation: []
-    },
-    data: {
-      home: {
-        navigation: [],
-        ulContent: [],
-        cards: [
-          { link: "", title: "", text: "", images: [] },
-          { link: "", title: "", text: "", images: [] }
-        ],
-        button: "дізнатись більше ..."
-      },
-      projects: {
-        navigation: [],
-        cards: [
-          {
-            images: [],
-          }
-        ],
-      },
-      products: {
-        navigation: [],
-        cards: [
-          {
-            images: [],
-          }
-        ],
-      },
-      contacts: {
-
-      }
-    },
-    footer: {
-      copyright: [],
-      address: [],
-      head: []
-    },
-  }
+  state = InitialState;
 
   componentDidMount() {
     const language = this.state.header.language;
@@ -93,6 +51,7 @@ class LanguageProvider extends Component {
   }
 
   updateLanguage = (event) => {
+    //console.log(this);
     let language = event.target.value;
     /*this.setState(prevState => {})*/
     let updatedHeader = this.state.titles.header[language];

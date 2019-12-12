@@ -260,30 +260,8 @@
       ]
     },
     "contacts": {
-      "head" : ["Директор Head of the company", "Бойко Сергій Степанович"],
-      "navigation": [
-        {
-          "link": "#activities",
-          "text": "Види діяльності"
-        }
-      ],
-      "h2": "Підприємство спеціалізується на наступних видах діяльності:",
-
-      "cards": [
-        {
-          "link": "",
-          "title": "",
-          "customer": "",
-          "text": "",
-          "images": [
-            {
-              "text": "",
-              "image": "./docs/images/pr81.jpg"
-            }
-          ]
-        }
-      ],
-      "button": "дізнатись більше ..."
+      "h2": "",
+      "button": ""
     }
   }
 }
