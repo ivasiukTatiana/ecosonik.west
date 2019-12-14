@@ -1,5 +1,5 @@
 {
-  "routes" : ["home", "products", "services", "projects", "contacts"],
+  "routes" : ["home", "products", "projects", "contacts"],
   "header": {
     "ua": {
       "language": "ua",

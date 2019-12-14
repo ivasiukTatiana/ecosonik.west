@@ -73,17 +73,18 @@ class LanguageProvider extends Component {
   }
 
   render() {
+    const { titles, languages, header, footer, data } = this.state;
     return(
       <LanguageContext.Provider value={{
-        routes: this.state.titles.routes,
-        languages: this.state.languages,
-        header: this.state.header,
-        footer: this.state.footer,
+        routes: titles.routes,
+        languages: languages,
+        header: header,
+        footer: footer,
         updateLanguage: this.updateLanguage,
-        home: this.state.data.home,
-        projects: this.state.data.projects,
-        products: this.state.data.products,
-        contacts: this.state.data.contacts
+        home: data.home,
+        projects: data.projects,
+        products: data.products,
+        contacts: data.contacts
       }}>
         {this.props.children}
       </LanguageContext.Provider>

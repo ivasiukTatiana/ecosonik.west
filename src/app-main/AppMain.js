@@ -11,12 +11,9 @@ import Contacts from '../components/Contacts';
 
 const theme = createMuiTheme({
   overrides: {
-    // Style sheet name
     MuiPaper: {
-      // Name of the rule
       root: {
         color: '#000038',
-        //backgroundColor: 'transparent',
         backgroundColor: 'rgba(230, 230, 230, 0.6)',
       },
     },

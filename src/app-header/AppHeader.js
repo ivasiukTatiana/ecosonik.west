@@ -12,7 +12,7 @@ class AppHeader extends Component {
       <LanguageConsumer>
         {(context) => (
           <header className="App-header">
-            <Link to="/" className="Logo" >
+            <Link to="/home" className="Logo" >
               <span>EKOSONIC&nbsp;-</span>
               <span>WEST</span>
             </Link>

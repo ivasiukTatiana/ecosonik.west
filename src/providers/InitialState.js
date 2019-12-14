@@ -4,7 +4,7 @@ export const InitialState = {
   },
   languages: [],
   header: {
-    language: "ua",
+    language: "ru",
     navigation: []
   },
   data: {
@@ -34,6 +34,8 @@ export const InitialState = {
       ],
     },
     contacts: {
+      formfields: {},
+      button: ""
 
     }
   },

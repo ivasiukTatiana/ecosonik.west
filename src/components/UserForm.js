@@ -7,6 +7,8 @@ import CallIcon from '@material-ui/icons/Call';
 import Button from '@material-ui/core/Button';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
+//import SuccessSubmit from './SuccessSubmit';
+
 const theme = createMuiTheme({
   overrides: {
     MuiFormControl: {
@@ -50,7 +52,7 @@ export default class UserForm extends Component {
     super(props);
     this.state = {
       username: "",
-      comnany: "",
+      company: "",
       usermail: "",
       userphone: "",
       subject: "",
@@ -64,12 +66,12 @@ export default class UserForm extends Component {
       usermailValid: false,
       messageValid: false,
       formValid: false,
-      disabledSubmit: false,
+      //disabledSubmit: false,
+      disabledSubmit: true,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.validateUserInput = this.validateUserInput.bind(this);
-    //console.log(this.state.formErrors.username === '')
   }
 
   handleChange = (event) => {
@@ -79,6 +81,7 @@ export default class UserForm extends Component {
   };
 
   validateUserInput = (fieldName, value) => {
+    const { username, usermail, message } = this.props.fields;
     let formErrors = this.state.formErrors;
     let usernameValid = this.state.usernameValid;
     let usermailValid = this.state.usermailValid;
@@ -87,15 +90,15 @@ export default class UserForm extends Component {
     switch (fieldName) {
       case 'username':
         usernameValid = (value.length > 0) && (value.match(/^[\D]{3,40}$/g) !== null);
-        formErrors.username = usernameValid ? '' : 'Incorrect name';
+        formErrors.username = usernameValid ? '' : username.errorin;
         break;
       case 'usermail':
         usermailValid = value.match(/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i) ? true : false;
-        formErrors.usermail = usermailValid ? '' : 'Incorrect e-mail';
+        formErrors.usermail = usermailValid ? '' : usermail.errorin;
         break;
       case 'message':
         messageValid = value.length > 0;
-        formErrors.message = messageValid ? '' : 'Message cannot be empty';
+        formErrors.message = messageValid ? '' : message.error;
         break;
       default:
         break;
@@ -111,26 +114,24 @@ export default class UserForm extends Component {
   };
 
   handleSubmit = (event) => {
-    event.preventDefault()
-    //console.log(this.state);
+    event.preventDefault();
+
     if (!this.state.formValid) {
+      const { username, usermail, message } = this.props.fields;
       const formErrors = {};
-      formErrors.username = this.state.username.length === 0 ? 'Name cannot be empty' : '';
-      formErrors.usermail = this.state.usermail.length === 0 ? 'E-mail cannot be empty' : '';
-      formErrors.message = this.state.message.length === 0 ? 'Message cannot be empty' : '';
+      formErrors.username = this.state.username.length === 0 ? username.error : '';
+      formErrors.usermail = this.state.usermail.length === 0 ? usermail.error : '';
+      formErrors.message = this.state.message.length === 0 ? message.error : '';
       this.setState({ formErrors: formErrors, disabledSubmit: true });
-      console.log(this.state);
-
-
+      //console.log(this.state);
       return
     }
-
-    console.log(this.state);
-
+    //console.log(this.state);
   };
 
   render(){
-    const { className } = this.props;
+    const { className, fields, button } = this.props;
+    //console.log(button, this.props);
     return(
       <ThemeProvider theme={theme}>
         <form className={className} noValidate autoComplete="off"
@@ -142,16 +143,16 @@ export default class UserForm extends Component {
               helperText={this.state.formErrors.username}
               id="username"
               className="smallField"
-              label="Your name"
+              label={typeof(fields.username) === 'object' ? fields.username.lable : ''}
               value={this.state.username}
               onChange={this.handleChange}
               variant="filled"
             />
             <TextField
-              id="comnany"
+              id="company"
               className="smallField"
-              label="Your company"
-              value={this.state.comnany}
+              label={typeof(fields.company) === 'object' ? fields.company.lable : ''}
+              value={this.state.company}
               onChange={this.handleChange}
               variant="filled"
             />
@@ -163,7 +164,7 @@ export default class UserForm extends Component {
               helperText={this.state.formErrors.usermail}
               id="usermail"
               className="smallField"
-              label="E-mail:"
+              label={typeof(fields.usermail) === 'object' ? fields.usermail.lable : ''}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -178,7 +179,7 @@ export default class UserForm extends Component {
             <TextField
               id="userphone"
               className="smallField"
-              label="Phone:"
+              label={typeof(fields.userphone) === 'object' ? fields.userphone.lable : ''}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -194,7 +195,7 @@ export default class UserForm extends Component {
 
           <TextField
             id="subject"
-            label="Message subject"
+            label={typeof(fields.subject) === 'object' ? fields.subject.lable : ''}
             fullWidth
             value={this.state.subject}
             onChange={this.handleChange}
@@ -205,7 +206,7 @@ export default class UserForm extends Component {
             error={this.state.formErrors.message === '' ? false : true}
             helperText={this.state.formErrors.message}
             id="message"
-            label="Your message"
+            label={typeof(fields.message) === 'object' ? fields.message.lable : ''}
             multiline
             rows="4"
             fullWidth
@@ -215,14 +216,10 @@ export default class UserForm extends Component {
           />
 
           <Button variant="contained" type="submit" disabled={this.state.disabledSubmit}>
-            Send
+            {button}
           </Button>
-
-
-
         </form>
       </ThemeProvider>
-
     );
   }
 }

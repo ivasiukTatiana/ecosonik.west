@@ -23,7 +23,7 @@ export default function Products() {
                 }).map((item) => { return item.products; })
               }
               navigation={context.products.navigation}
-              classItem="navItem" />
+              classItem="fontSmall" />
           </Grid>
 
           <Grid item xs={9}>

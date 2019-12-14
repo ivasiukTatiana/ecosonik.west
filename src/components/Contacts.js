@@ -51,8 +51,9 @@ export default function Contacts() {
                 {context.contacts.h2}
               </Typography>
 
-              <UserForm className={classes.userForm} />
-
+              <UserForm className={classes.userForm}
+                fields={context.contacts.formfields}
+                button={context.contacts.button} />
             </Paper>
           </Grid>
         </Grid>

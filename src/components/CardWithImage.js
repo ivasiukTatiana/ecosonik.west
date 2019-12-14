@@ -34,6 +34,10 @@ const useStyles = makeStyles({
   media: {
     maxWidth: '26rem',
     margin: '0.6rem auto',
+  },
+  bigmedia: {
+    maxWidth: '95%',
+    margin: '0.6rem auto',
   }
 });
 
@@ -89,7 +93,7 @@ export default function CardWithImage(props) {
               <CardMedia
                 component="img"
                 alt=""
-                className={classes.media}
+                className={classes[image.class]}
                 image={image.image}
                 title={image.text}
               />

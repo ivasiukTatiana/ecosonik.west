@@ -71,26 +71,44 @@ export default function Table(props) {
       </React.Fragment>
     )
   }
+  const TableFooter = () => {
+    if (props.table.hasOwnProperty('tfooter')) {
+      console.log()
+      return (
+        <tfoot>
+          <tr>
+            <td colSpan="2" className={classes.cell}>{props.table.tfooter}</td>
+          </tr>
+        </tfoot>
+      )
+    } else {
+      return <React.Fragment />
+    }
+  }
   const TableBody = () => {
     if (typeof props.table.body === 'object') {
       return (
-        <tbody>
-          {props.table.body.map((tr, index) => {
-            if (index % 2 === 0) {
-              return (
-                <tr key={index} className={classes.evenRow} >
-                  <Tr tr={tr} />
-                </tr>
-              )
-            } else {
-              return (
-                <tr key={index}>
-                  <Tr tr={tr} />
-                </tr>
-              )
-            }
-          })}
-        </tbody>
+        <React.Fragment>
+          <tbody>
+            {props.table.body.map((tr, index) => {
+              if (index % 2 === 0) {
+                return (
+                  <tr key={index} className={classes.evenRow} >
+                    <Tr tr={tr} />
+                  </tr>
+                )
+              } else {
+                return (
+                  <tr key={index}>
+                    <Tr tr={tr} />
+                  </tr>
+                )
+              }
+            })}
+
+          </tbody>
+          <TableFooter />
+        </React.Fragment>
       )
     } else {
       return <React.Fragment />
