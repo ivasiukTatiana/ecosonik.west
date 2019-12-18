@@ -1,71 +1,83 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import Slide from '@material-ui/core/Slide';
-
+import IconButton from '@material-ui/core/IconButton';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
+import CloseIcon from '@material-ui/icons/Close';
+import { makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles(theme => ({
+  success: {
+    backgroundColor: 'rgba(0, 105, 50, 0.6)',
+  },
+  error: {
+    backgroundColor: 'rgba(255, 105, 50, 0.6)',
+  },
+  icon: {
+    fontSize: 20,
+  },
+  iconSuccess: {
+    fontSize: 20,
+    opacity: 0.9,
+    marginRight: '1rem',
+  },
+  message: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+}));
 
-function TransitionUp(props) {
+const variantIcon = {
+  success: CheckCircleOutlineIcon,
+  error: ErrorOutlineIcon,
+};
+
+function SlideTransition(props) {
   return <Slide {...props} direction="up" />;
 }
 
-export default function SuccessSubmit() {
+export default function SuccessSubmit(props) {
+  const classes = useStyles();
+  const {submitMessage, submitClass, submitState, submitMessageClose, ...other} = props;
+  const Icon = variantIcon[submitClass];
+
   const [open, setOpen] = React.useState(false);
-  //const [transition, setTransition] = React.useState(undefined);
-
-  const handleClick = Fade => () => {
-    //setTransition(() => Transition);
-    console.log(open);
+  if (submitState && !open) {
     setOpen(true);
-    console.log(open);
-  };
-
-
+  }
 
   const handleClose = () => {
-    console.log(open);
+    submitMessageClose();
     setOpen(false);
-
   };
 
   return (
-    <div>
-      <Button onClick={handleClick()}>Up</Button>
-      <Snackbar
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
-        open={open}
-        /*autoHideDuration={6000}*/
-        onClose={handleClose}
-        TransitionComponent={(props) => { return <Slide {...props} direction="up" />; }}
-        ContentProps={{
-          'aria-describedby': 'message-id',
-        }}
-        message={<span id="message-id">I love snacks</span>} >
-
-
-
-    </Snackbar>
-    </div>
+    <Snackbar
+      anchorOrigin={{
+        vertical: 'bottom',
+        horizontal: 'right',
+      }}
+      open={open}
+      autoHideDuration={4000}
+      onClose={handleClose}
+      TransitionComponent={SlideTransition}
+      ContentProps={{
+        'aria-describedby': 'client-snackbar',
+        'className': classes[submitClass],
+        'action': [
+          <IconButton key="close" aria-label="close" color="inherit"
+            onClick={handleClose}>
+            <CloseIcon className={classes.icon} />
+          </IconButton>,
+        ],
+      }}
+      message={
+        <span id="client-snackbar" className={classes.message}>
+          <Icon className={classes.iconSuccess} />
+          {submitMessage}
+        </span>
+      }
+      {...other} />
   );
 }
-
-/*<SnackbarContent
-          className={clsx(classes[variant], className)}
-          aria-describedby="client-snackbar"
-          message={
-            <span id="client-snackbar" className={classes.message}>
-              <Icon className={clsx(classes.icon, classes.iconVariant)} />
-              {message}
-            </span>
-          }
-          action={[
-            <IconButton key="close" aria-label="close" color="inherit" onClick={onClose}>
-              <CloseIcon className={classes.icon} />
-            </IconButton>,
-          ]}
-          {...other}
-        />*/

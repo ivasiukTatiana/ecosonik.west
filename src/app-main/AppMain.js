@@ -32,7 +32,7 @@ class AppMain extends Component {
             <Route path="/products" component={Products} />
             <Route path="/projects" component={Projects} />
             <Route path="/contacts" component={Contacts} />
-            <Route component={() => (<div>404 Not found 1</div>)} />
+            <Route component={() => (<div>404 Not found</div>)} />
           </Switch>
         </ThemeProvider>
       </div>

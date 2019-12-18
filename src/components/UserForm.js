@@ -7,7 +7,11 @@ import CallIcon from '@material-ui/icons/Call';
 import Button from '@material-ui/core/Button';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
-//import SuccessSubmit from './SuccessSubmit';
+
+import Fade from '@material-ui/core/Fade';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+import SuccessSubmit from './SuccessSubmit';
 
 const theme = createMuiTheme({
   overrides: {
@@ -42,6 +46,15 @@ const theme = createMuiTheme({
         backgroundColor: 'rgba(45, 45, 120, 0.15)',
         marginTop: '1rem',
       }
+    },
+    MuiCircularProgress: {
+      root: {
+        marginTop: '1rem',
+        marginLeft: '0.5rem',
+      },
+      colorPrimary: {
+        color: '#000038',
+      }
     }
   },
 });
@@ -66,8 +79,11 @@ export default class UserForm extends Component {
       usermailValid: false,
       messageValid: false,
       formValid: false,
-      //disabledSubmit: false,
-      disabledSubmit: true,
+      disabledSubmit: false,
+      //disabledSubmit: true,
+      submitMessage: "success",
+      submitState: false,
+      submitProgress: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -89,7 +105,7 @@ export default class UserForm extends Component {
 
     switch (fieldName) {
       case 'username':
-        usernameValid = (value.length > 0) && (value.match(/^[\D]{3,40}$/g) !== null);
+        usernameValid = (value.length > 0) && (value.match(/^[\D]{1,40}$/g) !== null);
         formErrors.username = usernameValid ? '' : username.errorin;
         break;
       case 'usermail':
@@ -123,15 +139,45 @@ export default class UserForm extends Component {
       formErrors.usermail = this.state.usermail.length === 0 ? usermail.error : '';
       formErrors.message = this.state.message.length === 0 ? message.error : '';
       this.setState({ formErrors: formErrors, disabledSubmit: true });
-      //console.log(this.state);
       return
     }
-    //console.log(this.state);
+
+    let formData = new FormData();
+
+    formData.append("name", this.state.username);
+    formData.append("company", this.state.company);
+    formData.append("email", this.state.usermail);
+    formData.append("phone", this.state.userphone);
+    formData.append("subject", this.state.subject);
+    formData.append("message", this.state.message);
+
+    fetch("https://ekosonic-west.com/sendmail.php", {
+      method: "POST",
+      body: formData,
+      mode: 'no-cors',
+      headers: {
+        "Content-Type": "multipart/form-data",
+      }
+    }).then(response => {
+      response.json().then(data => {
+        console.log("Successful" + data);
+      });
+    }).catch(err => {
+      console.log(err);
+    });
+
+    /*this.setState({ submitProgress: true }); // for spinner
+    // after server response
+    let submitMessage = "success"; // or "error"
+    this.setState({ submitMessage: submitMessage, submitState: true, });*/
   };
 
+  submitMessageClose = () => {
+    this.setState({ submitState: false, });
+  }
+
   render(){
-    const { className, fields, button } = this.props;
-    //console.log(button, this.props);
+    const { className, fields, button, submitMessage } = this.props;
     return(
       <ThemeProvider theme={theme}>
         <form className={className} noValidate autoComplete="off"
@@ -215,10 +261,33 @@ export default class UserForm extends Component {
             variant="filled"
           />
 
+          <Grid container alignItems="center" justify="center">
+
           <Button variant="contained" type="submit" disabled={this.state.disabledSubmit}>
             {button}
           </Button>
+
+
+          <Fade
+            in={this.state.submitProgress}
+            style={{
+              transitionDelay: this.state.submitProgress ? '800ms' : '0ms',
+            }}
+            size={24}
+            unmountOnExit
+          >
+            <CircularProgress />
+          </Fade>
+
+          </Grid>
+
+
         </form>
+        <SuccessSubmit
+          submitMessage={submitMessage[this.state.submitMessage]}
+          submitClass={this.state.submitMessage}
+          submitState={this.state.submitState}
+          submitMessageClose={this.submitMessageClose} />
       </ThemeProvider>
     );
   }

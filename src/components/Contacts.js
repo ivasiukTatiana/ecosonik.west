@@ -53,7 +53,8 @@ export default function Contacts() {
 
               <UserForm className={classes.userForm}
                 fields={context.contacts.formfields}
-                button={context.contacts.button} />
+                button={context.contacts.button}
+                submitMessage={context.contacts.submitMessage} />
             </Paper>
           </Grid>
         </Grid>
@@ -61,16 +62,3 @@ export default function Contacts() {
     </LanguageConsumer>
   );
 }
-
-
-
-/*<br />
-<TextField
-  required
-  id="filled-required"
-  label="Required"
-  defaultValue="Hello World"
-  variant="filled"
-  error
-  helperText="Incorrect entry."
-/>*/

@@ -35,7 +35,8 @@ export const InitialState = {
     },
     contacts: {
       formfields: {},
-      button: ""
+      button: "",
+      submitMessage: ""
 
     }
   },
