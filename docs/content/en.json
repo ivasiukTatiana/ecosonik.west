@@ -132,7 +132,7 @@
           "link": "3",
           "title": "Установка еквівалентного витіснення для повірки (калібрування) зразкових приладів вимірювання витрати. Клас точності 0,15%.",
           "customer": "Замовник: ДП Івано-ФраківськСтандартМетрологія.",
-          "text": "Брали активну участь у створенні.",
+          "text": "",
           "images": [
             {
               "text": "",
@@ -363,7 +363,11 @@
             "error": "Message cannot be empty"
           }
       },
-      "button": "Send"
+      "button": "Send",
+      "submitMessage": {
+        "success": "Your message has been sent successfully",
+        "error": "Server error! Please try again"
+      }
     }
   }
 }
