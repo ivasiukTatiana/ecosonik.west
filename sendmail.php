@@ -17,7 +17,6 @@
   $usersubject = $_POST['subject'];
   $message = $_POST['message'];
 
-  //$adminEmail = "tivasyuk@i.ua";
   $adminEmail = "ekosonicwest@ukr.net, tivasyuk@i.ua";
 
   $subject = "message from ekosonic-west.com";
