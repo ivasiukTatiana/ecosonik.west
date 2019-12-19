@@ -6,8 +6,6 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import CallIcon from '@material-ui/icons/Call';
 import Button from '@material-ui/core/Button';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-
-
 import Fade from '@material-ui/core/Fade';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
@@ -88,14 +86,26 @@ export default class UserForm extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.validateUserInput = this.validateUserInput.bind(this);
+    this.submitMessageClose = this.submitMessageClose.bind(this);
   }
 
+  /**
+  * @function handleChange
+  * @param event { obj } - change event
+  * @return void
+  */
   handleChange = (event) => {
     const key = event.target.id;
     const value = event.target.value;
     this.setState({ [key]: value }, () => { this.validateUserInput(key, value) });
   };
 
+  /**
+  * @function validateUserInput
+  * @param fieldName { string } - field's name
+  * @param value { string } - value of field
+  * @return void
+  */
   validateUserInput = (fieldName, value) => {
     const { username, usermail, message } = this.props.fields;
     let formErrors = this.state.formErrors;
@@ -142,34 +152,42 @@ export default class UserForm extends Component {
       return
     }
 
-    let formData = new FormData();
-
-    formData.append("name", this.state.username);
-    formData.append("company", this.state.company);
-    formData.append("email", this.state.usermail);
-    formData.append("phone", this.state.userphone);
-    formData.append("subject", this.state.subject);
-    formData.append("message", this.state.message);
+    this.setState({ submitProgress: true }); // for spinner
+    let submitMessage = "success";
+    const formData = {
+      name: this.state.username,
+      company: this.state.company,
+      email: this.state.usermail,
+      phone: this.state.userphone,
+      subject: this.state.subject,
+      message: this.state.message
+    };
 
     fetch("https://ekosonic-west.com/sendmail.php", {
       method: "POST",
-      body: formData,
+      body: JSON.stringify(formData),
       mode: 'no-cors',
       headers: {
-        "Content-Type": "multipart/form-data",
+        "Content-Type": "application/json"
       }
     }).then(response => {
-      response.json().then(data => {
-        console.log("Successful" + data);
+      response.text().then(data => {
+        console.log(data);
+        this.setState({
+          submitProgress: false,
+          submitMessage: submitMessage,
+          submitState: true,
+        });
       });
     }).catch(err => {
       console.log(err);
+      submitMessage = "error";
+      this.setState({
+        submitProgress: false,
+        submitMessage: submitMessage,
+        submitState: true,
+      });
     });
-
-    /*this.setState({ submitProgress: true }); // for spinner
-    // after server response
-    let submitMessage = "success"; // or "error"
-    this.setState({ submitMessage: submitMessage, submitState: true, });*/
   };
 
   submitMessageClose = () => {
@@ -262,26 +280,19 @@ export default class UserForm extends Component {
           />
 
           <Grid container alignItems="center" justify="center">
-
-          <Button variant="contained" type="submit" disabled={this.state.disabledSubmit}>
-            {button}
-          </Button>
-
-
-          <Fade
-            in={this.state.submitProgress}
-            style={{
-              transitionDelay: this.state.submitProgress ? '800ms' : '0ms',
-            }}
-            size={24}
-            unmountOnExit
-          >
-            <CircularProgress />
-          </Fade>
-
+            <Button variant="contained" type="submit" disabled={this.state.disabledSubmit}>
+              {button}
+            </Button>
+            <Fade
+              in={this.state.submitProgress}
+              style={{
+                transitionDelay: this.state.submitProgress ? '800ms' : '0ms',
+              }}
+              size={24}
+              unmountOnExit>
+              <CircularProgress />
+            </Fade>
           </Grid>
-
-
         </form>
         <SuccessSubmit
           submitMessage={submitMessage[this.state.submitMessage]}
