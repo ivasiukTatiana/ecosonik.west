@@ -2,12 +2,13 @@
   min-height: 5rem;
   position: sticky;
   bottom: -10rem;
+  padding-left: 2rem;
   background-color: rgba(52, 74, 97, 0.4);
   color: #000038;
   font-size: 0.8rem;
   font-weight: 500;
   line-height: 1.2;
-  /*box-shadow: 0 -1px 5px #000038;*/
+  box-shadow: 0 -5px 35px rgba(27, 39, 51, 0.8);
 }
 .Footer-left {
   padding: 1.2rem;

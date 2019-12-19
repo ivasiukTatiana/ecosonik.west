@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+//import Container from '@material-ui/core/Container';
+import CallIcon from '@material-ui/icons/Call';
 
 import './AppHeader.css';
 import {LanguageConsumer} from '../providers/LanguageProvider';
@@ -21,6 +23,10 @@ class AppHeader extends Component {
                 <span>{context.header.title1}</span>
                 <span>{context.header.title2}</span>
                 <hr />
+              </div>
+              <div className="Header-phone">
+                <CallIcon />
+                <strong>{context.footer.phone}</strong>
               </div>
               <div className="Header-right">
                 <img src={context.header.img} alt="" />

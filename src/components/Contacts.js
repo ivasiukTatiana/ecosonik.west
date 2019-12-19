@@ -16,34 +16,36 @@ export default function Contacts() {
       {(context) => (
         <Grid container spacing={1} justify="space-between">
           <Grid item xs={3}>
-            <Paper className={classes.stickyNav}>
-              <Typography variant="h6" component="h3" gutterBottom className={classes.navTitle}>
-                {context.header.navigation.filter((item) => {
-                    return item.hasOwnProperty("contacts");
-                  }).map((item) => { return item.contacts; })}
-              </Typography>
-              <Grid container direction="column" alignItems="flex-start"
-              className={classes.navItem}>
-                {context.footer.address.map((item, index) => {
-                  return (
-                    <span key={index}>{item}</span>
-                  )
-                })}
-              </Grid>
-              <Grid container alignItems="center" className={classes.navItem}>
-                <MailIcon />
-                <strong>{context.footer.email}</strong>
-              </Grid>
-              <Grid container alignItems="center" className={classes.navItem}>
-                <CallIcon />
-                <strong>{context.footer.phone}</strong>
-              </Grid>
-              <Grid container alignItems="center" className={classes.navItem}>
-                {context.footer.head.map((item, index) => {
-                  return <span key={index}>{item}</span>
-                })}
-              </Grid>
-            </Paper>
+            <div className={classes.stickyNav}>
+              <Paper>
+                <Typography variant="h6" component="h3" gutterBottom className={classes.navTitle}>
+                  {context.header.navigation.filter((item) => {
+                      return item.hasOwnProperty("contacts");
+                    }).map((item) => { return item.contacts; })}
+                </Typography>
+                <Grid container direction="column" alignItems="flex-start"
+                className={classes.navItem}>
+                  {context.footer.address.map((item, index) => {
+                    return (
+                      <span key={index}>{item}</span>
+                    )
+                  })}
+                </Grid>
+                <Grid container alignItems="center" className={classes.navItem}>
+                  <MailIcon />
+                  <strong>{context.footer.email}</strong>
+                </Grid>
+                <Grid container alignItems="center" className={classes.navItem}>
+                  <CallIcon />
+                  <strong>{context.footer.phone}</strong>
+                </Grid>
+                <Grid container alignItems="center" className={classes.navItem}>
+                  {context.footer.head.map((item, index) => {
+                    return <span key={index}>{item}</span>
+                  })}
+                </Grid>
+              </Paper>
+            </div>
           </Grid>
           <Grid item xs={9}>
             <Paper className={classes.paperContent} elevation={7}>

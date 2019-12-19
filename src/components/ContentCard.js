@@ -18,13 +18,14 @@ const useStyles = makeStyles({
     display: 'flex',
   },
   title: {
-    fontSize: '1rem',
+    fontSize: '0.96rem',
     lineHeight: 1.3,
     paddingLeft: '0.8rem',
   },
   text: {
     textAlign: 'justify',
     paddingLeft: '0.8rem',
+    fontSize: '0.95rem',
   },
   action: {
     justifyContent: 'flex-end',

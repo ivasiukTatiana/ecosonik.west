@@ -17,6 +17,11 @@ const theme = createMuiTheme({
         backgroundColor: 'rgba(230, 230, 230, 0.6)',
       },
     },
+    MuiButton: {
+      root: {
+        textTransform: 'none',
+      },
+    },
   },
 });
 

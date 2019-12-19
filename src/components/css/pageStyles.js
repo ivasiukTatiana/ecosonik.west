@@ -3,8 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 const pageStyles = makeStyles(theme => ({
   stickyNav: {
     position: "sticky",
-    top: "7.7rem",
-    paddingBottom: '1.5rem',
+    top: "6.2rem",
+    backgroundColor: 'rgba(52, 74, 97, 0.3)',
+    paddingTop: '1rem',
+    paddingBottom: '0.5rem',
+    borderTopLeftRadius: '1rem',
+    borderTopRightRadius: '1rem',
     maxHeight: '30rem',
     overflowY: 'auto',
     "&::-webkit-scrollbar": {
@@ -12,6 +16,7 @@ const pageStyles = makeStyles(theme => ({
     },
     "-ms-overflow-style": 'none',
     scrollbarWidth: 'none',
+    //boxShadow: '0 10px 35px rgb(27, 39, 51)',
   },
   navigation: {
     listStyleType: "none",
@@ -54,7 +59,7 @@ const pageStyles = makeStyles(theme => ({
     padding: '1rem',
     textAlign: 'justify',
     lineHeight: 1.3,
-    fontSize: '1rem',
+    fontSize: '0.96rem',
   },
   listItem: {
     marginTop: '0.6rem',

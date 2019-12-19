@@ -9,19 +9,21 @@ export default function ContentNav(props) {
   const classes = useStyles();
 
   return (
-    <Paper className={classes.stickyNav}>
-      <Typography variant="h6" component="h3" gutterBottom className={classes.navTitle}>
-        {props.title}
-      </Typography>
-      <ul className={classes.navigation}>
-        {props.navigation.map((item, index) => {
-          return (
-            <HashLink key={index} to={item.link}>
-              <li className={classes[props.classItem]}>{item.text}</li>
-            </HashLink>
-          )
-        })}
-      </ul>
-    </Paper>
+    <div className={classes.stickyNav}>
+      <Paper>
+        <Typography variant="h6" component="h3" gutterBottom className={classes.navTitle}>
+          {props.title}
+        </Typography>
+        <ul className={classes.navigation}>
+          {props.navigation.map((item, index) => {
+            return (
+              <HashLink key={index} to={item.link}>
+                <li className={classes[props.classItem]}>{item.text}</li>
+              </HashLink>
+            )
+          })}
+        </ul>
+      </Paper>
+    </div>
   )
 }
