@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/ecosonik.west/static/css/main.d39648d4.chunk.css",
-    "main.js": "/ecosonik.west/static/js/main.53a4a7a4.chunk.js",
-    "main.js.map": "/ecosonik.west/static/js/main.53a4a7a4.chunk.js.map",
+    "main.css": "/ecosonik.west/static/css/main.7d32649f.chunk.css",
+    "main.js": "/ecosonik.west/static/js/main.004d4708.chunk.js",
+    "main.js.map": "/ecosonik.west/static/js/main.004d4708.chunk.js.map",
     "runtime-main.js": "/ecosonik.west/static/js/runtime-main.ca490f8c.js",
     "runtime-main.js.map": "/ecosonik.west/static/js/runtime-main.ca490f8c.js.map",
     "static/js/2.3a3b0477.chunk.js": "/ecosonik.west/static/js/2.3a3b0477.chunk.js",
     "static/js/2.3a3b0477.chunk.js.map": "/ecosonik.west/static/js/2.3a3b0477.chunk.js.map",
     "index.html": "/ecosonik.west/index.html",
-    "precache-manifest.9c57f8b809c82bf34a3e9425b45e582c.js": "/ecosonik.west/precache-manifest.9c57f8b809c82bf34a3e9425b45e582c.js",
+    "precache-manifest.4091c6220e0691f6cf2a4f07ce4b39e4.js": "/ecosonik.west/precache-manifest.4091c6220e0691f6cf2a4f07ce4b39e4.js",
     "service-worker.js": "/ecosonik.west/service-worker.js",
-    "static/css/main.d39648d4.chunk.css.map": "/ecosonik.west/static/css/main.d39648d4.chunk.css.map",
+    "static/css/main.7d32649f.chunk.css.map": "/ecosonik.west/static/css/main.7d32649f.chunk.css.map",
     "static/media/index.css": "/ecosonik.west/static/media/fon.ec666c80.jpg",
     "static/media/AppHeader.css": "/ecosonik.west/static/media/logo.a928e7c9.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.ca490f8c.js",
     "static/js/2.3a3b0477.chunk.js",
-    "static/css/main.d39648d4.chunk.css",
-    "static/js/main.53a4a7a4.chunk.js"
+    "static/css/main.7d32649f.chunk.css",
+    "static/js/main.004d4708.chunk.js"
   ]
 }
