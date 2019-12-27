@@ -9,12 +9,6 @@ import ContentCard from './ContentCard';
 import pageStyles from './css/pageStyles';
 
 export default function Home() {
-
-  //const [spacing, setSpacing] = React.useState(2);
-  /*const handleChange = event => {
-    setSpacing(Number(event.target.value));
-  };*/
-
   const classes = pageStyles();
 
   return (

@@ -3,19 +3,17 @@ import { makeStyles } from '@material-ui/core/styles';
 const pageStyles = makeStyles(theme => ({
   stickyNav: {
     position: "sticky",
-    top: "7.6rem",
+    top: "5.9rem",
     //backgroundColor: 'rgba(52, 74, 97, 0.3)',
     paddingBottom: '0.5rem',
-    borderTopLeftRadius: '1rem',
-    borderTopRightRadius: '1rem',
-    maxHeight: '30rem',
+    maxHeight: '31rem',
     overflowY: 'auto',
     "&::-webkit-scrollbar": {
       width: 0,
     },
     "-ms-overflow-style": 'none',
     scrollbarWidth: 'none',
-    boxShadow: '1px 1px 3px rgb(27, 39, 51)',
+    boxShadow: '-2px -2px 4px rgba(27, 39, 51, 0.6)',
   },
   navigation: {
     listStyleType: "none",

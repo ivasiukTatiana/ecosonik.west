@@ -78,7 +78,6 @@ export default class UserForm extends Component {
       messageValid: false,
       formValid: false,
       disabledSubmit: false,
-      //disabledSubmit: true,
       submitMessage: "success",
       submitState: false,
       submitProgress: false,

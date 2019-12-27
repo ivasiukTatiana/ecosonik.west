@@ -23,7 +23,6 @@ class AppHeader extends Component {
                 <div className="Header-center">
                   <span>{context.header.title1}</span>
                   <span>{context.header.title2}</span>
-                  <hr />
                 </div>
                 <div className="Header-phone">
                   <CallIcon />
