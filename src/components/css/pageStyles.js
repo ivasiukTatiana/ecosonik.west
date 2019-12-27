@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const pageStyles = makeStyles(theme => ({
   stickyNav: {
     position: "sticky",
-    top: "5.9rem",
+    top: "6.16rem",
     //backgroundColor: 'rgba(52, 74, 97, 0.3)',
     paddingBottom: '0.5rem',
     maxHeight: '31rem',
