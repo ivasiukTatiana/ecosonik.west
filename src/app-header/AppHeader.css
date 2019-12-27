@@ -69,7 +69,7 @@
   margin-bottom: 0.2rem;
 }
 .Header-phone strong {
-  text-shadow: 1px -1px 3px rgba(27, 39, 51, 0.8);
+  text-shadow: 2px 2px 2px rgba(27, 39, 51, 0.5);
   font-size: 0.8rem;
 }
 .Header-right {
