@@ -14,7 +14,6 @@ const theme = createMuiTheme({
       root: {
         boxSizing: 'content-box',
         marginTop: '0.5rem',
-        /*marginBottom: '0.4rem',*/
       }
     },
   },

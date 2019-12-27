@@ -5,7 +5,6 @@ const pageStyles = makeStyles(theme => ({
     position: "sticky",
     top: "7.6rem",
     //backgroundColor: 'rgba(52, 74, 97, 0.3)',
-    //paddingTop: '1rem',
     paddingBottom: '0.5rem',
     borderTopLeftRadius: '1rem',
     borderTopRightRadius: '1rem',

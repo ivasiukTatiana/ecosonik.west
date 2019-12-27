@@ -16,41 +16,41 @@ class AppFooter extends Component {
         {(context) => (
           <footer className="App-footer">
             <Container maxWidth="md">
-            <Grid container justify="space-between">
-              <Grid container item xs={4} direction="column" alignItems="flex-start" className="Footer-left">
-                <span>&copy; {context.footer.copyright[0]}</span>
-                <span>{context.footer.copyright[1]}</span>
-                <br />
-                {context.footer.address.map((item, index) => {
-                  return (
-                    <span key={index}>{item}</span>
-                  )
-                })}
-              </Grid>
-              <Grid container item xs={5} direction="column" alignItems="flex-start" justify="space-around" className="Footer-nav">
-                  <AppNav
-                    links={context.header.navigation}
-                    routes={context.routes} />
-              </Grid>
-              <Grid container item xs={3} direction="column" alignItems="flex-start" justify="space-between" className="Footer-right">
-                <Grid container alignItems="center">
-                  <MailIcon />
-                  <strong>ekosonicwest@ukr.net</strong>
+              <Grid container justify="space-between">
+                <Grid container item xs={4} direction="column" alignItems="flex-start" className="Footer-left">
+                  <span>&copy; {context.footer.copyright[0]}</span>
+                  <span>{context.footer.copyright[1]}</span>
+                  <br />
+                  {context.footer.address.map((item, index) => {
+                    return (
+                      <span key={index}>{item}</span>
+                    )
+                  })}
                 </Grid>
-                <Grid container alignItems="center">
-                  <CallIcon />
-                  <strong>+38 099 336 21 63</strong>
+                <Grid container item xs={5} direction="column" alignItems="flex-start" justify="space-around" className="Footer-nav">
+                    <AppNav
+                      links={context.header.navigation}
+                      routes={context.routes} />
                 </Grid>
-                <br />
-                <Grid container direction="column" alignItems="flex-start">
-                  <Grid container item alignItems="center">
-                    <span>Developer: Tatiana Mysiuk</span>
-                    <a href="https://www.linkedin.com/in/tatiana-mysiuk/" target="_blank" rel="noopener noreferrer"><LinkedInIcon /></a>
+                <Grid container item xs={3} direction="column" alignItems="flex-start" justify="space-between" className="Footer-right">
+                  <Grid container alignItems="center">
+                    <MailIcon />
+                    <strong>ekosonicwest@ukr.net</strong>
+                  </Grid>
+                  <Grid container alignItems="center">
+                    <CallIcon />
+                    <strong>+38 099 336 21 63</strong>
+                  </Grid>
+                  <br />
+                  <Grid container direction="column" alignItems="flex-start">
+                    <Grid container item alignItems="center">
+                      <span>Developer: Tatiana Mysiuk</span>
+                      <a href="https://www.linkedin.com/in/tatiana-mysiuk/" target="_blank" rel="noopener noreferrer"><LinkedInIcon /></a>
 
+                    </Grid>
                   </Grid>
                 </Grid>
               </Grid>
-            </Grid>
             </Container>
           </footer>
         )}
