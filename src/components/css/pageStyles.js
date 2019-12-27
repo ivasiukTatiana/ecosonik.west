@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 const pageStyles = makeStyles(theme => ({
   stickyNav: {
     position: "sticky",
-    top: "6.2rem",
-    backgroundColor: 'rgba(52, 74, 97, 0.3)',
-    paddingTop: '1rem',
+    top: "7.6rem",
+    //backgroundColor: 'rgba(52, 74, 97, 0.3)',
+    //paddingTop: '1rem',
     paddingBottom: '0.5rem',
     borderTopLeftRadius: '1rem',
     borderTopRightRadius: '1rem',
@@ -16,19 +16,25 @@ const pageStyles = makeStyles(theme => ({
     },
     "-ms-overflow-style": 'none',
     scrollbarWidth: 'none',
-    //boxShadow: '0 10px 35px rgb(27, 39, 51)',
+    boxShadow: '1px 1px 3px rgb(27, 39, 51)',
   },
   navigation: {
     listStyleType: "none",
     paddingLeft: 0,
+    "& a": {
+      textDecoration: 'none',
+    }
   },
   navTitle: {
     padding: '1.5rem 1.5rem 0',
+    color: '#000038',
+    textShadow: '0px 0px 1px rgb(0, 0, 0)',
   },
   navItem: {
     padding: '0.6rem 1.1rem',
     fontSize: '0.95rem',
-    textShadow: '1px 1px 1px rgb(143, 164, 183)',
+    color: '#000038',
+    textShadow: '0px 0px 1px rgb(0, 0, 0)',
     "&:hover": {
       backgroundColor: 'rgba(52, 74, 97, 0.1)',
     },
@@ -38,8 +44,9 @@ const pageStyles = makeStyles(theme => ({
   },
   fontSmall: {
     padding: '0.6rem 1.1rem',
-    fontSize: '0.9rem',
-    textShadow: '1px 1px 1px rgb(143, 164, 183)',
+    fontSize: '0.85rem',
+    color: '#000038',
+    textShadow: '0px 0px 1px rgb(0, 0, 0)',
     "&:hover": {
       backgroundColor: 'rgba(52, 74, 97, 0.1)',
     },

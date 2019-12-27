@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
-import Paper from '@material-ui/core/Paper';
+//import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 import useStyles from './css/pageStyles';
@@ -10,7 +10,7 @@ export default function ContentNav(props) {
 
   return (
     <div className={classes.stickyNav}>
-      <Paper>
+
         <Typography variant="h6" component="h3" gutterBottom className={classes.navTitle}>
           {props.title}
         </Typography>
@@ -23,7 +23,7 @@ export default function ContentNav(props) {
             )
           })}
         </ul>
-      </Paper>
+
     </div>
   )
 }

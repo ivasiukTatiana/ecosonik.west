@@ -13,8 +13,8 @@ const theme = createMuiTheme({
     MuiContainer: {
       root: {
         boxSizing: 'content-box',
-        marginTop: '0.8rem',
-        marginBottom: '0.8rem',
+        marginTop: '0.5rem',
+        /*marginBottom: '0.4rem',*/
       }
     },
   },

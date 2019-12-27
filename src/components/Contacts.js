@@ -17,7 +17,7 @@ export default function Contacts() {
         <Grid container spacing={1} justify="space-between">
           <Grid item xs={3}>
             <div className={classes.stickyNav}>
-              <Paper>
+
                 <Typography variant="h6" component="h3" gutterBottom className={classes.navTitle}>
                   {context.header.navigation.filter((item) => {
                       return item.hasOwnProperty("contacts");
@@ -44,7 +44,7 @@ export default function Contacts() {
                     return <span key={index}>{item}</span>
                   })}
                 </Grid>
-              </Paper>
+
             </div>
           </Grid>
           <Grid item xs={9}>

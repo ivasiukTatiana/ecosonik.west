@@ -163,7 +163,7 @@ export default class UserForm extends Component {
       message: this.state.message
     };
 
-    fetch("https://ekosonic-west.com/sendmail.php", {
+    fetch("./sendmail.php", {
       method: "POST",
       body: JSON.stringify(formData),
       mode: 'no-cors',

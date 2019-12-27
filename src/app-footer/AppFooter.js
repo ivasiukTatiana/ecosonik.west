@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 import CallIcon from '@material-ui/icons/Call';
 import MailIcon from '@material-ui/icons/Mail';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -14,6 +15,7 @@ class AppFooter extends Component {
       <LanguageConsumer>
         {(context) => (
           <footer className="App-footer">
+            <Container maxWidth="md">
             <Grid container justify="space-between">
               <Grid container item xs={4} direction="column" alignItems="flex-start" className="Footer-left">
                 <span>&copy; {context.footer.copyright[0]}</span>
@@ -49,6 +51,7 @@ class AppFooter extends Component {
                 </Grid>
               </Grid>
             </Grid>
+            </Container>
           </footer>
         )}
       </LanguageConsumer>
