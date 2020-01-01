@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -10,9 +9,16 @@ import {LanguageConsumer} from '../providers/LanguageProvider';
 const useStyles = makeStyles(theme => ({
   selectEmpty: {
     minWidth: 50,
+    [theme.breakpoints.only('xs')]: {
+      minWidth: 40,
+    },
   },
   menuItem: {
     fontSize: 12,
+    [theme.breakpoints.only('xs')]: {
+      fontSize: 10,
+      minHeight: 30,
+    },
   }
 }));
 

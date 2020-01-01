@@ -17,7 +17,7 @@ class AppFooter extends Component {
           <footer className="App-footer">
             <Container maxWidth="md">
               <Grid container justify="space-between">
-                <Grid container item xs={4} direction="column" alignItems="flex-start" className="Footer-left">
+                <Grid container item xs={7} sm={5} md={4} direction="column" alignItems="flex-start" className="Footer-left">
                   <span>&copy; {context.footer.copyright[0]}</span>
                   <span>{context.footer.copyright[1]}</span>
                   <br />
@@ -27,12 +27,12 @@ class AppFooter extends Component {
                     )
                   })}
                 </Grid>
-                <Grid container item xs={5} direction="column" alignItems="flex-start" justify="space-around" className="Footer-nav">
+                <Grid container item xs={5} sm={3} md={4} direction="column" alignItems="flex-start" justify="space-around" className="Footer-nav">
                     <AppNav
                       links={context.header.navigation}
                       routes={context.routes} />
                 </Grid>
-                <Grid container item xs={3} direction="column" alignItems="flex-start" justify="space-between" className="Footer-right">
+                <Grid container item xs={12} sm={4} direction="column" alignItems="flex-start" justify="space-between" className="Footer-right">
                   <Grid container alignItems="center">
                     <MailIcon />
                     <strong>ekosonicwest@ukr.net</strong>

@@ -14,7 +14,7 @@ export default function Projects() {
   return (
     <LanguageConsumer>
       {(context) => (
-        <Grid container spacing={1} justify="space-between">
+        <Grid container spacing={1} justify="space-around">
           <Grid item xs={3}>
             <ContentNav
               title={
@@ -26,7 +26,7 @@ export default function Projects() {
               classItem="fontSmall" />
           </Grid>
 
-          <Grid item xs={9}>
+          <Grid item xs={12} md={9}>
             <Paper className={classes.paperContent} elevation={7}>
               <Typography className={classes.title} variant="subtitle2" component="h2" id="projects">
                 {context.projects.h2}

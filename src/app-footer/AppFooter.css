@@ -2,7 +2,6 @@
   min-height: 5rem;
   position: sticky;
   bottom: -10rem;
-  padding-left: 2rem;
   background-color: rgba(52, 74, 97, 0.4);
   color: #000038;
   font-size: 0.8rem;
@@ -12,6 +11,7 @@
 }
 .Footer-left {
   padding: 1.2rem 0;
+  padding-left: 2rem;
 }
 .Footer-nav {
   padding: 1rem;
@@ -33,4 +33,33 @@
 .Footer-right a {
   color: #000038;
   padding-left: 0.6rem;
+}
+
+@media screen and (max-width: 750px) {
+  .Footer-nav .Link {
+    font-size: 0.8rem;
+  }
+  .Footer-right {
+    font-size: 0.7rem;
+  }
+  .Footer-right strong{
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 599px) {
+  .App-footer {
+    font-size: 0.6rem;
+  }
+  .Footer-left {
+    padding-left: 1.5rem;
+  }
+  .Footer-nav .Link {
+    font-size: 0.7rem;
+  }
+  .Footer-right {
+    padding: 0 1.5rem 1rem;
+  }
+  .Footer-right strong{
+    font-size: 0.7rem;
+  }
 }

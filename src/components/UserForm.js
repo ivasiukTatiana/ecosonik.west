@@ -6,11 +6,13 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import CallIcon from '@material-ui/icons/Call';
 import Button from '@material-ui/core/Button';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 import Fade from '@material-ui/core/Fade';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import SuccessSubmit from './SuccessSubmit';
 
+const breakpoints = createBreakpoints({});
 const theme = createMuiTheme({
   overrides: {
     MuiFormControl: {
@@ -28,6 +30,18 @@ const theme = createMuiTheme({
             backgroundColor: 'rgba(150, 170, 180, 0.6)',
         },
       },
+      input: {
+        [breakpoints.down('xs')]: {
+          fontSize: '0.75rem',
+          padding: '1.2rem 0.7rem 0.4rem',
+        },
+      },
+      multiline: {
+        [breakpoints.down('xs')]: {
+          fontSize: '0.75rem',
+          padding: '1rem 0.7rem 0.3rem',
+        },
+      },
     },
     MuiInputBase: {
       root: {
@@ -37,13 +51,28 @@ const theme = createMuiTheme({
     MuiFormLabel: {
       root: {
         color: '#000038',
-      }
+        [breakpoints.down('xs')]: {
+          fontSize: '0.7rem',
+        },
+      },
+    },
+    MuiInputLabel: {
+      filled: {
+        [breakpoints.down('xs')]: {
+          transform: 'translate(12px, 10px) scale(1)',
+        },
+      },
     },
     MuiButton: {
+      root: {
+        [breakpoints.down('xs')]: {
+          fontSize: '0.4rem',
+        },
+      },
       contained: {
         backgroundColor: 'rgba(45, 45, 120, 0.15)',
         marginTop: '1rem',
-      }
+      },
     },
     MuiCircularProgress: {
       root: {
@@ -52,8 +81,15 @@ const theme = createMuiTheme({
       },
       colorPrimary: {
         color: '#000038',
-      }
-    }
+      },
+    },
+    MuiSvgIcon: {
+      root: {
+        [breakpoints.down('xs')]: {
+          fontSize: '0.8rem',
+        },
+      },
+    },
   },
 });
 
@@ -138,6 +174,11 @@ export default class UserForm extends Component {
     });
   };
 
+  /**
+  * @function handleSubmit
+  * @param event { obj } - submit event
+  * @return void
+  */
   handleSubmit = (event) => {
     event.preventDefault();
 

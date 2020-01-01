@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Switch, Route} from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 import './AppMain.css';
 import Home from '../components/Home';
@@ -9,6 +10,7 @@ import Products from '../components/Products';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
 
+const breakpoints = createBreakpoints({});
 const theme = createMuiTheme({
   overrides: {
     MuiPaper: {
@@ -20,6 +22,25 @@ const theme = createMuiTheme({
     MuiButton: {
       root: {
         textTransform: 'none',
+      },
+      textSizeSmall: {
+        [breakpoints.down('sm')]: {
+          fontSize: '0.75rem',
+        },
+        [breakpoints.down('xs')]: {
+          fontSize: '0.68rem',
+        },
+      },
+    },
+    MuiCardMedia: {
+      media: {
+        maxWidth: '5rem',
+        [breakpoints.down('sm')]: {
+          maxWidth: '4rem',
+        },
+        [breakpoints.down('xs')]: {
+          maxWidth: '3rem',
+        },
       },
     },
   },

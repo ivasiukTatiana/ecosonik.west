@@ -8,7 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   card: {
     backgroundColor: 'rgba(52, 74, 97, 0.1)',
     marginBottom: '0.2rem',
@@ -16,27 +16,42 @@ const useStyles = makeStyles({
   cardContent: {
     padding: '1rem 0.8rem 0',
     display: 'flex',
+    [theme.breakpoints.down('sm')]: {
+      padding: '0.7rem 0.4rem 0',
+    },
   },
   title: {
     fontSize: '0.96rem',
     lineHeight: 1.3,
     paddingLeft: '0.8rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.84rem',
+      paddingLeft: '0.5rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.7rem',
+      lineHeight: 1.2,
+    },
   },
   text: {
     textAlign: 'justify',
     paddingLeft: '0.8rem',
     fontSize: '0.95rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.84rem',
+      lineHeight: 1.1,
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.65rem',
+      lineHeight: 1.1,
+    },
   },
   action: {
     justifyContent: 'flex-end',
     paddingTop: 0,
     lineHeight: 1,
-  },
-  media: {
-    maxWidth: '5rem',
-    //padding: '0.3rem',
-  },
-});
+  }
+}));
 
 export default function ContentCard(props) {
   const classes = useStyles();
@@ -46,7 +61,6 @@ export default function ContentCard(props) {
         <CardMedia
         component="img"
         alt=""
-        className={classes.media}
         image={props.cardBody.images[0].image}
         title="" />
       )

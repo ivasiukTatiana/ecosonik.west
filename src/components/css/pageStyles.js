@@ -39,6 +39,17 @@ const pageStyles = makeStyles(theme => ({
       paddingLeft: '0.5rem',
     },
   },
+  contacts: {
+    paddingLeft: '2rem',
+    paddingBottom: '0.4rem',
+    fontSize: '0.8rem',
+    color: '#000038',
+    textShadow: '0px 0px 1px rgb(0, 0, 56)',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.6rem',
+      paddingBottom: '0.4rem',
+    },
+  },
   fontSmall: {
     padding: '0.6rem 1.1rem',
     fontSize: '0.85rem',
@@ -53,9 +64,15 @@ const pageStyles = makeStyles(theme => ({
   },
   title: {
     fontSize: '1rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.95rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.7rem',
+    },
     textAlign: 'center',
-    marginTop: '-7.6rem',
-    paddingTop: '7.6rem',
+    marginTop: '-6.16rem',
+    paddingTop: '6.16rem',
     marginBottom: '0.6rem',
   },
   text: {
@@ -64,17 +81,45 @@ const pageStyles = makeStyles(theme => ({
     textAlign: 'justify',
     lineHeight: 1.3,
     fontSize: '0.96rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.85rem',
+      padding: '0.5rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.7rem',
+      padding: '0.3rem',
+    },
+  },
+  list: {
+    [theme.breakpoints.down('xs')]: {
+      paddingLeft: '1.5rem',
+    },
   },
   listItem: {
     marginTop: '0.6rem',
     marginBottom: '0.6rem',
     fontSize: '0.95rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.8rem',
+      marginTop: '0.3rem',
+      marginBottom: '0.3rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.7rem',
+      lineHeight: 1.1,
+    },
   },
   userForm: {
     padding: '1.2rem',
     textAlign: 'center',
     "& .smallField": {
       width: '48%',
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: '0.5rem',
+      "& .smallField": {
+        width: '100%',
+      },
     },
   },
 }));

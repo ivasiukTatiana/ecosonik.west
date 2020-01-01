@@ -9,3 +9,6 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.2;
 }
+@media screen and (max-width: 1024px) {
+  /* start of large tablet styles*/
+}

@@ -50,21 +50,21 @@
       "address": ["76006 Україна", "м. Івано-Франківськ", "вул. 24 Серпня, 16"],
       "email": "ekosonicwest@ukr.net",
       "phone": "+38 099 336 21 63",
-      "head" : ["Директор", "Бойко Сергій Степанович"]
+      "head" : ["Директор: ", "Бойко Сергій Степанович"]
     },
     "ru": {
       "copyright": ["2019 \"НПФ Екосоник-Вест\" ООО", "Все права защищены."],
       "address": ["76006 Украина", "г. Ивано-Франковск", "ул. 24 Серпня, 16"],
       "email": "ekosonicwest@ukr.net",
       "phone": "+38 099 336 21 63",
-      "head" : ["Директор", "Бойко Сергей Степанович"]
+      "head" : ["Директор: ", "Бойко Сергей Степанович"]
     },
     "en": {
       "copyright": ["2019 \"Ecosonic-West SPF\" LLC", "All rights reserved"],
       "address": ["76006 Ukraine", "Ivano–Frankivs’k", "24 Serpna str, 16"],
       "email": "ekosonicwest@ukr.net",
       "phone": "+38 099 336 21 63",
-      "head" : ["Head of the company", "Sergij Bojko"]
+      "head" : ["Head of the company ", "Sergij Bojko"]
     }
   }
 }

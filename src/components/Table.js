@@ -2,18 +2,32 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   table: {
     width: '95%',
     fontSize: '0.8rem',
     margin: '0 auto 1rem',
     border: '1px solid rgba(0, 0, 56, 0.6)',
     borderCollapse: 'collapse',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.75rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.5rem',
+      lineHeight: 1.1,
+    },
   },
   title: {
     fontSize: '0.9rem',
     lineHeight: 1.4,
     marginBottom: '0.6rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.8rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.6rem',
+      lineHeight: 1.1,
+    },
   },
   firstCell: {
     width: '60%',
@@ -25,7 +39,7 @@ const useStyles = makeStyles({
   evenRow: {
     backgroundColor: 'rgba(52, 74, 97, 0.1)',
   }
-});
+}));
 
 export default function Table(props) {
   const classes = useStyles();
@@ -73,7 +87,6 @@ export default function Table(props) {
   }
   const TableFooter = () => {
     if (props.table.hasOwnProperty('tfooter')) {
-      console.log()
       return (
         <tfoot>
           <tr>

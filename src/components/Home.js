@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <LanguageConsumer>
       {(context) => (
-        <Grid container spacing={1} justify="space-between">
+        <Grid container spacing={1} justify="space-around">
           <Grid item xs={3}>
             <ContentNav
               title={
@@ -26,7 +26,7 @@ export default function Home() {
               classItem="navItem" />
           </Grid>
 
-          <Grid item xs={9}>
+          <Grid item xs={12} md={9}>
             <Paper className={classes.paperContent} elevation={7}>
               <Typography className={classes.text} variant="body1" component="p" gutterBottom>
                 {context.home.p1}
@@ -34,7 +34,7 @@ export default function Home() {
               <Typography className={classes.title} variant="subtitle2" component="h2" id="activities">
                 {context.home.h2}
               </Typography>
-              <ul>
+              <ul className={classes.list}>
                 {context.home.ulContent.map((item, index) => {
                   return (
                     <li key={index} className={classes.listItem}>{item}</li>

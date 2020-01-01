@@ -7,29 +7,56 @@ import Typography from '@material-ui/core/Typography';
 
 import Table from './Table';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   card: {
     //backgroundColor: 'rgba(52, 74, 97, 0.1)',
     marginBottom: '0.6rem',
   },
   anchor: {
-    marginTop: '-7.6rem',
-    paddingTop: '7.6rem',
+    marginTop: '-6.16rem',
+    paddingTop: '6.16rem',
   },
   cardContent: {
-    padding: '0.6rem',
+    padding: '1.2rem',
+    [theme.breakpoints.down('sm')]: {
+      padding: '0.6rem',
+    },
   },
   title: {
     fontSize: '1rem',
     lineHeight: 1.4,
     marginBottom: '0.6rem',
     backgroundColor: 'rgba(52, 74, 97, 0.1)',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.84rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.7rem',
+      lineHeight: 1.2,
+    },
+  },
+  customer: {
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.84rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.7rem',
+      lineHeight: 1.2,
+    },
   },
   text: {
     textAlign: 'justify',
     lineHeight: 1.35,
     fontSize: '0.95rem',
     marginTop: '0.6rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.84rem',
+      lineHeight: 1.2,
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.65rem',
+      lineHeight: 1.1,
+    },
   },
   media: {
     maxWidth: '26rem',
@@ -39,7 +66,7 @@ const useStyles = makeStyles({
     maxWidth: '95%',
     margin: '0.6rem auto',
   }
-});
+}));
 
 export default function CardWithImage(props) {
   const classes = useStyles();
@@ -73,11 +100,11 @@ export default function CardWithImage(props) {
   return (
     <Card className={classes.card} elevation={2}>
       <Typography component="p" className={classes.anchor} id={props.cardBody.link}/>
-      <CardContent >
+      <CardContent className={classes.cardContent}>
         <Typography className={classes.title} variant="subtitle2" component="h2" >
           {props.cardBody.title}
         </Typography>
-        <Typography variant="subtitle2" component="h3">
+        <Typography className={classes.customer} variant="subtitle2" component="h3">
           {props.cardBody.hasOwnProperty('customer') ? props.cardBody.customer : ""}
         </Typography>
         <CardTable />
