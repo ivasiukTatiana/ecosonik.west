@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/ecosonik.west/static/css/main.7d32649f.chunk.css",
-    "main.js": "/ecosonik.west/static/js/main.004d4708.chunk.js",
-    "main.js.map": "/ecosonik.west/static/js/main.004d4708.chunk.js.map",
+    "main.css": "/ecosonik.west/static/css/main.5a1750e8.chunk.css",
+    "main.js": "/ecosonik.west/static/js/main.d3c0d60e.chunk.js",
+    "main.js.map": "/ecosonik.west/static/js/main.d3c0d60e.chunk.js.map",
     "runtime-main.js": "/ecosonik.west/static/js/runtime-main.ca490f8c.js",
     "runtime-main.js.map": "/ecosonik.west/static/js/runtime-main.ca490f8c.js.map",
-    "static/js/2.3a3b0477.chunk.js": "/ecosonik.west/static/js/2.3a3b0477.chunk.js",
-    "static/js/2.3a3b0477.chunk.js.map": "/ecosonik.west/static/js/2.3a3b0477.chunk.js.map",
+    "static/js/2.c84a6ba7.chunk.js": "/ecosonik.west/static/js/2.c84a6ba7.chunk.js",
+    "static/js/2.c84a6ba7.chunk.js.map": "/ecosonik.west/static/js/2.c84a6ba7.chunk.js.map",
     "index.html": "/ecosonik.west/index.html",
-    "precache-manifest.4091c6220e0691f6cf2a4f07ce4b39e4.js": "/ecosonik.west/precache-manifest.4091c6220e0691f6cf2a4f07ce4b39e4.js",
+    "precache-manifest.47b8338b35f8e30de831e3925b42cb81.js": "/ecosonik.west/precache-manifest.47b8338b35f8e30de831e3925b42cb81.js",
     "service-worker.js": "/ecosonik.west/service-worker.js",
-    "static/css/main.7d32649f.chunk.css.map": "/ecosonik.west/static/css/main.7d32649f.chunk.css.map",
+    "static/css/main.5a1750e8.chunk.css.map": "/ecosonik.west/static/css/main.5a1750e8.chunk.css.map",
     "static/media/index.css": "/ecosonik.west/static/media/fon.ec666c80.jpg",
     "static/media/AppHeader.css": "/ecosonik.west/static/media/logo.a928e7c9.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.ca490f8c.js",
-    "static/js/2.3a3b0477.chunk.js",
-    "static/css/main.7d32649f.chunk.css",
-    "static/js/main.004d4708.chunk.js"
+    "static/js/2.c84a6ba7.chunk.js",
+    "static/css/main.5a1750e8.chunk.css",
+    "static/js/main.d3c0d60e.chunk.js"
   ]
 }
