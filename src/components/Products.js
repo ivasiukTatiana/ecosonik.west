@@ -15,7 +15,7 @@ export default function Products() {
     <LanguageConsumer>
       {(context) => (
         <Grid container spacing={1} justify="space-around">
-          <Grid item xs={3}>
+          <Grid item xs={1} md={3}>
             <ContentNav
               title={
                 context.header.navigation.filter((item) => {
@@ -26,7 +26,7 @@ export default function Products() {
               classItem="fontSmall" />
           </Grid>
 
-          <Grid item xs={12} md={9}>
+          <Grid item xs={11} md={9}>
             <Paper className={classes.paperContent} elevation={7}>
               <Typography className={classes.title} variant="subtitle2" component="h2" id="products">
                 {context.products.h2}

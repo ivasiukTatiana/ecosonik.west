@@ -2,18 +2,10 @@
   min-height: 26rem;
 }
 
-/* start of desktop styles */
-
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 968px) {
   /* start of large tablet styles */
-
-}
-
-@media screen and (max-width: 767px) {
-  /* start of medium tablet styles */
-
-}
-
-@media screen and (max-width: 479px) {
-  /* start of phone styles */
+  .App-main {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }

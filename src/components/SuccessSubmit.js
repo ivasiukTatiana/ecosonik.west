@@ -10,9 +10,15 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
   success: {
     backgroundColor: 'rgba(0, 105, 50, 0.6)',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.7rem',
+    },
   },
   error: {
     backgroundColor: 'rgba(255, 105, 50, 0.6)',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.7rem',
+    },
   },
   icon: {
     fontSize: 20,

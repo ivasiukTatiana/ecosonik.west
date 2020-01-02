@@ -2,9 +2,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const pageStyles = makeStyles(theme => ({
   stickyNav: {
-    position: "sticky",
-    top: "6.16rem",
-    //backgroundColor: 'rgba(52, 74, 97, 0.3)',
+    position: 'sticky',
+    top: '6.16rem',
+    //backgroundColor: 'rgba(230, 230, 230, 0.1)',
     paddingBottom: '0.5rem',
     maxHeight: '31rem',
     overflowY: 'auto',
@@ -14,6 +14,16 @@ const pageStyles = makeStyles(theme => ({
     "-ms-overflow-style": 'none',
     scrollbarWidth: 'none',
     boxShadow: '-2px -2px 4px rgba(27, 39, 51, 0.6)',
+    [theme.breakpoints.down('sm')]: {
+      backgroundColor: 'rgba(230, 230, 230, 0.3)',
+      maxHeight: '25rem',
+    },
+  },
+  contactData: {
+    [theme.breakpoints.down('sm')]: {
+      paddingBottom: '0.5rem',
+      backgroundColor: 'rgba(230, 230, 230, 0.3)',
+    },
   },
   navigation: {
     listStyleType: "none",
@@ -26,6 +36,13 @@ const pageStyles = makeStyles(theme => ({
     padding: '1.5rem 1.5rem 0',
     color: '#000038',
     textShadow: '0px 0px 1px rgb(0, 0, 0)',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.1rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.9rem',
+      padding: '1rem 1rem 0',
+    },
   },
   navItem: {
     padding: '0.6rem 1.1rem',
@@ -35,19 +52,48 @@ const pageStyles = makeStyles(theme => ({
     "&:hover": {
       backgroundColor: 'rgba(52, 74, 97, 0.1)',
     },
-    "& strong": {
-      paddingLeft: '0.5rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.8rem',
+      padding: '0.4rem 0.9rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.7rem',
+      padding: '0.3rem 0.7rem',
+    },
+  },
+  strong: {
+    paddingLeft: '0.5rem',
+    fontWeight: 900,
+    [theme.breakpoints.down('sm')]: {
+      fontWeight: 400,
     },
   },
   contacts: {
     paddingLeft: '2rem',
-    paddingBottom: '0.4rem',
-    fontSize: '0.8rem',
+    paddingTop: '0.4rem',
+    fontSize: '0.9rem',
     color: '#000038',
-    textShadow: '0px 0px 1px rgb(0, 0, 56)',
+    textShadow: '0px 0px 1px rgba(0, 0, 56, 0.7)',
     [theme.breakpoints.down('xs')]: {
       fontSize: '0.6rem',
-      paddingBottom: '0.4rem',
+      paddingTop: '0.3rem',
+    },
+  },
+  menuButton: {
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+    backgroundColor: 'rgba(188, 188, 188, 0.4)',
+    position: 'sticky',
+    top: '6.16rem',
+    [theme.breakpoints.down('xs')]: {
+      top: '5.05rem',
+    },
+  },
+  drawer: {
+    width: '14rem',
+    [theme.breakpoints.down('xs')]: {
+      width: '11rem',
     },
   },
   fontSmall: {
@@ -57,6 +103,14 @@ const pageStyles = makeStyles(theme => ({
     textShadow: '0px 0px 1px rgb(0, 0, 0)',
     "&:hover": {
       backgroundColor: 'rgba(52, 74, 97, 0.1)',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.8rem',
+      padding: '0.4rem 0.9rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.7rem',
+      padding: '0.3rem 0.7rem',
     },
   },
   paperContent: {
@@ -68,7 +122,7 @@ const pageStyles = makeStyles(theme => ({
       fontSize: '0.95rem',
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '0.7rem',
+      fontSize: '0.6rem',
     },
     textAlign: 'center',
     marginTop: '-6.16rem',
@@ -96,13 +150,12 @@ const pageStyles = makeStyles(theme => ({
     },
   },
   listItem: {
-    marginTop: '0.6rem',
     marginBottom: '0.6rem',
     fontSize: '0.95rem',
+    lineHeight: 1.2,
     [theme.breakpoints.down('sm')]: {
       fontSize: '0.8rem',
-      marginTop: '0.3rem',
-      marginBottom: '0.3rem',
+      marginBottom: '0.4rem',
     },
     [theme.breakpoints.down('xs')]: {
       fontSize: '0.7rem',

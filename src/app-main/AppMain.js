@@ -5,7 +5,6 @@ import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 import './AppMain.css';
 import Home from '../components/Home';
-import Services from '../components/services/Services';
 import Products from '../components/Products';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
@@ -22,6 +21,7 @@ const theme = createMuiTheme({
     MuiButton: {
       root: {
         textTransform: 'none',
+        color: '#000038',
       },
       textSizeSmall: {
         [breakpoints.down('sm')]: {
@@ -54,7 +54,6 @@ class AppMain extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/home" component={Home} />
-            <Route path="/services" component={Services} />
             <Route path="/products" component={Products} />
             <Route path="/projects" component={Projects} />
             <Route path="/contacts" component={Contacts} />

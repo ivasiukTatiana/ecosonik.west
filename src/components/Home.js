@@ -15,7 +15,7 @@ export default function Home() {
     <LanguageConsumer>
       {(context) => (
         <Grid container spacing={1} justify="space-around">
-          <Grid item xs={3}>
+          <Grid item xs={1} md={3}>
             <ContentNav
               title={
                 context.header.navigation.filter((item) => {
@@ -26,7 +26,7 @@ export default function Home() {
               classItem="navItem" />
           </Grid>
 
-          <Grid item xs={12} md={9}>
+          <Grid item xs={11} md={9}>
             <Paper className={classes.paperContent} elevation={7}>
               <Typography className={classes.text} variant="body1" component="p" gutterBottom>
                 {context.home.p1}

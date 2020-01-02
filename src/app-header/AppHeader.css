@@ -12,7 +12,7 @@
 .Logo {
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 1301;
   background-image: url(../assets/images/logo.jpg);
   background-position: top right;
   background-color: #7c8cad;

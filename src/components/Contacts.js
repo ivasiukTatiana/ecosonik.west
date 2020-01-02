@@ -4,16 +4,13 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import CallIcon from '@material-ui/icons/Call';
 import MailIcon from '@material-ui/icons/Mail';
-
 import Hidden from '@material-ui/core/Hidden';
-
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 import useStyles from './css/pageStyles';
 import { LanguageConsumer } from '../providers/LanguageProvider';
 import UserForm from './UserForm';
-
 
 const breakpoints = createBreakpoints({});
 const theme = createMuiTheme({
@@ -34,6 +31,34 @@ const theme = createMuiTheme({
 
 export default function Contacts() {
   const classes = useStyles();
+  const ContactData = (props) => {
+    return (
+      <div className={classes.contactData}>
+        <Grid container direction="column" alignItems="flex-start"
+          className={props.classes}>
+          {props.data.address.map((item, index) => {
+            return (
+              <span key={index}>{item}</span>
+            )
+          })}
+        </Grid>
+        <Grid container alignItems="center" className={props.classes}>
+          <MailIcon />
+          <span className={classes.strong}>{props.data.email}</span>
+        </Grid>
+        <Grid container alignItems="center" className={props.classes}>
+          <CallIcon />
+          <span className={classes.strong}>{props.data.phone}</span>
+        </Grid>
+        <Grid container alignItems="center" className={props.classes}>
+          {props.data.head.map((item, index) => {
+            return <span key={index}>{item}</span>
+          })}
+        </Grid>
+      </div>
+    )
+  }
+
   return(
     <LanguageConsumer>
       {(context) => (
@@ -46,27 +71,7 @@ export default function Contacts() {
                       return item.hasOwnProperty("contacts");
                     }).map((item) => { return item.contacts; })}
                 </Typography>
-                <Grid container direction="column" alignItems="flex-start"
-                className={classes.navItem}>
-                  {context.footer.address.map((item, index) => {
-                    return (
-                      <span key={index}>{item}</span>
-                    )
-                  })}
-                </Grid>
-                <Grid container alignItems="center" className={classes.navItem}>
-                  <MailIcon />
-                  <strong>{context.footer.email}</strong>
-                </Grid>
-                <Grid container alignItems="center" className={classes.navItem}>
-                  <CallIcon />
-                  <strong>{context.footer.phone}</strong>
-                </Grid>
-                <Grid container alignItems="center" className={classes.navItem}>
-                  {context.footer.head.map((item, index) => {
-                    return <span key={index}>{item}</span>
-                  })}
-                </Grid>
+                <ContactData data={context.footer} classes={classes.navItem} />
               </div>
             </Hidden>
           </Grid>
@@ -74,27 +79,7 @@ export default function Contacts() {
           <Grid item xs={12} md={9}>
             <ThemeProvider theme={theme}>
               <Hidden mdUp>
-                <Grid container direction="column" alignItems="flex-start"
-                className={classes.contacts}>
-                  {context.footer.address.map((item, index) => {
-                    return (
-                      <span key={index}>{item}</span>
-                    )
-                  })}
-                </Grid>
-                <Grid container alignItems="center" className={classes.contacts}>
-                  <MailIcon />
-                  {context.footer.email}
-                </Grid>
-                <Grid container alignItems="center" className={classes.contacts}>
-                  <CallIcon />
-                  {context.footer.phone}
-                </Grid>
-                <Grid container className={classes.contacts}>
-                  {context.footer.head.map((item, index) => {
-                    return <span key={index}>{item}</span>
-                  })}
-                </Grid>
+                <ContactData data={context.footer} classes={classes.contacts} />
               </Hidden>
             </ThemeProvider>
 
