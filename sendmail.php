@@ -18,6 +18,7 @@
   $message = $_POST['message'];
 
   $adminEmail = "ekosonicwest@ukr.net, tivasyuk@i.ua";
+  //$adminEmail = tivasyuk@i.ua";
 
   $subject = "message from ekosonic-west.com";
   $message = "Ім'я: $name\r\nКомпанія: $company\r\nТелефон: $phone\r\nТема повідомлення: $usersubject\r\n$message\r\n";
