@@ -15,6 +15,11 @@ const useStyles = makeStyles(theme => ({
   },
   menuItem: {
     fontSize: 12,
+    backgroundColor: 'rgba(230, 230, 230, 0.7)',
+    fontWeight: 500,
+    "&:hover": {
+      backgroundColor: 'rgba(210, 210, 210, 0.7)',
+    },
     [theme.breakpoints.only('xs')]: {
       fontSize: 10,
       minHeight: 30,

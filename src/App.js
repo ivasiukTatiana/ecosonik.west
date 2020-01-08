@@ -58,9 +58,11 @@ const theme = createMuiTheme({
         maxWidth: '5rem',
         [breakpoints.down('sm')]: {
           maxWidth: '4rem',
+          maxHeight: '4.8rem',
         },
         [breakpoints.down('xs')]: {
           maxWidth: '3rem',
+          maxHeight: '3.6rem',
         },
       },
     },
