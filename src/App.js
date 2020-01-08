@@ -15,7 +15,6 @@ const theme = createMuiTheme({
     MuiContainer: {
       root: {
         boxSizing: 'content-box',
-        marginTop: '0.2rem',
         [breakpoints.down('md')]: {
           paddingLeft: 0,
           paddingRight: 0,
@@ -32,6 +31,38 @@ const theme = createMuiTheme({
           fontSize: '0.6rem',
         },
       }
+    },
+    MuiPaper: {
+      root: {
+        color: '#000038',
+        backgroundColor: 'rgba(230, 230, 230, 0.6)',
+      },
+    },
+    MuiButton: {
+      root: {
+        textTransform: 'none',
+        color: '#000038',
+      },
+      text: {
+        paddingTop: 0,
+        [breakpoints.down('sm')]: {
+          fontSize: '0.75rem',
+        },
+        [breakpoints.down('xs')]: {
+          fontSize: '0.68rem',
+        },
+      },
+    },
+    MuiCardMedia: {
+      media: {
+        maxWidth: '5rem',
+        [breakpoints.down('sm')]: {
+          maxWidth: '4rem',
+        },
+        [breakpoints.down('xs')]: {
+          maxWidth: '3rem',
+        },
+      },
     },
   },
 });

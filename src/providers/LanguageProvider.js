@@ -50,7 +50,6 @@ class LanguageProvider extends Component {
   }
 
   updateLanguage = (event) => {
-    //console.log(this);
     let language = event.target.value;
     /*this.setState(prevState => {})*/
     let updatedHeader = this.state.titles.header[language];

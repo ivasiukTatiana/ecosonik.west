@@ -2,12 +2,14 @@
   min-height: 5rem;
   position: sticky;
   bottom: -10rem;
-  background-color: rgba(52, 74, 97, 0.4);
+  background-color: rgba(52, 74, 97, 0.5);
   color: #000038;
+  font-family: 'Oswald', sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   line-height: 1.2;
   box-shadow: -2px -2px 4px rgba(27, 39, 51, 0.6);
+  margin-top: 0.3rem;
 }
 .Footer-left {
   padding: 1.2rem 0;

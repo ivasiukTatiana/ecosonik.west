@@ -6,9 +6,6 @@ body {
   margin: 0;
   background: url(assets/images/fon.jpg) no-repeat fixed;
   background-size: cover;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   line-height: 1.2;
-}
-@media screen and (max-width: 1024px) {
-  /* start of large tablet styles*/
 }

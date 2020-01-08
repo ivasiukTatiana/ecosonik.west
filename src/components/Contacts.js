@@ -8,7 +8,7 @@ import Hidden from '@material-ui/core/Hidden';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
-import useStyles from './css/pageStyles';
+import pageStyles from './css/pageStyles';
 import { LanguageConsumer } from '../providers/LanguageProvider';
 import UserForm from './UserForm';
 
@@ -30,7 +30,7 @@ const theme = createMuiTheme({
 });
 
 export default function Contacts() {
-  const classes = useStyles();
+  const classes = pageStyles();
   const ContactData = (props) => {
     return (
       <div className={classes.contactData}>

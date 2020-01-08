@@ -65,12 +65,14 @@ const theme = createMuiTheme({
     },
     MuiButton: {
       root: {
+        textTransform: 'none',
         [breakpoints.down('xs')]: {
           fontSize: '0.4rem',
         },
       },
       contained: {
         backgroundColor: 'rgba(45, 45, 120, 0.15)',
+        color: '#000038',
         marginTop: '1rem',
       },
     },

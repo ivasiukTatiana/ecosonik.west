@@ -1,13 +1,8 @@
 .App-header {
-  /*position: sticky;
-  top: 0;*/
-  background-color: rgba(52, 74, 97, 0.4);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /*background-color: rgba(52, 74, 97, 0.5);*/
   color: #000038;
   line-height: 1.2;
-  box-shadow: 2px 2px 4px rgba(27, 39, 51, 0.6);
+  /*box-shadow: 2px 2px 4px rgba(27, 39, 51, 0.6);*/
 }
 .Logo {
   position: fixed;
@@ -43,35 +38,6 @@
   display: flex;
   justify-content: space-around;
 }
-.Header-center {
-  margin: 0.5rem auto 0.2rem;
-  padding-left: 6rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 700;
-  letter-spacing: 0.5rem;
-  text-transform: uppercase;
-}
-.Header-center span:nth-child(1){
-  font-size: 1.1rem;
-  text-shadow: 1px 1px 1px #d0d0d0;
-}
-.Header-center span:nth-child(2){
-  font-size: 1.6rem;
-  text-shadow: 2px 2px 1px #fc0;
-}
-.Header-phone {
-  display: flex;
-  align-items: flex-end;
-  margin-left: -8rem;
-  margin-right: 0.8rem;
-  margin-bottom: 0.2rem;
-}
-.Header-phone strong {
-  text-shadow: 2px 2px 2px rgba(27, 39, 51, 0.5);
-  font-size: 0.8rem;
-}
 .Header-right {
   margin: 0.5rem 0;
   display: flex;
@@ -83,21 +49,20 @@
 nav {
   position: relative;
   z-index: 9;
-  width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding-top: 0.2rem;
-  margin-top: 0.2rem;
-  box-shadow: 2px -2px 4px rgba(27, 39, 51, 0.4);
-  border-top-right-radius: 0.2rem;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 nav .Link{
-  margin-left: 1rem;
+  margin-right: 1rem;
   padding: 0 0.5rem;
   color: #000038;
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
   text-decoration: none;
+  text-transform: uppercase;
   padding-bottom: 0.3rem;
 }
 nav .Link:hover{
@@ -117,9 +82,6 @@ nav .Link:hover{
   .Header-right {
     margin-right: 0.5rem;
   }
-  nav .Link{
-    font-size: 0.8rem;
-  }
 }
 @media screen and (max-width: 820px) {
   .Logo {
@@ -134,21 +96,6 @@ nav .Link:hover{
     margin-right: -5.4rem;
     margin-top: -0.8rem;
   }
-  .Header-center {
-    letter-spacing: 0.4rem;
-  }
-  .Header-center span:nth-child(1){
-    font-size: 0.9rem;
-  }
-  .Header-center span:nth-child(2){
-    font-size: 1.4rem;
-  }
-  .Header-phone {
-    margin-right: 0.4rem;
-  }
-  .Header-phone strong {
-    font-size: 0.6rem;
-  }
 }
 @media screen and (max-width: 750px) {
   .Logo {
@@ -162,15 +109,8 @@ nav .Link:hover{
   .Logo span:last-child {
     margin-right: -4.2rem;
   }
-  .Header-center {
-    letter-spacing: 0.3rem;
-  }
-  .Header-center span:nth-child(1){
-    font-size: 0.7rem;
-  }
-  .Header-center span:nth-child(2){
-    font-size: 0.9rem;
-    text-shadow: 1px 1px 1px #fc0;
+  nav {
+    margin-bottom: 0rem;
   }
 }
 @media screen and (max-width: 599px) {
@@ -186,32 +126,16 @@ nav .Link:hover{
     margin-right: -3.1rem;
     margin-top: -0.4rem;
   }
-  .Header-center {
-    letter-spacing: 0.1rem;
-    margin: 0.2rem auto;
-  }
-  .Header-center span:nth-child(1){
-    font-size: 0.5rem;
-  }
-  .Header-center span:nth-child(2){
-    font-size: 0.8rem;
-  }
-  .Header-phone {
-    margin-right: 0.4rem;
-    margin-left: -10rem;
-  }
-  .Header-phone strong {
-    font-size: 0.5rem;
-  }
-  .Header-center {
-    padding-left: 0;
-  }
   nav .Link{
     margin-left: 0;
+    margin-right: 0.2rem;
+    font-size: 0.65rem;
+    padding: 0 0.3rem;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
   nav .Link{
-    font-size: 0.6rem;
+    font-size: 0.4rem;
+    padding: 0 0.2rem;
   }
 }

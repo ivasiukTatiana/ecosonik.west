@@ -4,7 +4,6 @@ import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
-//import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import MenuIcon from '@material-ui/icons/Menu';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
@@ -23,10 +22,10 @@ const theme = createMuiTheme({
     },
     MuiDrawer: {
       paper: {
-        top: '6.16rem',
+        top: '4rem',
         height: 'inherit',
-        [breakpoints.down('sm')]: {
-          top: '5.05rem',
+        [breakpoints.down('xs')]: {
+          top: '3rem',
         },
       },
     },

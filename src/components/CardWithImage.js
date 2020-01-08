@@ -13,8 +13,8 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '0.6rem',
   },
   anchor: {
-    marginTop: '-6.16rem',
-    paddingTop: '6.16rem',
+    marginTop: '-6rem',
+    paddingTop: '6rem',
   },
   cardContent: {
     padding: '1.2rem',
@@ -24,6 +24,7 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     fontSize: '1rem',
+    fontFamily: 'Oswald',
     lineHeight: 1.4,
     marginBottom: '0.6rem',
     backgroundColor: 'rgba(52, 74, 97, 0.1)',
@@ -119,7 +120,7 @@ export default function CardWithImage(props) {
 
               <CardMedia
                 component="img"
-                alt=""
+                alt={image.alt}
                 className={classes[image.class]}
                 image={image.image}
                 title={image.text}

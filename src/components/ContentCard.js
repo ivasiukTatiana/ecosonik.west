@@ -10,7 +10,8 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    backgroundColor: 'rgba(52, 74, 97, 0.1)',
+    //backgroundColor: 'rgba(52, 74, 97, 0.1)',
+    backgroundColor: 'rgba(230, 230, 230, 0.2)',
     marginBottom: '0.2rem',
   },
   cardContent: {
@@ -21,7 +22,10 @@ const useStyles = makeStyles(theme => ({
     },
   },
   title: {
-    fontSize: '0.96rem',
+    backgroundColor: 'rgba(230, 230, 230, 0.1)',
+    fontSize: '1rem',
+    fontFamily: 'Oswald',
+    fontWeight: 700,
     lineHeight: 1.3,
     paddingLeft: '0.8rem',
     [theme.breakpoints.down('sm')]: {
@@ -34,6 +38,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   text: {
+    color: '#000038',
     textAlign: 'justify',
     paddingLeft: '0.8rem',
     fontSize: '0.95rem',
@@ -60,7 +65,7 @@ export default function ContentCard(props) {
       return (
         <CardMedia
         component="img"
-        alt=""
+        alt={props.cardBody.images[0].alt}
         image={props.cardBody.images[0].image}
         title="" />
       )
@@ -84,7 +89,7 @@ export default function ContentCard(props) {
       </CardContent>
       <CardActions className={classes.action}>
         <HashLink to={props.link}>
-          <Button size="small">{props.button}</Button>
+          <Button>{props.button}</Button>
         </HashLink>
       </CardActions>
     </Card>
