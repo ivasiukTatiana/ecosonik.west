@@ -4,7 +4,7 @@ const pageStyles = makeStyles(theme => ({
 
   headerCenter: {
     boxShadow: '2px -2px 3px rgba(27, 39, 51, 0.6)',
-    paddingTop: '1rem',
+    paddingTop: '1.5rem',
     marginBottom: '2rem',
     borderTopRightRadius: '3px',
     display: 'flex',
@@ -15,7 +15,7 @@ const pageStyles = makeStyles(theme => ({
     letterSpacing: '0.5rem',
     textTransform: 'uppercase',
     fontSize: '1.5rem',
-    fontStyle: 'italic',
+    //fontStyle: 'italic',
     "& span:nth-child(1)": {
       textShadow: '1px 1px 1px #d0d0d0',
     },
@@ -45,14 +45,14 @@ const pageStyles = makeStyles(theme => ({
   slider: {
     //backgroundColor: 'rgba(230, 230, 230, 0.3)',
     boxShadow: '-2px 2px 2px rgba(27, 39, 51, 0.6)',
-    padding: '0.5rem',
+    padding: '1rem',
     paddingLeft: '6rem',
     marginTop: '1rem',
-    marginBottom: '2rem',
+    //marginBottom: '2rem',
     color: '#000038',
     fontSize: '1.2rem',
     fontFamily: '"Oswald", sans-serif',
-    fontStyle: 'italic',
+    //fontStyle: 'italic',
     textShadow: '1px 1px 1px #d0d0d0',
     borderBottomLeftRadius: '3px',
     [theme.breakpoints.down('sm')]: {

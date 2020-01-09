@@ -66,8 +66,9 @@ const theme = createMuiTheme({
     MuiButton: {
       root: {
         textTransform: 'none',
+        fontSize: '0.95rem',
         [breakpoints.down('xs')]: {
-          fontSize: '0.4rem',
+          fontSize: '0.6rem',
         },
       },
       contained: {
