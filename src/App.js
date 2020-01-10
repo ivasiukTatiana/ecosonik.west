@@ -38,6 +38,14 @@ const theme = createMuiTheme({
         backgroundColor: 'rgba(230, 230, 230, 0.6)',
       },
     },
+    MuiTypography: {
+      body1: {
+        fontFamily: '"Roboto Condensed", sans-serif',
+      },
+      body2: {
+        fontFamily: '"Roboto Condensed", sans-serif',
+      },
+    },
     MuiButton: {
       root: {
         textTransform: 'none',

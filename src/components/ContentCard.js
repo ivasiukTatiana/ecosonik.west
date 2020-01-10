@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
     color: '#000038',
     textAlign: 'justify',
     paddingLeft: '0.8rem',
-    fontSize: '0.95rem',
+    //fontSize: '0.95rem',
     [theme.breakpoints.down('sm')]: {
       fontSize: '0.84rem',
       lineHeight: 1.1,

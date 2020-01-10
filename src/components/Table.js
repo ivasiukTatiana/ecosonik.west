@@ -35,6 +35,7 @@ const useStyles = makeStyles(theme => ({
   },
   cell: {
     padding: '0.2rem 0.4rem',
+    fontFamily: '"Roboto Condensed", sans-serif',
   },
   evenRow: {
     backgroundColor: 'rgba(52, 74, 97, 0.1)',
