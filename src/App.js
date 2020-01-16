@@ -48,29 +48,16 @@ const theme = createMuiTheme({
     },
     MuiButton: {
       root: {
-        textTransform: 'none',
+        //textTransform: 'none',
         color: '#000038',
       },
       text: {
-        paddingTop: 0,
+        //paddingTop: 0,
         [breakpoints.down('sm')]: {
           fontSize: '0.75rem',
         },
         [breakpoints.down('xs')]: {
           fontSize: '0.68rem',
-        },
-      },
-    },
-    MuiCardMedia: {
-      media: {
-        maxWidth: '5rem',
-        [breakpoints.down('sm')]: {
-          maxWidth: '4rem',
-          maxHeight: '4.8rem',
-        },
-        [breakpoints.down('xs')]: {
-          maxWidth: '3rem',
-          maxHeight: '3.6rem',
         },
       },
     },

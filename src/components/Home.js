@@ -22,36 +22,43 @@ export default function Home() {
             <ActivitiesSlider className={classes.slider} content={context.home.ulContent} />
           </Grid>
 
-          <Grid item xs={12}>
-            <Typography className={classes.text} variant="subtitle2" component="h4" gutterBottom>
-              {context.home.p1}
-            </Typography>
+          <Grid container item xs={12} spacing={1}>
+            <Grid item xs={12}>
+              <Typography className={classes.text} variant="subtitle2" component="h4" gutterBottom>
+                {context.home.p1}
+              </Typography>
 
-            <ContentCard
-              link={context.home.cards[0].link}
-              cardBody = {context.home.cards[0]}
-              button={context.home.button} />
+              <ContentCard
+                link={context.home.cards[0].link}
+                cardBody = {context.home.cards[0]}
+                button={context.home.button} />
+            </Grid>
 
             {context.projects.cards.map((card, index) => {
               return (
-                <ContentCard key={index}
-                link={`/projects#${card.link}`}
-                cardBody = {card}
-                button={context.home.button} />
+                 <Grid item sm={6} xs={12}>
+                  <ContentCard key={index}
+                  link={`/projects#${card.link}`}
+                  cardBody = {card}
+                  button={context.home.button}
+                  direction="column" />
+                </Grid>
               )
             })}
 
-            <Typography className={classes.text} variant="subtitle2" component="h4" gutterBottom>
-              {context.home.p2}
-            </Typography>
-            <ContentCard
-              link={context.home.cards[1].link}
-              cardBody={context.home.cards[1]}
-              button={context.home.button} />
+            <Grid item xs={12}>
+              <Typography className={classes.text} variant="subtitle2" component="h4" gutterBottom>
+                {context.home.p2}
+              </Typography>
+              <ContentCard
+                link={context.home.cards[1].link}
+                cardBody={context.home.cards[1]}
+                button={context.home.button} />
 
-            <Typography className={classes.text} variant="body1" component="p" gutterBottom>
-              {context.home.p3}
-            </Typography>
+              <Typography className={classes.text} variant="body1" component="p" gutterBottom>
+                {context.home.p3}
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
       )}

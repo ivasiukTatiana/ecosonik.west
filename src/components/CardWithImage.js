@@ -60,8 +60,12 @@ const useStyles = makeStyles(theme => ({
     },
   },
   media: {
-    maxWidth: '26rem',
+    maxWidth: '65%',
     margin: '0.6rem auto',
+    [theme.breakpoints.down('xs')]: {
+      maxWidth: '95%',
+      //maxHeight: '4.8rem',
+    },
   },
   bigmedia: {
     maxWidth: '95%',

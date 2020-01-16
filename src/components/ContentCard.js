@@ -10,27 +10,51 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    //backgroundColor: 'rgba(52, 74, 97, 0.1)',
     backgroundColor: 'rgba(230, 230, 230, 0.2)',
     marginBottom: '0.2rem',
   },
   cardContent: {
-    padding: '1rem 0.8rem 0',
+    padding: 0,
     display: 'flex',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+    },
+  },
+  column: {
+    flexDirection: 'column',
+    minHeight: '22.5rem',
     [theme.breakpoints.down('sm')]: {
-      padding: '0.7rem 0.4rem 0',
+      minHeight: '18rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      minHeight: 0,
+    },
+  },
+  cardText: {
+    width: '100%',
+    minHeight: '10rem',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    padding: '1.2rem',
+    paddingBottom: 0,
+
+    [theme.breakpoints.down('sm')]: {
+      padding: '0.5rem',
+      paddingBottom: 0,
+      minHeight: '7.5rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      minHeight: 0,
     },
   },
   title: {
-    backgroundColor: 'rgba(230, 230, 230, 0.1)',
     fontSize: '1rem',
     fontFamily: 'Oswald',
     fontWeight: 700,
     lineHeight: 1.3,
-    paddingLeft: '0.8rem',
     [theme.breakpoints.down('sm')]: {
       fontSize: '0.84rem',
-      paddingLeft: '0.5rem',
     },
     [theme.breakpoints.down('xs')]: {
       fontSize: '0.7rem',
@@ -38,10 +62,6 @@ const useStyles = makeStyles(theme => ({
     },
   },
   text: {
-    color: '#000038',
-    textAlign: 'justify',
-    paddingLeft: '0.8rem',
-    //fontSize: '0.95rem',
     [theme.breakpoints.down('sm')]: {
       fontSize: '0.84rem',
       lineHeight: 1.1,
@@ -53,9 +73,14 @@ const useStyles = makeStyles(theme => ({
   },
   action: {
     justifyContent: 'flex-end',
-    paddingTop: 0,
-    lineHeight: 1,
-  }
+    paddingBottom: 0,
+  },
+  media: {
+    maxHeight: '11rem',
+    [theme.breakpoints.down('sm')]: {
+      maxHeight: '8rem',
+    },
+  },
 }));
 
 export default function ContentCard(props) {
@@ -64,10 +89,11 @@ export default function ContentCard(props) {
     if (props.cardBody.images.length !== 0) {
       return (
         <CardMedia
-        component="img"
-        alt={props.cardBody.images[0].alt}
-        image={props.cardBody.images[0].image}
-        title="" />
+          component="img"
+          alt={props.cardBody.images[0].alt}
+          image={props.cardBody.images[0].image}
+          title=""
+          className={classes.media} />
       )
     } else {
       return <React.Fragment />
@@ -76,22 +102,24 @@ export default function ContentCard(props) {
 
   return (
     <Card className={classes.card} elevation={4}>
-      <CardContent className={classes.cardContent}>
+      <CardContent className={props.direction === "column" ?
+        `${classes.cardContent} ${classes[props.direction]}`:`${classes.cardContent}`}>
         <Image />
-        <div>
+        <div className={classes.cardText}>
           <Typography className={classes.title} variant="subtitle2" component="h3" gutterBottom>
             {props.cardBody.title}
           </Typography>
           <Typography className={classes.text} variant="body1" component="p">
             {props.cardBody.customer}
           </Typography>
+
+          <CardActions className={classes.action}>
+            <HashLink to={props.link}>
+              <Button>{props.button}</Button>
+            </HashLink>
+          </CardActions>
         </div>
       </CardContent>
-      <CardActions className={classes.action}>
-        <HashLink to={props.link}>
-          <Button>{props.button}</Button>
-        </HashLink>
-      </CardActions>
     </Card>
   );
 }
