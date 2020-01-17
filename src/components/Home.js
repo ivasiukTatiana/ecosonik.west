@@ -36,12 +36,11 @@ export default function Home() {
 
             {context.projects.cards.map((card, index) => {
               return (
-                 <Grid item sm={6} xs={12}>
-                  <ContentCard key={index}
-                  link={`/projects#${card.link}`}
-                  cardBody = {card}
-                  button={context.home.button}
-                  direction="column" />
+                <Grid item sm={6} xs={12} key={index}>
+                  <ContentCard link={`/projects#${card.link}`}
+                    cardBody = {card}
+                    button={context.home.button}
+                    direction="column" />
                 </Grid>
               )
             })}

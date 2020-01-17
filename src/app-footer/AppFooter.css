@@ -1,7 +1,5 @@
 .App-footer {
   min-height: 5rem;
-  position: sticky;
-  bottom: -10rem;
   background-color: rgba(52, 74, 97, 0.5);
   color: #000038;
   font-family: 'Oswald', sans-serif;

@@ -1,6 +1,5 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 import { LanguageConsumer } from '../providers/LanguageProvider';
@@ -26,20 +25,18 @@ export default function Projects() {
               classItem="fontSmall" />
           </Grid>
 
-          <Grid item xs={11} md={9}>
-            <Paper className={classes.paperContent} elevation={7}>
-              <Typography className={classes.title} variant="subtitle2" component="h2" id="projects">
-                {context.projects.h2}
-              </Typography>
+          <Grid item xs={11} md={9} className={classes.paperContent}>
+            <Typography className={classes.title} variant="subtitle2" component="h2" id="projects">
+              {context.projects.h2}
+            </Typography>
 
-              {context.projects.cards.map((card, index) => {
-                return (
-                  <CardWithImage key={index}
-                  cardBody={card}
-                  button={context.projects.button} />
-                )
-              })}
-            </Paper>
+            {context.projects.cards.map((card, index) => {
+              return (
+                <CardWithImage key={index}
+                cardBody={card}
+                button={context.projects.button} />
+              )
+            })}
           </Grid>
         </Grid>
       )}

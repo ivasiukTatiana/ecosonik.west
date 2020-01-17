@@ -22,12 +22,15 @@ const theme = createMuiTheme({
     },
     MuiFilledInput: {
       root: {
-        backgroundColor: 'rgba(150, 170, 180, 0.3)',
+        //backgroundColor: 'rgba(150, 170, 180, 0.3)',
+        backgroundColor: 'rgba(235, 235, 235, 0.3)',
         "&:hover": {
-          backgroundColor: 'rgba(150, 170, 180, 0.6)',
+          //backgroundColor: 'rgba(150, 170, 180, 0.6)',
+          backgroundColor: 'rgba(235, 235, 235, 0.8)',
         },
         "&.Mui-focused": {
-            backgroundColor: 'rgba(150, 170, 180, 0.6)',
+          //backgroundColor: 'rgba(150, 170, 180, 0.6)',
+          backgroundColor: 'rgba(235, 235, 235, 0.8)',
         },
       },
       input: {
@@ -40,6 +43,14 @@ const theme = createMuiTheme({
         [breakpoints.down('xs')]: {
           fontSize: '0.75rem',
           padding: '1rem 0.7rem 0.3rem',
+        },
+      },
+      underline: {
+        "&:before": {
+          borderBottom: '2px solid rgba(0, 0, 0, 0.42)',
+        },
+        "&:hover:before": {
+          borderBottom: '2px solid rgba(0, 0, 0, 0.87)',
         },
       },
     },
@@ -243,99 +254,96 @@ export default class UserForm extends Component {
       <ThemeProvider theme={theme}>
         <form className={className} noValidate autoComplete="off"
           onSubmit={this.handleSubmit}>
-          <Grid container alignItems="flex-start" justify="space-between">
-            <TextField
-              required
-              error={this.state.formErrors.username === '' ? false : true}
-              helperText={this.state.formErrors.username}
-              id="username"
-              className="smallField"
-              label={typeof(fields.username) === 'object' ? fields.username.lable : ''}
-              value={this.state.username}
-              onChange={this.handleChange}
-              variant="filled"
-            />
-            <TextField
-              id="company"
-              className="smallField"
-              label={typeof(fields.company) === 'object' ? fields.company.lable : ''}
-              value={this.state.company}
-              onChange={this.handleChange}
-              variant="filled"
-            />
-          </Grid>
-          <Grid container alignItems="flex-start" justify="space-between">
-            <TextField
-              required
-              error={this.state.formErrors.usermail === '' ? false : true}
-              helperText={this.state.formErrors.usermail}
-              id="usermail"
-              className="smallField"
-              label={typeof(fields.usermail) === 'object' ? fields.usermail.lable : ''}
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <MailOutlineIcon />
-                  </InputAdornment>
-                ),
-              }}
-              value={this.state.usermail}
-              onChange={this.handleChange}
-              variant="filled"
-            />
-            <TextField
-              id="userphone"
-              className="smallField"
-              label={typeof(fields.userphone) === 'object' ? fields.userphone.lable : ''}
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <CallIcon />
-                  </InputAdornment>
-                ),
-              }}
-              value={this.state.userphone}
-              onChange={this.handleChange}
-              variant="filled"
-            />
+          <Grid container spacing={1} justify="space-between">
+
+            <Grid item xs={12} sm={5} container direction="column" justify="space-around">
+              <TextField
+                required
+                error={this.state.formErrors.username === '' ? false : true}
+                helperText={this.state.formErrors.username}
+                id="username"
+                label={typeof(fields.username) === 'object' ? fields.username.lable : ''}
+                value={this.state.username}
+                onChange={this.handleChange}
+                variant="filled"
+              />
+              <TextField
+                id="company"
+                label={typeof(fields.company) === 'object' ? fields.company.lable : ''}
+                value={this.state.company}
+                onChange={this.handleChange}
+                variant="filled"
+              />
+              <TextField
+                required
+                error={this.state.formErrors.usermail === '' ? false : true}
+                helperText={this.state.formErrors.usermail}
+                id="usermail"
+                label={typeof(fields.usermail) === 'object' ? fields.usermail.lable : ''}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <MailOutlineIcon />
+                    </InputAdornment>
+                  ),
+                }}
+                value={this.state.usermail}
+                onChange={this.handleChange}
+                variant="filled"
+              />
+              <TextField
+                id="userphone"
+                label={typeof(fields.userphone) === 'object' ? fields.userphone.lable : ''}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <CallIcon />
+                    </InputAdornment>
+                  ),
+                }}
+                value={this.state.userphone}
+                onChange={this.handleChange}
+                variant="filled"
+              />
+            </Grid>
+
+            <Grid item xs={12} sm={7} container direction="column" justify="space-between">
+              <TextField
+                id="subject"
+                label={typeof(fields.subject) === 'object' ? fields.subject.lable : ''}
+                fullWidth
+                value={this.state.subject}
+                onChange={this.handleChange}
+                variant="filled"
+              />
+              <TextField
+                required
+                error={this.state.formErrors.message === '' ? false : true}
+                helperText={this.state.formErrors.message}
+                id="message"
+                label={typeof(fields.message) === 'object' ? fields.message.lable : ''}
+                multiline
+                rows="7"
+                fullWidth
+                value={this.state.message}
+                onChange={this.handleChange}
+                variant="filled"
+              />
+            </Grid>
           </Grid>
 
-          <TextField
-            id="subject"
-            label={typeof(fields.subject) === 'object' ? fields.subject.lable : ''}
-            fullWidth
-            value={this.state.subject}
-            onChange={this.handleChange}
-            variant="filled"
-          />
-          <TextField
-            required
-            error={this.state.formErrors.message === '' ? false : true}
-            helperText={this.state.formErrors.message}
-            id="message"
-            label={typeof(fields.message) === 'object' ? fields.message.lable : ''}
-            multiline
-            rows="4"
-            fullWidth
-            value={this.state.message}
-            onChange={this.handleChange}
-            variant="filled"
-          />
-
-          <Grid container alignItems="center" justify="center">
-            <Button variant="contained" type="submit" disabled={this.state.disabledSubmit}>
-              {button}
-            </Button>
-            <Fade
-              in={this.state.submitProgress}
-              style={{
-                transitionDelay: this.state.submitProgress ? '800ms' : '0ms',
-              }}
-              size={24}
-              unmountOnExit>
-              <CircularProgress />
-            </Fade>
-          </Grid>
+          <Button variant="contained" type="submit" disabled={this.state.disabledSubmit}>
+            {button}
+          </Button>
+          <Fade
+            in={this.state.submitProgress}
+            style={{
+              transitionDelay: this.state.submitProgress ? '800ms' : '0ms',
+            }}
+            size={24}
+            unmountOnExit>
+            <CircularProgress />
+          </Fade>
         </form>
         <SuccessSubmit
           submitMessage={submitMessage[this.state.submitMessage]}

@@ -1,10 +1,10 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const pageStyles = makeStyles(theme => ({
-
   headerCenter: {
-    boxShadow: '2px -2px 3px rgba(27, 39, 51, 0.6)',
+    //boxShadow: '2px -2px 3px rgba(27, 39, 51, 0.6)',
     paddingTop: '1.5rem',
+    marginTop: '1.5rem',
     marginBottom: '2rem',
     borderTopRightRadius: '3px',
     display: 'flex',
@@ -72,33 +72,33 @@ const pageStyles = makeStyles(theme => ({
   },
   stickyNav: {
     position: 'sticky',
-    top: '4rem',
-    backgroundColor: 'rgba(230, 230, 230, 0.3)',
-    paddingTop: '2rem',
-    paddingBottom: '0.5rem',
+    top: '7.5rem',
+    //backgroundColor: 'rgba(230, 230, 230, 0.3)',
     fontFamily: 'Oswald',
     maxHeight: '32rem',
     overflowY: 'auto',
+    scrollbarWidth: 'thin',
     "&::-webkit-scrollbar": {
-      width: 0,
+      backgroundColor: 'rgba(255, 255, 255, 0.2)',
+      width: '3px',
     },
-    "-ms-overflow-style": 'none',
-    scrollbarWidth: 'none',
-    boxShadow: '-2px -2px 4px rgba(27, 39, 51, 0.6)',
+    "&::-webkit-scrollbar-thumb": {
+      backgroundColor: 'rgba(52, 74, 97, 0.3)',
+      borderRadius: '25px',
+    },
+    "-ms-overflow-style": '-ms-autohiding-scrollbar',
+    //boxShadow: '-2px -2px 4px rgba(27, 39, 51, 0.6)',
     [theme.breakpoints.down('sm')]: {
-      backgroundColor: 'rgba(230, 230, 230, 0.3)',
+      backgroundColor: 'rgba(230, 230, 230, 0.6)',
       maxHeight: '30rem',
-    },
-    [theme.breakpoints.down('xs')]: {
-      paddingTop: '0.5rem',
     },
   },
   contactData: {
     [theme.breakpoints.down('sm')]: {
-      paddingTop: '1.5rem',
+      paddingTop: '2rem',
       paddingLeft: '1rem',
       paddingBottom: '0.5rem',
-      backgroundColor: 'rgba(230, 230, 230, 0.3)',
+      //backgroundColor: 'rgba(230, 230, 230, 0.3)',
     },
     [theme.breakpoints.down('xs')]: {
       paddingTop: '0rem',
@@ -113,12 +113,14 @@ const pageStyles = makeStyles(theme => ({
     }
   },
   navTitle: {
-    padding: '1.5rem 1.5rem 0',
+    //padding: '1.5rem 1.5rem 0',
+    paddingLeft: '1.5rem',
     fontFamily: 'Oswald',
     color: '#000038',
     textShadow: '0px 0px 1px rgb(0, 0, 0)',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.1rem',
+      padding: '1.5rem 1.5rem 0',
     },
     [theme.breakpoints.down('xs')]: {
       fontSize: '0.9rem',
@@ -144,10 +146,7 @@ const pageStyles = makeStyles(theme => ({
   },
   strong: {
     paddingLeft: '0.5rem',
-    fontWeight: 900,
-    [theme.breakpoints.down('sm')]: {
-      fontWeight: 400,
-    },
+    //fontWeight: 900,
   },
   contacts: {
     paddingLeft: '2rem',
@@ -195,9 +194,16 @@ const pageStyles = makeStyles(theme => ({
     },
   },
   paperContent: {
-    padding: theme.spacing(1),
+    marginTop: '4rem',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '3rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '0.7rem',
+    },
   },
   title: {
+    color: '#000038',
     fontSize: '1rem',
     [theme.breakpoints.down('sm')]: {
       fontSize: '0.95rem',
@@ -207,8 +213,7 @@ const pageStyles = makeStyles(theme => ({
     },
     textAlign: 'center',
     marginTop: '-4rem',
-    paddingTop: '4.5rem',
-    marginBottom: '0.6rem',
+    paddingTop: '4rem',
   },
   text: {
     marginTop: '0.6rem',
@@ -247,16 +252,12 @@ const pageStyles = makeStyles(theme => ({
     },
   },
   userForm: {
-    padding: '1rem',
+    paddingTop: '1.6rem',
+    paddingBottom: '1rem',
     textAlign: 'center',
-    "& .smallField": {
-      width: '48%',
-    },
     [theme.breakpoints.down('sm')]: {
-      padding: '0.5rem',
-      "& .smallField": {
-        width: '100%',
-      },
+      paddingTop: '0.8rem',
+      paddingBottom: '0.5rem',
     },
   },
 }));

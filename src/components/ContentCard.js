@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    backgroundColor: 'rgba(230, 230, 230, 0.2)',
+    backgroundColor: 'rgba(230, 230, 230, 0.3)',
     marginBottom: '0.2rem',
   },
   cardContent: {

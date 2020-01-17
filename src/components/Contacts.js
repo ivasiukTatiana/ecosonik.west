@@ -1,6 +1,5 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import CallIcon from '@material-ui/icons/Call';
 import MailIcon from '@material-ui/icons/Mail';
@@ -83,7 +82,7 @@ export default function Contacts() {
               </Hidden>
             </ThemeProvider>
 
-            <Paper className={classes.paperContent} elevation={7}>
+            <div className={classes.paperContent}>
               <Typography className={classes.title} variant="body1" component="p">
                 {context.contacts.h2}
               </Typography>
@@ -92,7 +91,7 @@ export default function Contacts() {
                 fields={context.contacts.formfields}
                 button={context.contacts.button}
                 submitMessage={context.contacts.submitMessage} />
-            </Paper>
+            </div>
           </Grid>
         </Grid>
       )}

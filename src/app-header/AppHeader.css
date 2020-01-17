@@ -1,13 +1,16 @@
 .App-header {
-  /*background-color: rgba(52, 74, 97, 0.5);*/
+  background-color: rgba(220, 220, 220, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 10;
   color: #000038;
   line-height: 1.2;
-  /*box-shadow: 2px 2px 4px rgba(27, 39, 51, 0.6);*/
+  box-shadow: 2px 2px 4px rgba(27, 39, 51, 0.6);
 }
 .Logo {
-  position: fixed;
+  position: absolute;
   top: 0;
-  z-index: 1301;
+  z-index: 1500;
   background-image: url(../assets/images/logo.jpg);
   background-position: top right;
   background-color: #7c8cad;
@@ -52,13 +55,13 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 nav .Link{
   margin-right: 1rem;
   padding: 0 0.5rem;
   color: #000038;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
   font-family: 'Oswald', sans-serif;
   text-decoration: none;
