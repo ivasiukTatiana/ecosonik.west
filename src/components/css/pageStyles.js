@@ -10,35 +10,61 @@ const pageStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-end',
-    color: '#000038',
-    fontWeight: 900,
+    color: 'rgb(30, 40, 50)',
+    textShadow: '1px -1px 2px rgba(90, 120, 150, 0.9)',
     letterSpacing: '0.5rem',
     textTransform: 'uppercase',
-    fontSize: '1.5rem',
-    //fontStyle: 'italic',
+    fontStyle: 'italic',
     "& span:nth-child(1)": {
-      textShadow: '1px 1px 1px #d0d0d0',
+      fontSize: '1.7rem',
+      fontWeight: 900,
+      [theme.breakpoints.down('1024')]: {
+        fontSize: '1.5rem',
+      },
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '1.4rem',
+      },
+      [theme.breakpoints.down('800')]: {
+        fontSize: '1.2rem',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '1rem',
+      },
+      [theme.breakpoints.down('460')]: {
+        fontSize: '0.65rem',
+      },
     },
     "& span:nth-child(2)": {
-      fontFamily: '"Seymour One", sans-serif',
-      textShadow: '2px 2px 1px rgba(255, 204, 0, 0.3)',
+      fontFamily: '"Rubik Mono One", sans-serif',
+      fontSize: '1.9rem',
+      [theme.breakpoints.down('1024')]: {
+        fontSize: '1.7rem',
+      },
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '1.6rem',
+      },
+      [theme.breakpoints.down('800')]: {
+        fontSize: '1.4rem',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '1.2rem',
+      },
+      [theme.breakpoints.down('460')]: {
+        fontSize: '0.8rem',
+      },
     },
     [theme.breakpoints.down('sm')]: {
       letterSpacing: '0.3rem',
-      fontSize: '1.4rem',
     },
     [theme.breakpoints.down('800')]: {
       letterSpacing: '0.2rem',
-      fontSize: '1.2rem',
       paddingTop: '1.1rem',
       marginBottom: '1rem',
     },
     [theme.breakpoints.down('xs')]: {
       letterSpacing: '0.1rem',
-      fontSize: '1rem',
     },
     [theme.breakpoints.down('460')]: {
-      fontSize: '0.65rem',
       paddingTop: '0.8rem',
     },
   },
@@ -49,22 +75,28 @@ const pageStyles = makeStyles(theme => ({
     paddingLeft: '6rem',
     marginTop: '1rem',
     //marginBottom: '2rem',
-    color: '#000038',
-    fontSize: '1.2rem',
-    fontFamily: '"Oswald", sans-serif',
-    //fontStyle: 'italic',
-    textShadow: '1px 1px 1px #d0d0d0',
+    color: 'rgba(40, 55, 70, 1)',
+    letterSpacing: '0.1rem',
+    fontSize: '1.3rem',
+    //fontFamily: '"Oswald", sans-serif',
+    fontStyle: 'italic',
+    textShadow: '-1px 1px 2px rgb(0, 0, 56)',
     borderBottomLeftRadius: '3px',
+    [theme.breakpoints.down('1025')]: {
+      fontSize: '1.2rem',
+    },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1.05rem',
+      fontSize: '1rem',
+      letterSpacing: 'normal',
       marginBottom: '1rem',
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '0.9rem',
+      fontSize: '0.8rem',
       paddingLeft: '4rem',
     },
-    [theme.breakpoints.down('450')]: {
-      fontSize: '0.6rem',
+    [theme.breakpoints.down('470')]: {
+      fontSize: '0.55rem',
+      textShadow: '1px 1px 1px rgb(0, 0, 56)',
       marginTop: '0.5rem',
       marginBottom: '0.5rem',
       paddingLeft: '2rem',
@@ -113,11 +145,10 @@ const pageStyles = makeStyles(theme => ({
     }
   },
   navTitle: {
-    //padding: '1.5rem 1.5rem 0',
     paddingLeft: '1.5rem',
     fontFamily: 'Oswald',
     color: '#000038',
-    textShadow: '0px 0px 1px rgb(0, 0, 0)',
+    textShadow: '0px 0px 1px rgba(0, 0, 56, 0.7)',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.1rem',
       padding: '1.5rem 1.5rem 0',
@@ -131,7 +162,7 @@ const pageStyles = makeStyles(theme => ({
     padding: '0.6rem 1.1rem',
     fontSize: '0.95rem',
     color: '#000038',
-    textShadow: '0px 0px 1px rgb(0, 0, 0)',
+    textShadow: '0px 0px 1px rgba(0, 0, 56, 0.7)',
     "&:hover": {
       backgroundColor: 'rgba(52, 74, 97, 0.1)',
     },
@@ -180,7 +211,7 @@ const pageStyles = makeStyles(theme => ({
     padding: '0.6rem 1.1rem',
     fontSize: '0.85rem',
     color: '#000038',
-    textShadow: '0px 0px 1px rgb(0, 0, 0)',
+    textShadow: '-1px 1px 2px rgba(0, 0, 56, 0.7)',
     "&:hover": {
       backgroundColor: 'rgba(52, 74, 97, 0.1)',
     },
@@ -197,6 +228,9 @@ const pageStyles = makeStyles(theme => ({
     marginTop: '4rem',
     [theme.breakpoints.down('sm')]: {
       marginTop: '3rem',
+    },
+    [theme.breakpoints.down('750')]: {
+      marginTop: '2rem',
     },
     [theme.breakpoints.down('xs')]: {
       marginTop: '0.7rem',
@@ -217,7 +251,7 @@ const pageStyles = makeStyles(theme => ({
   },
   text: {
     marginTop: '0.6rem',
-    padding: '1rem 1rem 0.5rem',
+    padding: '1rem',
     textAlign: 'center',
     lineHeight: 1.3,
     fontSize: '1.1rem',

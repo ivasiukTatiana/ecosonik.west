@@ -49,10 +49,11 @@ const useStyles = makeStyles(theme => ({
     },
   },
   title: {
-    fontSize: '1rem',
+    fontSize: '1.1rem',
     fontFamily: 'Oswald',
-    fontWeight: 700,
+    //fontWeight: 700,
     lineHeight: 1.3,
+    textShadow: '-1px 1px 2px rgb(60, 70, 80)',
     [theme.breakpoints.down('sm')]: {
       fontSize: '0.84rem',
     },

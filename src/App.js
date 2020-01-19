@@ -15,8 +15,8 @@ const theme = createMuiTheme({
   overrides: {
     MuiContainer: {
       root: {
-        boxSizing: 'content-box',
-        [breakpoints.down('md')]: {
+        //boxSizing: 'content-box',
+        [breakpoints.down('961')]: {
           paddingLeft: 0,
           paddingRight: 0,
         },
@@ -36,7 +36,7 @@ const theme = createMuiTheme({
     MuiPaper: {
       root: {
         color: '#000038',
-        backgroundColor: 'rgba(230, 230, 230, 0.6)',
+        backgroundColor: 'rgba(230, 230, 230, 0.7)',
       },
     },
     MuiTypography: {
@@ -73,7 +73,7 @@ class App extends Component {
         <LanguageProvider className="App">
           <ThemeProvider theme={theme}>
             <AppHeader />
-            <Container maxWidth="md" className="Main-container">
+            <Container maxWidth="lg" className="Main-container">
               <AppMain />
             </Container>
             <AppFooter />

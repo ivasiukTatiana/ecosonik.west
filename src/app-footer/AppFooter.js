@@ -15,7 +15,7 @@ class AppFooter extends Component {
       <LanguageConsumer>
         {(context) => (
           <footer className="App-footer">
-            <Container maxWidth="md">
+            <Container maxWidth="lg">
               <Grid container justify="space-between">
                 <Grid container item xs={7} sm={5} md={4} direction="column" alignItems="flex-start" className="Footer-left">
                   <span>&copy; {context.footer.copyright[0]}</span>

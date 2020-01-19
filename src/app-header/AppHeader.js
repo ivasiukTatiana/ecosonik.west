@@ -13,7 +13,7 @@ class AppHeader extends Component {
       <LanguageConsumer>
         {(context) => (
           <header className="App-header">
-            <Container maxWidth="md">
+            <Container maxWidth="lg">
               <Link to="/home" className="Logo" >
                 <span>EKOSONIC&nbsp;-</span>
                 <span>WEST</span>

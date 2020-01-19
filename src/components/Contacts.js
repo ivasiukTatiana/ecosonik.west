@@ -4,29 +4,10 @@ import Typography from '@material-ui/core/Typography';
 import CallIcon from '@material-ui/icons/Call';
 import MailIcon from '@material-ui/icons/Mail';
 import Hidden from '@material-ui/core/Hidden';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 import pageStyles from './css/pageStyles';
 import { LanguageConsumer } from '../providers/LanguageProvider';
 import UserForm from './UserForm';
-
-const breakpoints = createBreakpoints({});
-const theme = createMuiTheme({
-  overrides: {
-    MuiSvgIcon: {
-      root: {
-        fontSize: '1.3rem',
-        [breakpoints.down('sm')]: {
-          fontSize: '1.1rem',
-        },
-        [breakpoints.only('xs')]: {
-          fontSize: '0.6rem',
-        },
-      }
-    },
-  },
-});
 
 export default function Contacts() {
   const classes = pageStyles();
@@ -76,11 +57,9 @@ export default function Contacts() {
           </Grid>
 
           <Grid item xs={12} md={9}>
-            <ThemeProvider theme={theme}>
-              <Hidden mdUp>
-                <ContactData data={context.footer} classes={classes.contacts} />
-              </Hidden>
-            </ThemeProvider>
+            <Hidden mdUp>
+              <ContactData data={context.footer} classes={classes.contacts} />
+            </Hidden>
 
             <div className={classes.paperContent}>
               <Typography className={classes.title} variant="body1" component="p">
