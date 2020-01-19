@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a9a20a9de6a0dd37135b472e31fa22f4",
+    "revision": "e4251bc49c275bc94c2bd6901c6505bc",
     "url": "ivasiukTatiana.github.io/ecosonik.west/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "ivasiukTatiana.github.io/ecosonik.west/static/css/2.6b00acf2.chunk.css"
   },
   {
-    "revision": "e609c08d4c39e8ced5e5",
+    "revision": "229aef988ca8a9b29a3b",
     "url": "ivasiukTatiana.github.io/ecosonik.west/static/css/main.4811add2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "ivasiukTatiana.github.io/ecosonik.west/static/js/2.12f57874.chunk.js"
   },
   {
-    "revision": "e609c08d4c39e8ced5e5",
-    "url": "ivasiukTatiana.github.io/ecosonik.west/static/js/main.73b2f030.chunk.js"
+    "revision": "229aef988ca8a9b29a3b",
+    "url": "ivasiukTatiana.github.io/ecosonik.west/static/js/main.7697fad1.chunk.js"
   },
   {
     "revision": "c74c18e9f4f67ae33e08",
