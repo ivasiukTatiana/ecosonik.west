@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "ivasiukTatiana.github.io/ecosonik.west/static/css/main.4811add2.chunk.css",
-    "main.js": "ivasiukTatiana.github.io/ecosonik.west/static/js/main.4fb4c197.chunk.js",
-    "main.js.map": "ivasiukTatiana.github.io/ecosonik.west/static/js/main.4fb4c197.chunk.js.map",
+    "main.js": "ivasiukTatiana.github.io/ecosonik.west/static/js/main.73b2f030.chunk.js",
+    "main.js.map": "ivasiukTatiana.github.io/ecosonik.west/static/js/main.73b2f030.chunk.js.map",
     "runtime-main.js": "ivasiukTatiana.github.io/ecosonik.west/static/js/runtime-main.fffb33fd.js",
     "runtime-main.js.map": "ivasiukTatiana.github.io/ecosonik.west/static/js/runtime-main.fffb33fd.js.map",
     "static/css/2.6b00acf2.chunk.css": "ivasiukTatiana.github.io/ecosonik.west/static/css/2.6b00acf2.chunk.css",
     "static/js/2.12f57874.chunk.js": "ivasiukTatiana.github.io/ecosonik.west/static/js/2.12f57874.chunk.js",
     "static/js/2.12f57874.chunk.js.map": "ivasiukTatiana.github.io/ecosonik.west/static/js/2.12f57874.chunk.js.map",
     "index.html": "ivasiukTatiana.github.io/ecosonik.west/index.html",
-    "precache-manifest.4b754f190690e4a80aceb6f6e97c3a13.js": "ivasiukTatiana.github.io/ecosonik.west/precache-manifest.4b754f190690e4a80aceb6f6e97c3a13.js",
+    "precache-manifest.6947bc87bf2706bd4300aedd3b562fe3.js": "ivasiukTatiana.github.io/ecosonik.west/precache-manifest.6947bc87bf2706bd4300aedd3b562fe3.js",
     "service-worker.js": "ivasiukTatiana.github.io/ecosonik.west/service-worker.js",
     "static/css/2.6b00acf2.chunk.css.map": "ivasiukTatiana.github.io/ecosonik.west/static/css/2.6b00acf2.chunk.css.map",
     "static/css/main.4811add2.chunk.css.map": "ivasiukTatiana.github.io/ecosonik.west/static/css/main.4811add2.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.6b00acf2.chunk.css",
     "static/js/2.12f57874.chunk.js",
     "static/css/main.4811add2.chunk.css",
-    "static/js/main.4fb4c197.chunk.js"
+    "static/js/main.73b2f030.chunk.js"
   ]
 }
