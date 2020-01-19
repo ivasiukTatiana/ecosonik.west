@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/ecosonik.west/static/css/main.1e2039eb.chunk.css",
-    "main.js": "/ecosonik.west/static/js/main.acfaff4c.chunk.js",
-    "main.js.map": "/ecosonik.west/static/js/main.acfaff4c.chunk.js.map",
-    "runtime-main.js": "/ecosonik.west/static/js/runtime-main.ca490f8c.js",
-    "runtime-main.js.map": "/ecosonik.west/static/js/runtime-main.ca490f8c.js.map",
-    "static/css/2.6b00acf2.chunk.css": "/ecosonik.west/static/css/2.6b00acf2.chunk.css",
-    "static/js/2.a7fb8008.chunk.js": "/ecosonik.west/static/js/2.a7fb8008.chunk.js",
-    "static/js/2.a7fb8008.chunk.js.map": "/ecosonik.west/static/js/2.a7fb8008.chunk.js.map",
-    "index.html": "/ecosonik.west/index.html",
-    "precache-manifest.f2b67ab02144af50a614aaf113cca17d.js": "/ecosonik.west/precache-manifest.f2b67ab02144af50a614aaf113cca17d.js",
-    "service-worker.js": "/ecosonik.west/service-worker.js",
-    "static/css/2.6b00acf2.chunk.css.map": "/ecosonik.west/static/css/2.6b00acf2.chunk.css.map",
-    "static/css/main.1e2039eb.chunk.css.map": "/ecosonik.west/static/css/main.1e2039eb.chunk.css.map",
-    "static/media/index.css": "/ecosonik.west/static/media/fon.ec666c80.jpg",
-    "static/media/AppHeader.css": "/ecosonik.west/static/media/logo.a928e7c9.jpg"
+    "main.css": "ivasiukTatiana.github.io/ecosonik.west/static/css/main.4811add2.chunk.css",
+    "main.js": "ivasiukTatiana.github.io/ecosonik.west/static/js/main.4fb4c197.chunk.js",
+    "main.js.map": "ivasiukTatiana.github.io/ecosonik.west/static/js/main.4fb4c197.chunk.js.map",
+    "runtime-main.js": "ivasiukTatiana.github.io/ecosonik.west/static/js/runtime-main.fffb33fd.js",
+    "runtime-main.js.map": "ivasiukTatiana.github.io/ecosonik.west/static/js/runtime-main.fffb33fd.js.map",
+    "static/css/2.6b00acf2.chunk.css": "ivasiukTatiana.github.io/ecosonik.west/static/css/2.6b00acf2.chunk.css",
+    "static/js/2.12f57874.chunk.js": "ivasiukTatiana.github.io/ecosonik.west/static/js/2.12f57874.chunk.js",
+    "static/js/2.12f57874.chunk.js.map": "ivasiukTatiana.github.io/ecosonik.west/static/js/2.12f57874.chunk.js.map",
+    "index.html": "ivasiukTatiana.github.io/ecosonik.west/index.html",
+    "precache-manifest.4b754f190690e4a80aceb6f6e97c3a13.js": "ivasiukTatiana.github.io/ecosonik.west/precache-manifest.4b754f190690e4a80aceb6f6e97c3a13.js",
+    "service-worker.js": "ivasiukTatiana.github.io/ecosonik.west/service-worker.js",
+    "static/css/2.6b00acf2.chunk.css.map": "ivasiukTatiana.github.io/ecosonik.west/static/css/2.6b00acf2.chunk.css.map",
+    "static/css/main.4811add2.chunk.css.map": "ivasiukTatiana.github.io/ecosonik.west/static/css/main.4811add2.chunk.css.map",
+    "static/media/index.css": "ivasiukTatiana.github.io/ecosonik.west/static/media/fon.ec666c80.jpg",
+    "static/media/AppHeader.css": "ivasiukTatiana.github.io/ecosonik.west/static/media/logo.a928e7c9.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ca490f8c.js",
+    "static/js/runtime-main.fffb33fd.js",
     "static/css/2.6b00acf2.chunk.css",
-    "static/js/2.a7fb8008.chunk.js",
-    "static/css/main.1e2039eb.chunk.css",
-    "static/js/main.acfaff4c.chunk.js"
+    "static/js/2.12f57874.chunk.js",
+    "static/css/main.4811add2.chunk.css",
+    "static/js/main.4fb4c197.chunk.js"
   ]
 }
