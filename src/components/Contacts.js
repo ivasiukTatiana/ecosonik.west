@@ -9,6 +9,13 @@ import pageStyles from './css/pageStyles';
 import { LanguageConsumer } from '../providers/LanguageProvider';
 import UserForm from './UserForm';
 
+import styled, { keyframes } from "styled-components";
+import fadeIn from 'react-animations/lib/fade-in';
+const FadeInAnimation = keyframes`${fadeIn}`;
+const FadeInDiv = styled.div`
+  animation: 0.5s ${FadeInAnimation} ease-in;
+`;
+
 export default function Contacts() {
   const classes = pageStyles();
   const ContactData = (props) => {
@@ -42,37 +49,39 @@ export default function Contacts() {
   return(
     <LanguageConsumer>
       {(context) => (
-        <Grid container spacing={1} justify="space-between">
-          <Grid item xs={3}>
-            <Hidden smDown>
-              <div className={classes.stickyNav}>
-                <Typography variant="h6" component="h3" gutterBottom className={classes.navTitle}>
-                  {context.header.navigation.filter((item) => {
-                      return item.hasOwnProperty("contacts");
-                    }).map((item) => { return item.contacts; })}
+        <FadeInDiv>
+          <Grid container spacing={1} justify="space-between">
+            <Grid item xs={3}>
+              <Hidden smDown>
+                <div className={classes.stickyNav}>
+                  <Typography variant="h6" component="h3" gutterBottom className={classes.navTitle}>
+                    {context.header.navigation.filter((item) => {
+                        return item.hasOwnProperty("contacts");
+                      }).map((item) => { return item.contacts; })}
+                  </Typography>
+                  <ContactData data={context.footer} classes={`${classes.navItem} ${classes.fontBig}`} />
+                </div>
+              </Hidden>
+            </Grid>
+
+            <Grid item xs={12} md={9}>
+              <Hidden mdUp>
+                <ContactData data={context.footer} classes={classes.contacts} />
+              </Hidden>
+
+              <div className={classes.paperContent}>
+                <Typography className={classes.title} variant="body1" component="p">
+                  {context.contacts.h2}
                 </Typography>
-                <ContactData data={context.footer} classes={classes.navItem} />
+
+                <UserForm className={classes.userForm}
+                  fields={context.contacts.formfields}
+                  button={context.contacts.button}
+                  submitMessage={context.contacts.submitMessage} />
               </div>
-            </Hidden>
+            </Grid>
           </Grid>
-
-          <Grid item xs={12} md={9}>
-            <Hidden mdUp>
-              <ContactData data={context.footer} classes={classes.contacts} />
-            </Hidden>
-
-            <div className={classes.paperContent}>
-              <Typography className={classes.title} variant="body1" component="p">
-                {context.contacts.h2}
-              </Typography>
-
-              <UserForm className={classes.userForm}
-                fields={context.contacts.formfields}
-                button={context.contacts.button}
-                submitMessage={context.contacts.submitMessage} />
-            </div>
-          </Grid>
-        </Grid>
+        </FadeInDiv>
       )}
     </LanguageConsumer>
   );

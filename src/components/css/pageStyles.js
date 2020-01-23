@@ -142,13 +142,13 @@ const pageStyles = makeStyles(theme => ({
     paddingLeft: 0,
     "& a": {
       textDecoration: 'none',
-    }
+    },
   },
   navTitle: {
     paddingLeft: '1.5rem',
     fontFamily: 'Oswald',
     color: '#000038',
-    textShadow: '0px 0px 1px rgba(0, 0, 56, 0.7)',
+    textShadow: '-1px 1px 2px rgba(0, 0, 56, 0.7)',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.1rem',
       padding: '1.5rem 1.5rem 0',
@@ -159,56 +159,9 @@ const pageStyles = makeStyles(theme => ({
     },
   },
   navItem: {
-    padding: '0.6rem 1.1rem',
-    fontSize: '0.95rem',
-    color: '#000038',
-    textShadow: '0px 0px 1px rgba(0, 0, 56, 0.7)',
-    "&:hover": {
-      backgroundColor: 'rgba(52, 74, 97, 0.1)',
-    },
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '0.8rem',
-      padding: '0.4rem 0.9rem',
-    },
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '0.7rem',
-      padding: '0.3rem 0.7rem',
-    },
-  },
-  strong: {
-    paddingLeft: '0.5rem',
-    //fontWeight: 900,
-  },
-  contacts: {
-    paddingLeft: '2rem',
-    paddingTop: '0.4rem',
-    fontSize: '0.9rem',
-    color: '#000038',
-    textShadow: '0px 0px 1px rgba(0, 0, 56, 0.7)',
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '0.6rem',
-      paddingTop: '0.3rem',
-    },
-  },
-  menuButton: {
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
-    },
-    backgroundColor: 'rgba(188, 188, 188, 0.4)',
-    position: 'sticky',
-    top: '6rem',
-    [theme.breakpoints.down('xs')]: {
-      top: '3.5rem',
-    },
-  },
-  drawer: {
-    width: '14rem',
-    [theme.breakpoints.down('xs')]: {
-      //width: '11rem',
-    },
-  },
-  fontSmall: {
-    padding: '0.6rem 1.1rem',
+    marginBottom: '0.3rem',
+    padding: '0.3rem 1.1rem',
+    borderRadius: '3px',
     fontSize: '0.85rem',
     color: '#000038',
     textShadow: '-1px 1px 2px rgba(0, 0, 56, 0.7)',
@@ -222,6 +175,30 @@ const pageStyles = makeStyles(theme => ({
     [theme.breakpoints.down('xs')]: {
       fontSize: '0.7rem',
       padding: '0.3rem 0.7rem',
+    },
+  },
+  active: {
+    "& li": {
+      backgroundColor: 'rgba(52, 74, 97, 0.1)',
+      textDecoration: 'underline',
+    },
+  },
+  fontBig: {
+    fontSize: '1rem',
+  },
+  strong: {
+    paddingLeft: '0.5rem',
+    fontWeight: 900,
+  },
+  contacts: {
+    paddingLeft: '2rem',
+    paddingTop: '0.4rem',
+    fontSize: '0.9rem',
+    color: '#000038',
+    textShadow: '0px 0px 1px rgba(0, 0, 56, 0.7)',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.6rem',
+      paddingTop: '0.3rem',
     },
   },
   paperContent: {
@@ -246,8 +223,6 @@ const pageStyles = makeStyles(theme => ({
       fontSize: '0.6rem',
     },
     textAlign: 'center',
-    marginTop: '-4rem',
-    paddingTop: '4rem',
   },
   text: {
     marginTop: '0.6rem',
@@ -265,24 +240,6 @@ const pageStyles = makeStyles(theme => ({
     [theme.breakpoints.down('xs')]: {
       fontSize: '0.6rem',
       padding: '0.3rem',
-    },
-  },
-  list: {
-    [theme.breakpoints.down('xs')]: {
-      paddingLeft: '1.5rem',
-    },
-  },
-  listItem: {
-    marginBottom: '0.6rem',
-    fontSize: '0.95rem',
-    lineHeight: 1.2,
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '0.8rem',
-      marginBottom: '0.4rem',
-    },
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '0.7rem',
-      lineHeight: 1.1,
     },
   },
   userForm: {

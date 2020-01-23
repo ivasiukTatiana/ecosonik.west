@@ -8,7 +8,7 @@ import * as serviceWorker from './serviceWorker';
 import ScrollToTop from './components/ScrollToTop';
 
 ReactDOM.render(
-  <HashRouter>
+  <HashRouter basename="/">
     <ScrollToTop />
     <App />
   </HashRouter>,

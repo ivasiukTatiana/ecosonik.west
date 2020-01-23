@@ -7,6 +7,16 @@ import ContentCard from './ContentCard';
 import ActivitiesSlider from './ActivitiesSlider';
 import pageStyles from './css/pageStyles';
 
+import styled, { keyframes } from "styled-components";
+import zoomIn from 'react-animations/lib/zoom-in';
+const ZoomInAnimation = keyframes`${zoomIn}`;
+const ZoomInTitle = styled.div`
+  animation: 1s ${ZoomInAnimation} ease-in;
+`;
+const ZoomInSub = styled.div`
+  animation: 1 3s ${ZoomInAnimation} ease-in;
+`;
+
 export default function Home() {
   const classes = pageStyles();
 
@@ -15,18 +25,22 @@ export default function Home() {
       {(context) => (
         <Grid container spacing={1} justify="flex-end">
           <Grid item xs={12}>
-            <div className={classes.headerCenter}>
-              <span>{context.header.title1}</span>
-              <span>{context.header.title2}</span>
-            </div>
+            <ZoomInTitle>
+              <div className={classes.headerCenter}>
+                <span>{context.header.title1}</span>
+                <span>{context.header.title2}</span>
+              </div>
+            </ZoomInTitle>
             <ActivitiesSlider className={classes.slider} content={context.home.ulContent} />
           </Grid>
 
           <Grid container item xs={12} spacing={1}>
             <Grid item xs={12}>
-              <Typography className={classes.text} variant="subtitle2" component="h4" gutterBottom>
-                {context.home.p1}
-              </Typography>
+              <ZoomInSub>
+                <Typography className={classes.text} variant="subtitle2" component="h4"   gutterBottom>
+                  {context.home.p1}
+                </Typography>
+              </ZoomInSub>
 
               <ContentCard
                 link={context.home.cards[0].link}

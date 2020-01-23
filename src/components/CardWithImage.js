@@ -16,6 +16,14 @@ const useStyles = makeStyles(theme => ({
   anchor: {
     marginTop: '-6rem',
     paddingTop: '6rem',
+    [theme.breakpoints.down('750')]: {
+      marginTop: '-5rem',
+      paddingTop: '5rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '-4rem',
+      paddingTop: '4rem',
+    },
   },
   cardContent: {
     padding: '1.2rem',

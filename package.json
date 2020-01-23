@@ -2,19 +2,22 @@
   "name": "sonikwest",
   "version": "0.1.0",
   "private": true,
-  "homepage": "ivasiukTatiana.github.io/ecosonik.west",
+  "homepage": "https://ivasiukTatiana.github.io/ecosonik.west",
   "dependencies": {
     "@material-ui/core": "^4.7.0",
     "@material-ui/icons": "^4.5.1",
     "gh-pages": "^2.1.1",
+    "i": "^0.3.6",
     "infinite-react-carousel": "^1.2.7",
     "react": "^16.12.0",
+    "react-animations": "^1.0.0",
     "react-dom": "^16.12.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-router-hash-link": "^1.2.2",
     "react-scripts": "3.2.0",
-    "serialize-javascript": "2.1.1"
+    "serialize-javascript": "2.1.1",
+    "styled-components": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
