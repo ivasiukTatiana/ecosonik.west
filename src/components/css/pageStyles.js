@@ -242,6 +242,19 @@ const pageStyles = makeStyles(theme => ({
       padding: '0.3rem',
     },
   },
+  cardWrapper: {
+    marginTop: '-6rem',
+    paddingTop: '6rem',
+    marginBottom: '0.5rem',
+    [theme.breakpoints.down('750')]: {
+      marginTop: '-5rem',
+      paddingTop: '5rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '-4rem',
+      paddingTop: '4rem',
+    },
+  },
   userForm: {
     paddingTop: '1.6rem',
     paddingBottom: '1rem',

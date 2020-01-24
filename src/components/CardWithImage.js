@@ -9,22 +9,6 @@ import Slider from 'infinite-react-carousel';
 import Table from './Table';
 
 const useStyles = makeStyles(theme => ({
-  card: {
-    //backgroundColor: 'rgba(52, 74, 97, 0.1)',
-    marginBottom: '0.6rem',
-  },
-  anchor: {
-    marginTop: '-6rem',
-    paddingTop: '6rem',
-    [theme.breakpoints.down('750')]: {
-      marginTop: '-5rem',
-      paddingTop: '5rem',
-    },
-    [theme.breakpoints.down('xs')]: {
-      marginTop: '-4rem',
-      paddingTop: '4rem',
-    },
-  },
   cardContent: {
     padding: '1.2rem',
     [theme.breakpoints.down('sm')]: {
@@ -213,7 +197,7 @@ export default function CardWithImage(props) {
   }
 
   return (
-    <Card className={classes.card} elevation={2}>
+    <Card elevation={2}>
       <Typography component="p" className={classes.anchor} id={props.cardBody.link}/>
       <CardContent className={classes.cardContent}>
         <Typography className={classes.title} variant="subtitle2" component="h2" >

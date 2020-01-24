@@ -9,6 +9,7 @@ import { LanguageConsumer } from '../providers/LanguageProvider';
 import ContentNav from './ContentNav';
 import CardWithImage from './CardWithImage';
 import pageStyles from './css/pageStyles';
+import scrollHandler from '../utilities/scroll-handler';
 
 const FadeInAnimation = keyframes`${fadeIn}`;
 const FadeInRightAnimation = keyframes`${fadeInRight}`;
@@ -22,11 +23,13 @@ animation: 1s ${FadeInRightAnimation} ease-in;
 export default function Products() {
   const classes = pageStyles();
 
+  scrollHandler(classes);
+
   return (
     <LanguageConsumer>
       {(context) => (
         <Grid container spacing={1} justify="space-around">
-          <Grid item xs={1} md={3}>
+          <Grid item xs={1} md={3} id="contentNav">
             <ContentNav
               title={
                 context.header.navigation.filter((item) => {
@@ -43,7 +46,9 @@ export default function Products() {
               </Typography>
               {context.products.cards.map((card, index) => {
                 return (
-                  <CardWithImage key={index} cardBody={card} />
+                  <div key={index} className={classes.cardWrapper} id={card.link}>
+                    <CardWithImage  cardBody={card} />
+                  </div>
                 )
               })}
             </FadeInDiv>

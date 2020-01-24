@@ -94,7 +94,7 @@ const DrawerContent = (props) => {
   )
 };
 
-export default class ContentNavClass extends Component {
+export default class ContentNav extends Component {
   constructor(props) {
     super(props);
     this.state = {
