@@ -39,7 +39,7 @@ export default function Projects() {
               navigation={context.projects.navigation} />
           </Grid>
 
-          <Grid item xs={11} md={9} className={classes.paperContent}>
+          <Grid item xs={11} md={9} className={classes.paperContent} id="projects">
             <FadeInDiv>
               <Typography className={classes.title} variant="subtitle2" component="h2">
                 {context.projects.h2}
