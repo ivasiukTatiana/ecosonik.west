@@ -107,7 +107,7 @@ const pageStyles = makeStyles(theme => ({
     top: '7.5rem',
     //backgroundColor: 'rgba(230, 230, 230, 0.3)',
     fontFamily: 'Oswald',
-    maxHeight: '32rem',
+    maxHeight: '80vh',
     overflowY: 'auto',
     scrollbarWidth: 'thin',
     "&::-webkit-scrollbar": {
@@ -162,7 +162,7 @@ const pageStyles = makeStyles(theme => ({
     marginBottom: '0.3rem',
     padding: '0.3rem 1.1rem',
     borderRadius: '3px',
-    fontSize: '0.85rem',
+    fontSize: '0.9rem',
     color: '#000038',
     textShadow: '-1px 1px 2px rgba(0, 0, 56, 0.7)',
     "&:hover": {

@@ -1,6 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import {Helmet} from 'react-helmet';
 
 import { LanguageConsumer } from '../providers/LanguageProvider';
 import ContentNav from './ContentNav';
@@ -26,6 +27,11 @@ export default function Projects() {
   scrollHandler(classes);
 
   return (
+    <div>
+    <Helmet>
+      <title>Модернизация грузокольцевых установок, Установки для поверки промышленных газовых счетчиков на рабочих эталонах</title>
+      <meta name="description" content="Модернизация грузокольцевых установок ГКУ 0.63 ГКУ 0.25 ГКУ 0.063, Установки на эталонных счетчиках типа ТЕМПО-3, Установки для поверки промышленных газовых счетчиков на рабочих эталонах" />
+    </Helmet>
     <LanguageConsumer>
       {(context) => (
         <Grid container spacing={1} justify="space-around">
@@ -57,5 +63,6 @@ export default function Projects() {
         </Grid>
       )}
     </LanguageConsumer>
+    </div>
   );
 }

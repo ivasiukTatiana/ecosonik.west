@@ -332,7 +332,7 @@
         "usermail": {
             "lable": "E-mail",
             "error": "E-mail cannot be empty",
-            "errorin": "Incorrect email"
+            "errorin": "Email format should be: example@mail.com"
           },
         "userphone":  {
             "lable": "Phone",

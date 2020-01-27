@@ -1,6 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import {Helmet} from 'react-helmet';
 
 import { LanguageConsumer } from '../providers/LanguageProvider';
 import ContentCard from './ContentCard';
@@ -21,6 +22,12 @@ export default function Home() {
   const classes = pageStyles();
 
   return (
+    <div>
+    <Helmet>
+      <title>Ekosonic-West - cопла Вентури, стенды поверки бытовых и промышленных счетчиков газа</title>
+      <meta name="description" content="Проектирование и разработка специализированного метрологического оборудования в сфере измерения расхода и объема газа, изготовление сопел Вентури критического истечения, проектирование и изготовление стендов для поверки бытовых и промышленных счетчиков газа, модернизация восстановление метрологического оборудования" />
+    </Helmet>
+
     <LanguageConsumer>
       {(context) => (
         <Grid container spacing={1} justify="flex-end">
@@ -68,7 +75,7 @@ export default function Home() {
                 cardBody={context.home.cards[1]}
                 button={context.home.button} />
 
-              <Typography className={classes.text} variant="body1" component="p" gutterBottom>
+              <Typography className={classes.text} variant="subtitle2" component="p" gutterBottom>
                 {context.home.p3}
               </Typography>
             </Grid>
@@ -76,5 +83,6 @@ export default function Home() {
         </Grid>
       )}
     </LanguageConsumer>
+    </div>
   );
 }

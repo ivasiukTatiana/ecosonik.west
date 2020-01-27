@@ -36,7 +36,7 @@ const theme = createMuiTheme({
     MuiPaper: {
       root: {
         color: '#000038',
-        backgroundColor: 'rgba(230, 230, 230, 0.7)',
+        backgroundColor: 'rgba(230, 230, 230, 0.9)',
       },
     },
     MuiTypography: {

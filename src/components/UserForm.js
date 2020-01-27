@@ -15,6 +15,11 @@ import SuccessSubmit from './SuccessSubmit';
 const breakpoints = createBreakpoints({});
 const theme = createMuiTheme({
   overrides: {
+    MuiGrid: {
+      root: {
+        backgroundColor: 'rgba(230, 230, 230, 0.3)',
+      },
+    },
     MuiFormControl: {
       root: {
         marginBottom: '0.4rem',
@@ -22,15 +27,15 @@ const theme = createMuiTheme({
     },
     MuiFilledInput: {
       root: {
-        //backgroundColor: 'rgba(150, 170, 180, 0.3)',
-        backgroundColor: 'rgba(235, 235, 235, 0.3)',
+        backgroundColor: 'rgba(170, 180, 190, 0.5)',
+        //backgroundColor: 'rgba(235, 235, 235, 0.5)',
         "&:hover": {
           //backgroundColor: 'rgba(150, 170, 180, 0.6)',
-          backgroundColor: 'rgba(235, 235, 235, 0.8)',
+          backgroundColor: 'rgba(160, 170, 180, 0.7)',
         },
         "&.Mui-focused": {
-          //backgroundColor: 'rgba(150, 170, 180, 0.6)',
-          backgroundColor: 'rgba(235, 235, 235, 0.8)',
+          backgroundColor: 'rgba(160, 170, 180, 0.7)',
+          //backgroundColor: 'rgba(235, 235, 235, 0.8)',
         },
       },
       input: {
@@ -47,10 +52,10 @@ const theme = createMuiTheme({
       },
       underline: {
         "&:before": {
-          borderBottom: '2px solid rgba(0, 0, 0, 0.42)',
+          borderBottom: '1px solid rgba(0, 0, 0, 0.42)',
         },
         "&:hover:before": {
-          borderBottom: '2px solid rgba(0, 0, 0, 0.87)',
+          borderBottom: '1px solid rgba(0, 0, 0, 0.87)',
         },
       },
     },
@@ -76,16 +81,25 @@ const theme = createMuiTheme({
     },
     MuiButton: {
       root: {
-        textTransform: 'none',
+        //textTransform: 'none',
         fontSize: '0.95rem',
         [breakpoints.down('xs')]: {
           fontSize: '0.6rem',
         },
       },
       contained: {
-        backgroundColor: 'rgba(45, 45, 120, 0.15)',
+        //backgroundColor: 'rgba(45, 45, 120, 0.15)',
+        backgroundColor: 'rgba(130, 140, 155, 0.8)',
         color: '#000038',
         marginTop: '1rem',
+        "&:hover": {
+          backgroundColor: 'rgba(100, 120, 140, 1)',
+        },
+        "&.Mui-disabled": {
+            backgroundColor: 'rgba(130, 140, 155, 0.8)',
+          },
+        //},
+
       },
     },
     MuiCircularProgress: {
@@ -168,7 +182,7 @@ export default class UserForm extends Component {
         formErrors.username = usernameValid ? '' : username.errorin;
         break;
       case 'usermail':
-        usermailValid = value.match(/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i) ? true : false;
+        usermailValid = (value.length < 20) || value.match(/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i) ? true : false;
         formErrors.usermail = usermailValid ? '' : usermail.errorin;
         break;
       case 'message':
@@ -195,6 +209,20 @@ export default class UserForm extends Component {
   */
   handleSubmit = (event) => {
     event.preventDefault();
+
+    if ( !(this.state.usermail.match(/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i)) && this.state.formValid) {
+
+      let formErrors = this.state.formErrors;
+      formErrors.usermail = this.props.fields.usermail.errorin;
+
+      this.setState({
+        formErrors: formErrors,
+        usermailValid: false,
+        formValid: false,
+        disabledSubmit: true,
+      });
+      return
+    }
 
     if (!this.state.formValid) {
       const { username, usermail, message } = this.props.fields;

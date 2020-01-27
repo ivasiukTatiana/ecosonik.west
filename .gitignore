@@ -6,6 +6,8 @@
 .pnp.js
 
 *.php
+*.jpg
+*.xml
 
 # testing
 /coverage

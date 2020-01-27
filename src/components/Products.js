@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import styled, { keyframes } from "styled-components";
 import fadeInRight from 'react-animations/lib/fade-in-right';
 import fadeIn from 'react-animations/lib/fade-in';
+import {Helmet} from 'react-helmet';
 
 import { LanguageConsumer } from '../providers/LanguageProvider';
 import ContentNav from './ContentNav';
@@ -26,6 +27,12 @@ export default function Products() {
   scrollHandler(classes);
 
   return (
+    <div>
+    <Helmet>
+      <title>Изготовление сопел Вентури, установки поверочные для бытовых и промышленных газовых счетчиков</title>
+      <meta name="description" content="Изготовление сопел Вентури критического истечения, Установки для поверки бытовых и промышленных газовых счетчиков на рабочих эталонах УПБСГ-РЭ УППСГ-РЭ, модернизация систем управления сбора и обработки информации, восстановительные работы и калибровка метрологического оборудования" />
+    </Helmet>
+
     <LanguageConsumer>
       {(context) => (
         <Grid container spacing={1} justify="space-around">
@@ -56,5 +63,6 @@ export default function Products() {
         </Grid>
       )}
     </LanguageConsumer>
+    </div>
   );
 }
