@@ -9,6 +9,20 @@ import Slider from 'infinite-react-carousel';
 import Table from './Table';
 
 const useStyles = makeStyles(theme => ({
+  subTitle: {
+    fontSize: '1.5rem',
+    color: '#000038',
+    textAlign: 'center',
+    padding: '1rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.3rem',
+      padding: '0.6rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.9rem',
+      padding: '0.5rem',
+    },
+  },
   cardContent: {
     padding: '1.2rem',
     [theme.breakpoints.down('sm')]: {
@@ -16,13 +30,13 @@ const useStyles = makeStyles(theme => ({
     },
   },
   title: {
-    fontSize: '1rem',
+    fontSize: '1.3rem',
     fontFamily: 'Oswald',
-    lineHeight: 1.4,
+    lineHeight: 1.3,
     marginBottom: '0.6rem',
     backgroundColor: 'rgba(52, 74, 97, 0.1)',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '0.84rem',
+      fontSize: '1rem',
     },
     [theme.breakpoints.down('xs')]: {
       fontSize: '0.7rem',
@@ -101,6 +115,17 @@ const useStyles = makeStyles(theme => ({
 export default function CardWithImage(props) {
   const classes = useStyles();
 
+  const SubTitle = () => {
+    if (props.cardBody.hasOwnProperty('subTitle')) {
+      return (
+        <Typography className={classes.subTitle} variant="subtitle2" component="h2">
+          {props.cardBody.subTitle}
+        </Typography>
+      )
+    } else {
+      return <React.Fragment />
+    }
+  }
   const CardTable = () => {
     if (props.cardBody.hasOwnProperty('table')) {
       return <Table table={props.cardBody.table} />
@@ -197,19 +222,21 @@ export default function CardWithImage(props) {
   }
 
   return (
-    <Card elevation={2}>
-      <Typography component="p" className={classes.anchor} id={props.cardBody.link}/>
-      <CardContent className={classes.cardContent}>
-        <Typography className={classes.title} variant="subtitle2" component="h2" >
-          {props.cardBody.title}
-        </Typography>
-        <Typography className={classes.customer} variant="subtitle2" component="h3">
-          {props.cardBody.hasOwnProperty('customer') ? props.cardBody.customer : ""}
-        </Typography>
-        <CardTable />
-        <CardText />
-        <ImagesSlider />
-      </CardContent>
-    </Card>
+    <React.Fragment>
+      <SubTitle />
+      <Card elevation={2}>
+        <CardContent className={classes.cardContent}>
+          <Typography className={classes.title} variant="subtitle2" component="h2" >
+            {props.cardBody.title}
+          </Typography>
+          <Typography className={classes.customer} variant="subtitle2" component="h3">
+            {props.cardBody.hasOwnProperty('customer') ? props.cardBody.customer : ""}
+          </Typography>
+          <CardTable />
+          <CardText />
+          <ImagesSlider />
+        </CardContent>
+      </Card>
+    </React.Fragment>
   );
 }

@@ -1,6 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const pageStyles = makeStyles(theme => ({
+  about: {
+    height: '91vh',
+  },
   headerCenter: {
     //boxShadow: '2px -2px 3px rgba(27, 39, 51, 0.6)',
     paddingTop: '1.5rem',
@@ -86,16 +89,16 @@ const pageStyles = makeStyles(theme => ({
       fontSize: '1.2rem',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem',
+      fontSize: '1.1rem',
       letterSpacing: 'normal',
       marginBottom: '1rem',
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '0.8rem',
+      fontSize: '0.9rem',
       paddingLeft: '4rem',
     },
     [theme.breakpoints.down('470')]: {
-      fontSize: '0.55rem',
+      fontSize: '0.7rem',
       textShadow: '1px 1px 1px rgb(0, 0, 56)',
       marginTop: '0.5rem',
       marginBottom: '0.5rem',
@@ -162,7 +165,7 @@ const pageStyles = makeStyles(theme => ({
     marginBottom: '0.3rem',
     padding: '0.3rem 1.1rem',
     borderRadius: '3px',
-    fontSize: '0.9rem',
+    fontSize: '0.95rem',
     color: '#000038',
     textShadow: '-1px 1px 2px rgba(0, 0, 56, 0.7)',
     "&:hover": {
@@ -185,6 +188,9 @@ const pageStyles = makeStyles(theme => ({
   },
   fontBig: {
     fontSize: '1rem',
+    "& span": {
+      paddingRight: '0.3rem',
+    },
   },
   strong: {
     paddingLeft: '0.5rem',
@@ -196,6 +202,9 @@ const pageStyles = makeStyles(theme => ({
     fontSize: '0.9rem',
     color: '#000038',
     textShadow: '0px 0px 1px rgba(0, 0, 56, 0.7)',
+    "& span": {
+      paddingRight: '0.3rem',
+    },
     [theme.breakpoints.down('xs')]: {
       fontSize: '0.6rem',
       paddingTop: '0.3rem',
@@ -215,32 +224,43 @@ const pageStyles = makeStyles(theme => ({
   },
   title: {
     color: '#000038',
-    fontSize: '1rem',
+    fontSize: '1.5rem',
+    fontStyle: 'italic',
+    textTransform: 'uppercase',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.1rem',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '0.8rem',
+    },
+    textAlign: 'center',
+  },
+  text: {
+    textAlign: 'center',
+    lineHeight: 1.3,
+    fontSize: '1.1rem',
+    color: '#000038',
+    textTransform: 'uppercase',
+    textShadow: '-1px 1px 2px rgba(0, 0, 56, 0.7)',
     [theme.breakpoints.down('sm')]: {
       fontSize: '0.95rem',
     },
     [theme.breakpoints.down('xs')]: {
       fontSize: '0.6rem',
     },
-    textAlign: 'center',
   },
-  text: {
-    marginTop: '0.6rem',
-    padding: '1rem',
-    textAlign: 'center',
-    lineHeight: 1.3,
-    fontSize: '1.1rem',
-    fontStyle: 'italic',
-    color: '#000038',
-    textTransform: 'uppercase',
+  indent: {
+    padding: '0.6rem',
+    margin: '0.6rem 0',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '0.85rem',
-      padding: '0.5rem',
+      padding: '0.4rem',
+      margin: '0.4rem 0',
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '0.6rem',
       padding: '0.3rem',
+      margin: '0.3rem 0',
     },
+    textShadow: '1px 1px 2px #000038',
   },
   cardWrapper: {
     marginTop: '-6rem',
@@ -260,8 +280,7 @@ const pageStyles = makeStyles(theme => ({
     paddingBottom: '1rem',
     textAlign: 'center',
     [theme.breakpoints.down('sm')]: {
-      paddingTop: '0.8rem',
-      paddingBottom: '0.5rem',
+      padding: '0.8rem',
     },
   },
 }));

@@ -17,7 +17,7 @@ const theme = createMuiTheme({
   overrides: {
     MuiGrid: {
       root: {
-        backgroundColor: 'rgba(230, 230, 230, 0.3)',
+        backgroundColor: 'rgba(230, 230, 230, 0.5)',
       },
     },
     MuiFormControl: {

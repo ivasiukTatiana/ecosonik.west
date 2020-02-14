@@ -1,5 +1,6 @@
 .App-header {
   /*background-color: rgba(220, 220, 220, 0.95);*/
+  height: 9vh;
   background-color: rgba(160, 170, 190, 0.95);
   position: sticky;
   top: 0;

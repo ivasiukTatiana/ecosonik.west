@@ -31,7 +31,7 @@ export default function Home() {
     <LanguageConsumer>
       {(context) => (
         <Grid container spacing={1} justify="flex-end">
-          <Grid item xs={12}>
+          <Grid item xs={12} container direction="column" justify="space-between" className={classes.about}>
             <ZoomInTitle>
               <div className={classes.headerCenter}>
                 <span>{context.header.title1}</span>
@@ -39,16 +39,15 @@ export default function Home() {
               </div>
             </ZoomInTitle>
             <ActivitiesSlider className={classes.slider} content={context.home.ulContent} />
+            <ZoomInSub>
+              <Typography className={`${classes.title} ${classes.indent}`} variant="subtitle2" component="h4">
+                {context.home.p1}
+              </Typography>
+            </ZoomInSub>
           </Grid>
 
           <Grid container item xs={12} spacing={1}>
             <Grid item xs={12}>
-              <ZoomInSub>
-                <Typography className={classes.text} variant="subtitle2" component="h4"   gutterBottom>
-                  {context.home.p1}
-                </Typography>
-              </ZoomInSub>
-
               <ContentCard
                 link={context.home.cards[0].link}
                 cardBody = {context.home.cards[0]}
@@ -67,18 +66,17 @@ export default function Home() {
             })}
 
             <Grid item xs={12}>
-              <Typography className={classes.text} variant="subtitle2" component="h4" gutterBottom>
+              <Typography className={`${classes.title} ${classes.indent}`} variant="subtitle2" component="h4">
                 {context.home.p2}
               </Typography>
               <ContentCard
                 link={context.home.cards[1].link}
                 cardBody={context.home.cards[1]}
                 button={context.home.button} />
-
-              <Typography className={classes.text} variant="subtitle2" component="p" gutterBottom>
-                {context.home.p3}
-              </Typography>
             </Grid>
+            <Typography className={`${classes.text} ${classes.indent}`} variant="subtitle2" component="p" gutterBottom>
+              {context.home.p3}
+            </Typography>
           </Grid>
         </Grid>
       )}

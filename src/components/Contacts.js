@@ -37,7 +37,7 @@ export default function Contacts() {
           <CallIcon />
           <span className={classes.strong}>{props.data.phone}</span>
         </Grid>
-        <Grid container alignItems="center" className={props.classes}>
+        <Grid container className={props.classes}>
           {props.data.head.map((item, index) => {
             return <span key={index}>{item}</span>
           })}
@@ -70,7 +70,7 @@ export default function Contacts() {
               </Hidden>
 
               <div className={classes.paperContent}>
-                <Typography className={classes.title} variant="body1" component="p">
+                <Typography className={classes.text} variant="body1" component="p">
                   {context.contacts.h2}
                 </Typography>
 
