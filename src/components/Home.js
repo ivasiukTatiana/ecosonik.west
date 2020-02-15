@@ -30,8 +30,8 @@ export default function Home() {
 
     <LanguageConsumer>
       {(context) => (
-        <Grid container spacing={1} justify="flex-end">
-          <Grid item xs={12} container direction="column" justify="space-between" className={classes.about}>
+        <Grid container spacing={1}>
+          <Grid item xs={12} className={classes.about}>
             <ZoomInTitle>
               <div className={classes.headerCenter}>
                 <span>{context.header.title1}</span>

@@ -1,9 +1,4 @@
-.App-main {
-  min-height: 26rem;
-}
-
 @media screen and (max-width: 968px) {
-  /* start of large tablet styles */
   .App-main {
     padding-left: 0.5rem;
     padding-right: 0.5rem;

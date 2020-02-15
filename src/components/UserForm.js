@@ -28,14 +28,11 @@ const theme = createMuiTheme({
     MuiFilledInput: {
       root: {
         backgroundColor: 'rgba(170, 180, 190, 0.5)',
-        //backgroundColor: 'rgba(235, 235, 235, 0.5)',
         "&:hover": {
-          //backgroundColor: 'rgba(150, 170, 180, 0.6)',
           backgroundColor: 'rgba(160, 170, 180, 0.7)',
         },
         "&.Mui-focused": {
           backgroundColor: 'rgba(160, 170, 180, 0.7)',
-          //backgroundColor: 'rgba(235, 235, 235, 0.8)',
         },
       },
       input: {
@@ -81,14 +78,12 @@ const theme = createMuiTheme({
     },
     MuiButton: {
       root: {
-        //textTransform: 'none',
         fontSize: '0.95rem',
         [breakpoints.down('xs')]: {
           fontSize: '0.6rem',
         },
       },
       contained: {
-        //backgroundColor: 'rgba(45, 45, 120, 0.15)',
         backgroundColor: 'rgba(130, 140, 155, 0.8)',
         color: '#000038',
         marginTop: '1rem',
@@ -98,8 +93,6 @@ const theme = createMuiTheme({
         "&.Mui-disabled": {
             backgroundColor: 'rgba(130, 140, 155, 0.8)',
           },
-        //},
-
       },
     },
     MuiCircularProgress: {

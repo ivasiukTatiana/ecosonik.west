@@ -15,7 +15,6 @@ const theme = createMuiTheme({
   overrides: {
     MuiContainer: {
       root: {
-        //boxSizing: 'content-box',
         [breakpoints.down('961')]: {
           paddingLeft: 0,
           paddingRight: 0,
@@ -49,11 +48,9 @@ const theme = createMuiTheme({
     },
     MuiButton: {
       root: {
-        //textTransform: 'none',
         color: '#000038',
       },
       text: {
-        //paddingTop: 0,
         [breakpoints.down('sm')]: {
           fontSize: '0.75rem',
         },

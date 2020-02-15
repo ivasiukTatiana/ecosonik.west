@@ -35,7 +35,7 @@ export default function Products() {
 
     <LanguageConsumer>
       {(context) => (
-        <Grid container spacing={1} justify="space-around">
+        <Grid container spacing={1}>
           <Grid item xs={1} md={3} id="contentNav">
             <ContentNav
               title={

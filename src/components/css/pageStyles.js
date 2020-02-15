@@ -1,11 +1,13 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const pageStyles = makeStyles(theme => ({
+const pageStyles = makeStyles( theme => ({
   about: {
     height: '91vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   },
   headerCenter: {
-    //boxShadow: '2px -2px 3px rgba(27, 39, 51, 0.6)',
     paddingTop: '1.5rem',
     marginTop: '1.5rem',
     marginBottom: '2rem',
@@ -72,12 +74,10 @@ const pageStyles = makeStyles(theme => ({
     },
   },
   slider: {
-    //backgroundColor: 'rgba(230, 230, 230, 0.3)',
     boxShadow: '-2px 2px 2px rgba(27, 39, 51, 0.6)',
     padding: '1rem',
     paddingLeft: '6rem',
     marginTop: '1rem',
-    //marginBottom: '2rem',
     color: 'rgba(40, 55, 70, 1)',
     letterSpacing: '0.1rem',
     fontSize: '1.3rem',
@@ -108,7 +108,6 @@ const pageStyles = makeStyles(theme => ({
   stickyNav: {
     position: 'sticky',
     top: '7.5rem',
-    //backgroundColor: 'rgba(230, 230, 230, 0.3)',
     fontFamily: 'Oswald',
     maxHeight: '80vh',
     overflowY: 'auto',
@@ -122,7 +121,7 @@ const pageStyles = makeStyles(theme => ({
       borderRadius: '25px',
     },
     "-ms-overflow-style": '-ms-autohiding-scrollbar',
-    //boxShadow: '-2px -2px 4px rgba(27, 39, 51, 0.6)',
+    //boxShadow: '-1px -1px 1px rgba(27, 39, 51, 0.6)',
     [theme.breakpoints.down('sm')]: {
       backgroundColor: 'rgba(230, 230, 230, 0.6)',
       maxHeight: '30rem',
@@ -133,7 +132,6 @@ const pageStyles = makeStyles(theme => ({
       paddingTop: '2rem',
       paddingLeft: '1rem',
       paddingBottom: '0.5rem',
-      //backgroundColor: 'rgba(230, 230, 230, 0.3)',
     },
     [theme.breakpoints.down('xs')]: {
       paddingTop: '0rem',

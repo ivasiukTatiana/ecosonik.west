@@ -55,7 +55,6 @@ const useStyles = makeStyles(theme => ({
   text: {
     textAlign: 'justify',
     lineHeight: 1.4,
-    //fontSize: '0.95rem',
     marginTop: '0.6rem',
     [theme.breakpoints.down('sm')]: {
       fontSize: '0.84rem',
@@ -193,7 +192,6 @@ export default function CardWithImage(props) {
         nextArrow: <NextArrow />,
         autoplay: false,
         dots: false,
-        //className: props.className,
       };
       return (
         <div>
