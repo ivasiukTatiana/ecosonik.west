@@ -6,6 +6,9 @@ const pageStyles = makeStyles( theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    [theme.breakpoints.down('xs')]: {
+      height: '84vh',
+    },
   },
   headerCenter: {
     paddingTop: '1.5rem',
