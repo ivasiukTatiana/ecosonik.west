@@ -86,10 +86,10 @@ const pageStyles = makeStyles( theme => ({
     textShadow: '-1px 1px 2px rgb(0, 0, 56)',
     borderBottomLeftRadius: '3px',
     [theme.breakpoints.down('1025')]: {
-      fontSize: '1.2rem',
+      fontSize: '1.1rem',
     },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1.1rem',
+      fontSize: '1rem',
       letterSpacing: 'normal',
       marginBottom: '1rem',
     },
