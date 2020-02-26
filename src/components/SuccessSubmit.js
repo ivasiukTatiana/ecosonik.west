@@ -62,7 +62,7 @@ export default function SuccessSubmit(props) {
     <Snackbar
       anchorOrigin={{
         vertical: 'bottom',
-        horizontal: 'right',
+        horizontal: 'center',
       }}
       open={open}
       autoHideDuration={4000}

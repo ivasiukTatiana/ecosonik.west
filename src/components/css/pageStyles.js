@@ -81,6 +81,7 @@ const pageStyles = makeStyles( theme => ({
     padding: '1rem',
     paddingLeft: '6rem',
     marginTop: '1rem',
+    marginBottom: '4rem',
     color: 'rgba(40, 55, 70, 1)',
     letterSpacing: '0.1rem',
     fontSize: '1.3rem',
@@ -107,6 +108,9 @@ const pageStyles = makeStyles( theme => ({
       marginBottom: '0.5rem',
       paddingLeft: '2rem',
     },
+  },
+  home: {
+    marginTop: '-4rem',
   },
   stickyNav: {
     position: 'sticky',
@@ -170,7 +174,7 @@ const pageStyles = makeStyles( theme => ({
     color: '#000038',
     textShadow: '-1px 1px 2px rgba(0, 0, 56, 0.7)',
     "&:hover": {
-      backgroundColor: 'rgba(52, 74, 97, 0.1)',
+      backgroundColor: 'rgba(176, 182, 179, 0.6)',
     },
     [theme.breakpoints.down('sm')]: {
       fontSize: '0.8rem',
@@ -183,7 +187,7 @@ const pageStyles = makeStyles( theme => ({
   },
   active: {
     "& li": {
-      backgroundColor: 'rgba(52, 74, 97, 0.1)',
+      backgroundColor: 'rgba(176, 182, 179, 0.6)',
       textDecoration: 'underline',
     },
   },

@@ -39,45 +39,48 @@ export default function Home() {
               </div>
             </ZoomInTitle>
             <ActivitiesSlider className={classes.slider} content={context.home.ulContent} />
+          </Grid>
+
+          <div className={classes.home}>
             <ZoomInSub>
               <Typography className={`${classes.title} ${classes.indent}`} variant="subtitle2" component="h4">
                 {context.home.p1}
               </Typography>
             </ZoomInSub>
-          </Grid>
 
-          <Grid container item xs={12} spacing={1}>
-            <Grid item xs={12}>
-              <ContentCard
-                link={context.home.cards[0].link}
-                cardBody = {context.home.cards[0]}
-                button={context.home.button} />
-            </Grid>
+            <Grid container item xs={12} spacing={1}>
+              <Grid item xs={12}>
+                <ContentCard
+                  link={context.home.cards[0].link}
+                  cardBody = {context.home.cards[0]}
+                  button={context.home.button} />
+              </Grid>
 
-            {context.projects.cards.map((card, index) => {
-              return (
-                <Grid item sm={6} xs={12} key={index}>
-                  <ContentCard link={`/projects#${card.link}`}
-                    cardBody = {card}
-                    button={context.home.button}
-                    direction="column" />
-                </Grid>
-              )
-            })}
+              {context.projects.cards.map((card, index) => {
+                return (
+                  <Grid item sm={6} xs={12} key={index}>
+                    <ContentCard link={`/projects#${card.link}`}
+                      cardBody = {card}
+                      button={context.home.button}
+                      direction="column" />
+                  </Grid>
+                )
+              })}
 
-            <Grid item xs={12}>
-              <Typography className={`${classes.title} ${classes.indent}`} variant="subtitle2" component="h4">
-                {context.home.p2}
+              <Grid item xs={12}>
+                <Typography className={`${classes.title} ${classes.indent}`} variant="subtitle2" component="h4">
+                  {context.home.p2}
+                </Typography>
+                <ContentCard
+                  link={context.home.cards[1].link}
+                  cardBody={context.home.cards[1]}
+                  button={context.home.button} />
+              </Grid>
+              <Typography className={`${classes.text} ${classes.indent}`} variant="subtitle2" component="p" gutterBottom>
+                {context.home.p3}
               </Typography>
-              <ContentCard
-                link={context.home.cards[1].link}
-                cardBody={context.home.cards[1]}
-                button={context.home.button} />
             </Grid>
-            <Typography className={`${classes.text} ${classes.indent}`} variant="subtitle2" component="p" gutterBottom>
-              {context.home.p3}
-            </Typography>
-          </Grid>
+          </div>
         </Grid>
       )}
     </LanguageConsumer>

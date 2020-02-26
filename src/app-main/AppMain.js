@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Switch, Route} from 'react-router-dom';
+import Container from '@material-ui/core/Container';
 
 import './AppMain.css';
 import Home from '../components/Home';
@@ -10,7 +11,7 @@ import Contacts from '../components/Contacts';
 class AppMain extends Component {
   render(){
     return(
-      <div className="App-main">
+      <Container maxWidth="lg" className="App-main">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />
@@ -19,7 +20,7 @@ class AppMain extends Component {
           <Route path="/contacts" component={Contacts} />
           <Route component={() => (<div>404 Not found</div>)} />
         </Switch>
-      </div>
+      </Container>
     )
   }
 }

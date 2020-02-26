@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
-import Container from '@material-ui/core/Container';
 
 import './App.css';
 import {LanguageProvider} from './providers/LanguageProvider';
@@ -70,9 +69,9 @@ class App extends Component {
         <LanguageProvider className="App">
           <ThemeProvider theme={theme}>
             <AppHeader />
-            <Container maxWidth="lg" className="Main-container">
-              <AppMain />
-            </Container>
+            <div className="Main-container">
+              <AppMain  />
+            </div>
             <AppFooter />
           </ThemeProvider>
         </LanguageProvider>

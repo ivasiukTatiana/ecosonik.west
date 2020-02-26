@@ -15,11 +15,6 @@ import SuccessSubmit from './SuccessSubmit';
 const breakpoints = createBreakpoints({});
 const theme = createMuiTheme({
   overrides: {
-    MuiGrid: {
-      root: {
-        backgroundColor: 'rgba(230, 230, 230, 0.5)',
-      },
-    },
     MuiFormControl: {
       root: {
         marginBottom: '0.4rem',
@@ -27,12 +22,15 @@ const theme = createMuiTheme({
     },
     MuiFilledInput: {
       root: {
-        backgroundColor: 'rgba(170, 180, 190, 0.5)',
+        backgroundColor: 'rgba(170, 180, 190, 0.8)',
         "&:hover": {
-          backgroundColor: 'rgba(160, 170, 180, 0.7)',
+          backgroundColor: 'rgba(160, 170, 180, 0.9)',
+          [breakpoints.down('lg')]: {
+            backgroundColor: 'rgba(160, 170, 180, 0.9)',
+          },
         },
         "&.Mui-focused": {
-          backgroundColor: 'rgba(160, 170, 180, 0.7)',
+          backgroundColor: 'rgba(160, 170, 180, 0.9)',
         },
       },
       input: {
@@ -49,10 +47,10 @@ const theme = createMuiTheme({
       },
       underline: {
         "&:before": {
-          borderBottom: '1px solid rgba(0, 0, 0, 0.42)',
+          borderBottom: '1px solid rgba(0, 0, 56, 0.75)',
         },
         "&:hover:before": {
-          borderBottom: '1px solid rgba(0, 0, 0, 0.87)',
+          borderBottom: '2px solid rgba(0, 0, 56, 0.87)',
         },
       },
     },
