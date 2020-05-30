@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
   column: {
     flexDirection: 'column',
-    minHeight: '22.5rem',
+    minHeight: '31vw',
     [theme.breakpoints.down('sm')]: {
       minHeight: '18rem',
     },
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   },
   cardText: {
     width: '100%',
-    minHeight: '10rem',
+    minHeight: '11vw',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -48,6 +48,15 @@ const useStyles = makeStyles(theme => ({
       minHeight: 0,
     },
   },
+  wrapperText: {
+    maxHeight:'6.5vw',
+    overflow: 'hidden',
+  },
+  wrapperTextLong: {
+    minHeight:'24.5vw',
+    maxHeight:'24.5vw',
+    overflow: 'hidden',
+  },
   title: {
     fontSize: '1.1rem',
     fontFamily: 'Oswald',
@@ -62,6 +71,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   text: {
+    textAlign: 'justify',
     [theme.breakpoints.down('sm')]: {
       fontSize: '0.84rem',
       lineHeight: 1.1,
@@ -76,7 +86,17 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 0,
   },
   media: {
-    maxHeight: '11rem',
+    minHeight: '18vw',
+    maxHeight: '18vw',
+    width: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      maxHeight: '8rem',
+    },
+  },
+  mediaRow: {
+    minHeight: '30vw',
+    maxHeight: '30vw',
+    width: 'auto',
     [theme.breakpoints.down('sm')]: {
       maxHeight: '8rem',
     },
@@ -86,6 +106,12 @@ const useStyles = makeStyles(theme => ({
 export default function ContentCard(props) {
   const classes = useStyles();
   const Image = () => {
+    let cardDirection = "";
+    if (props.direction === "column") {
+      cardDirection = "media";
+    } else {
+      cardDirection = "mediaRow";
+    }
     if (props.cardBody.images.length !== 0) {
       return (
         <CardMedia
@@ -93,11 +119,32 @@ export default function ContentCard(props) {
           alt={props.cardBody.images[0].alt}
           image={props.cardBody.images[0].image}
           title=""
-          className={classes.media} />
+          className={classes[cardDirection]} />
       )
     } else {
       return <React.Fragment />
     }
+  }
+  const Text = () => {
+    let textHeight = "";
+    if (props.cardBody.images.length !== 0 && props.direction === "column") {
+      textHeight = "wrapperText";
+    } else {
+      textHeight = "wrapperTextLong";
+    }
+    return (
+      <div className={classes[textHeight]}>        
+        <Typography className={classes.title} variant="subtitle2" component="h3" gutterBottom>
+          {props.cardBody.title}
+        </Typography>
+        <Typography className={classes.text} variant="body1" component="p" gutterBottom>
+          {props.cardBody.customer}
+        </Typography>
+        <Typography className={classes.text} variant="body1" component="p">
+          {props.cardBody.text}
+        </Typography>
+      </div>
+    )
   }
 
   return (
@@ -105,14 +152,8 @@ export default function ContentCard(props) {
       <CardContent className={props.direction === "column" ?
         `${classes.cardContent} ${classes[props.direction]}`:`${classes.cardContent}`}>
         <Image />
-        <div className={classes.cardText}>
-          <Typography className={classes.title} variant="subtitle2" component="h3" gutterBottom>
-            {props.cardBody.title}
-          </Typography>
-          <Typography className={classes.text} variant="body1" component="p">
-            {props.cardBody.customer}
-          </Typography>
-
+        <div className={classes.cardText}>         
+          <Text />
           <CardActions className={classes.action}>
             <HashLink to={props.link}>
               <Button>{props.button}</Button>

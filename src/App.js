@@ -15,8 +15,8 @@ const theme = createMuiTheme({
     MuiContainer: {
       root: {
         [breakpoints.down('961')]: {
-          paddingLeft: 0,
-          paddingRight: 0,
+          paddingLeft: '16px',
+          paddingRight: '16px',
         },
       }
     },

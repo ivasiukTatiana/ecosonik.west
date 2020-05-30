@@ -1,12 +1,13 @@
 .App-header {
   height: 9vh;
-  background-color: rgba(160, 170, 190, 0.95);
+  /*background-color: rgba(160, 170, 190, 0.95);*/
+  background: radial-gradient(at top, rgba(90, 124, 155, 0.9), rgba(229, 230, 199, 0.9));
   position: sticky;
   top: 0;
   z-index: 10;
   color: #000038;
   line-height: 1.2;
-  box-shadow: 2px 2px 4px rgba(27, 39, 51, 0.6);
+  box-shadow: 2px 2px 4px rgba(27, 39, 51, 0.6);  
 }
 .Logo {
   position: absolute;
@@ -21,7 +22,7 @@
   border-radius: 50%;
   margin-top: 0.6rem;
   margin-bottom: -1rem;
-  margin-left: -2.5rem;
+  /*margin-left: -2.5rem;*/
   padding: 1.8rem 0;
   color: #fc0;
   box-shadow: 5px 5px 8px rgb(35, 42, 51);
@@ -63,7 +64,6 @@ nav .Link{
   padding: 0.5rem 0.8rem;
   color: #000038;
   font-size: 0.85rem;
-  /*font-family: 'Oswald', sans-serif;*/
   font-family: 'Roboto Condensed', sans-serif;
   text-decoration: none;
   text-transform: uppercase;
@@ -74,7 +74,7 @@ nav .Link:hover{
   box-shadow: 1px 2px 1px #000038;
 }
 
-@media screen and (max-width: 1280px) {
+/*@media screen and (max-width: 1280px) {
   .Logo {
     margin-left: -1rem;
   }
@@ -83,13 +83,10 @@ nav .Link:hover{
   .Logo {
     margin-left: -1.5rem;
   }
-}
+}*/
 @media screen and (max-width: 960px) {
   .Logo {
     margin-left: 0.8rem;
-  }
-  .Header-right {
-    margin-right: 0.5rem;
   }
 }
 @media screen and (max-width: 820px) {
@@ -106,7 +103,7 @@ nav .Link:hover{
     margin-top: -0.8rem;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   .Logo {
     min-width: 6.8rem;
     font-size: 1rem;
@@ -121,11 +118,22 @@ nav .Link:hover{
   nav {
     margin-bottom: 0rem;
   }
+  nav .Link:first-child{
+    display: none;
+  }
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 560px) {
+  nav .Link{
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.75rem;  
+  } 
+}
+@media screen and (max-width: 480px) {
   .Logo {
     min-width: 4.6rem;
     font-size: 0.6rem;
+    margin-left: 0;
     padding: 0.8rem 0;
   }
   .Logo span:first-child {
@@ -138,12 +146,10 @@ nav .Link:hover{
   nav .Link{
     margin-left: 0;
     margin-right: 0.2rem;
-    font-size: 0.65rem;
-    padding: 0.3rem;
-  }
-}
-@media screen and (max-width: 400px) {
-  nav .Link{
-    font-size: 0.45rem;
+    font-size: 2.4vw;
+    padding: 0.5rem;
+  }  
+  .Header-right {
+    margin-left: 0.5rem;
   }
 }

@@ -1,13 +1,29 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const pageStyles = makeStyles( theme => ({
+  homeImg: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    zIndex: -1,
+    borderBottomLeftRadius: '60vw',
+    width: 'auto',
+    height: '100vh',
+    [theme.breakpoints.down('768')]: { 
+      height: '60vh',
+    },
+  },
   about: {
-    height: '91vh',
+    height: '46vw',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    [theme.breakpoints.down('xs')]: {
-      height: '84vh',
+
+    [theme.breakpoints.down('md')]: {
+      height: '54vw',
+    },
+    [theme.breakpoints.down('sm')]: {
+      height: 'auto',
     },
   },
   headerCenter: {
@@ -81,36 +97,49 @@ const pageStyles = makeStyles( theme => ({
     padding: '1rem',
     paddingLeft: '6rem',
     marginTop: '1rem',
-    marginBottom: '4rem',
+    marginBottom: '6rem',
     color: 'rgba(40, 55, 70, 1)',
     letterSpacing: '0.1rem',
-    fontSize: '1.3rem',
-    //fontFamily: '"Oswald", sans-serif',
     fontStyle: 'italic',
     textShadow: '-1px 1px 2px rgb(0, 0, 56)',
     borderBottomLeftRadius: '3px',
-    [theme.breakpoints.down('1025')]: {
-      fontSize: '1.1rem',
+    "& h2": {
+      fontSize: '2rem',      
+    }, 
+    "& ul": {
+      marginBlockStart: '2rem',
+    },    
+    [theme.breakpoints.down('1056')]: {
+      "& h2": {
+        fontSize: '1.7rem',
+      },
     },
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '1rem',
+    [theme.breakpoints.down('sm')]: {      
       letterSpacing: 'normal',
-      marginBottom: '1rem',
+      "& h2": {
+        fontSize: '1.6rem',
+      },
+      "& ul": {
+        marginBlockStart: '1rem',
+      }, 
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '0.9rem',
       paddingLeft: '4rem',
+      "& h2": {
+        fontSize: '1.4rem',
+      },      
     },
-    [theme.breakpoints.down('470')]: {
-      fontSize: '0.7rem',
+    [theme.breakpoints.down('480')]: {      
       textShadow: '1px 1px 1px rgb(0, 0, 56)',
       marginTop: '0.5rem',
-      marginBottom: '0.5rem',
       paddingLeft: '2rem',
+      "& h2": {
+        fontSize: '1rem',
+      },
     },
   },
   home: {
-    marginTop: '-4rem',
+    marginTop: '-5rem',
   },
   stickyNav: {
     position: 'sticky',
@@ -128,7 +157,6 @@ const pageStyles = makeStyles( theme => ({
       borderRadius: '25px',
     },
     "-ms-overflow-style": '-ms-autohiding-scrollbar',
-    //boxShadow: '-1px -1px 1px rgba(27, 39, 51, 0.6)',
     [theme.breakpoints.down('sm')]: {
       backgroundColor: 'rgba(230, 230, 230, 0.6)',
       maxHeight: '30rem',
@@ -141,7 +169,7 @@ const pageStyles = makeStyles( theme => ({
       paddingBottom: '0.5rem',
     },
     [theme.breakpoints.down('xs')]: {
-      paddingTop: '0rem',
+      paddingTop: '1rem',
       paddingLeft: '0.5rem',
     },
   },
@@ -238,7 +266,6 @@ const pageStyles = makeStyles( theme => ({
     [theme.breakpoints.down('xs')]: {
       fontSize: '0.8rem',
     },
-    textAlign: 'center',
   },
   text: {
     textAlign: 'center',
@@ -256,7 +283,20 @@ const pageStyles = makeStyles( theme => ({
   },
   indent: {
     padding: '0.6rem',
-    margin: '0.6rem 0',
+    margin: '1.5rem 0',
+    [theme.breakpoints.down('sm')]: {
+      padding: '0.4rem',
+      margin: '0.4rem 0',
+    },
+    [theme.breakpoints.down('xs')]: {
+      padding: '0.3rem',
+      margin: '0.3rem 0',
+    },
+    textShadow: '1px 1px 2px #000038',
+  },
+  indentText: {
+    padding: '0.6rem',
+    margin: '5rem 0',
     [theme.breakpoints.down('sm')]: {
       padding: '0.4rem',
       margin: '0.4rem 0',
@@ -287,6 +327,42 @@ const pageStyles = makeStyles( theme => ({
     [theme.breakpoints.down('sm')]: {
       padding: '0.8rem',
     },
+  },
+
+  promoWrapper: {
+    height: '38vw',
+  },
+  promoContainer: {
+    position: 'absolute',
+    width: '35vw',
+    height: 'calc(100vw - 32px)',
+    maxHeight: '1280px',
+    overflowY: 'scroll',
+    overflowX: 'hidden',
+    scrollbarWidth: 'thin',
+    "&::-webkit-scrollbar": {  
+      height: '5px',
+      width: '5px',
+      backgroundColor:  '#cacaca',
+    },
+    "&::-webkit-scrollbar-thumb": {
+      background: '#293E59',    
+      borderRadius: '3px',
+    },
+    transform: 'rotate(270deg) translateX(-100%)',
+    transformOrigin: 'top left',
+  },
+  promoContent: {
+    paddingTop: '2.5vw',
+    whiteSpace: 'nowrap',
+    color: '#fff',
+    transform: 'rotate(90deg) translateY(-35vw)',
+    transformOrigin: 'top left',
+  },
+  promo: {  
+    display: 'inline-block',  
+    marginRight: '2vw',
+    whiteSpace: 'normal',
   },
 }));
 

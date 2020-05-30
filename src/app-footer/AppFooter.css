@@ -50,11 +50,14 @@
   .App-footer {
     font-size: 0.6rem;
   }
+  .App-footer .Footer-nav {
+    margin-bottom: -4rem;
+  }
   .Footer-left {
     padding-left: 1.5rem;
-  }
+  }  
   .Footer-nav .Link {
-    font-size: 0.7rem;
+    font-size: 2.5vw;
   }
   .Footer-right {
     padding: 0 1.5rem 1rem;
