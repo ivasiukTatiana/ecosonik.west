@@ -5,6 +5,7 @@ export default function ActivitiesSlider(props) {
   const settings =  {
     arrows: false,
     autoplay: true,
+    autoplaySpeed: 4000,
     dots: true,
     className: props.className,
   };

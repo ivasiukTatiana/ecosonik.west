@@ -57,7 +57,7 @@ export default function Home() {
                     <div className={classes.promo}>
                       <ContentCard
                         link={context.home.cards[0].link}
-                        cardBody = {context.home.cards[0]}
+                        cardBody = {context.products.cards[0]}
                         button={context.home.button}
                         direction="column" />
                     </div>

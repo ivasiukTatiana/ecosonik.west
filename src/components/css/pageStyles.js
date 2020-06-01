@@ -286,11 +286,11 @@ const pageStyles = makeStyles( theme => ({
     margin: '1.5rem 0',
     [theme.breakpoints.down('sm')]: {
       padding: '0.4rem',
-      margin: '0.4rem 0',
+      margin: '1rem 0',
     },
     [theme.breakpoints.down('xs')]: {
       padding: '0.3rem',
-      margin: '0.3rem 0',
+      margin: '0.8rem 0',
     },
     textShadow: '1px 1px 2px #000038',
   },
@@ -299,11 +299,11 @@ const pageStyles = makeStyles( theme => ({
     margin: '5rem 0',
     [theme.breakpoints.down('sm')]: {
       padding: '0.4rem',
-      margin: '0.4rem 0',
+      margin: '4rem 0',
     },
     [theme.breakpoints.down('xs')]: {
       padding: '0.3rem',
-      margin: '0.3rem 0',
+      margin: '2rem 0',
     },
     textShadow: '1px 1px 2px #000038',
   },
@@ -331,11 +331,17 @@ const pageStyles = makeStyles( theme => ({
 
   promoWrapper: {
     height: '38vw',
+    [theme.breakpoints.down('sm')]: {
+      height: '46vw',
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: '64vw',
+    },
   },
   promoContainer: {
     position: 'absolute',
     width: '35vw',
-    height: 'calc(100vw - 32px)',
+    height: 'calc(100vw - 64px)',
     maxHeight: '1280px',
     overflowY: 'scroll',
     overflowX: 'hidden',
@@ -351,6 +357,17 @@ const pageStyles = makeStyles( theme => ({
     },
     transform: 'rotate(270deg) translateX(-100%)',
     transformOrigin: 'top left',
+    [theme.breakpoints.down('md')]: {
+      width: '37vw',
+      height: 'calc(100vw - 32px)',      
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '44vw',
+      height: 'calc(100vw - 16px)',      
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '60vw',    
+    },
   },
   promoContent: {
     paddingTop: '2.5vw',
@@ -358,6 +375,15 @@ const pageStyles = makeStyles( theme => ({
     color: '#fff',
     transform: 'rotate(90deg) translateY(-35vw)',
     transformOrigin: 'top left',
+    [theme.breakpoints.down('md')]: {
+      transform: 'rotate(90deg) translateY(-37vw)',      
+    },
+    [theme.breakpoints.down('sm')]: {
+      transform: 'rotate(90deg) translateY(-44vw)',      
+    },
+    [theme.breakpoints.down('xs')]: {
+      transform: 'rotate(90deg) translateY(-60vw)',      
+    },
   },
   promo: {  
     display: 'inline-block',  

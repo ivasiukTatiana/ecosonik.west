@@ -23,11 +23,14 @@ const useStyles = makeStyles(theme => ({
   column: {
     flexDirection: 'column',
     minHeight: '31vw',
+    maxHeight: '31vw',
     [theme.breakpoints.down('sm')]: {
-      minHeight: '18rem',
+      minHeight: '37vw',
+      maxHeight: '37vw',
     },
     [theme.breakpoints.down('xs')]: {
-      minHeight: 0,
+      minHeight: '54vw',
+      maxHeight: '54vw',
     },
   },
   cardText: {
@@ -42,20 +45,33 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       padding: '0.5rem',
       paddingBottom: 0,
-      minHeight: '7.5rem',
+      minHeight: '11.5vw',
     },
     [theme.breakpoints.down('xs')]: {
-      minHeight: 0,
+      minHeight: '16vw',
     },
   },
   wrapperText: {
-    maxHeight:'6.5vw',
+    minHeight: '6.5vw',
+    maxHeight: '6.5vw',
     overflow: 'hidden',
+    [theme.breakpoints.down('xs')]: {
+      minHeight: '10vw',
+      maxHeight: '10vw',
+    },
   },
   wrapperTextLong: {
     minHeight:'24.5vw',
     maxHeight:'24.5vw',
     overflow: 'hidden',
+    [theme.breakpoints.down('sm')]: {
+      minHeight:'28vw',
+      maxHeight:'28vw',
+    },
+    [theme.breakpoints.down('xs')]: {
+      minHeight:'39.5vw',
+      maxHeight:'39.5vw',
+    },
   },
   title: {
     fontSize: '1.1rem',
@@ -72,6 +88,7 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     textAlign: 'justify',
+    marginTop: '1vw',
     [theme.breakpoints.down('sm')]: {
       fontSize: '0.84rem',
       lineHeight: 1.1,
@@ -90,7 +107,12 @@ const useStyles = makeStyles(theme => ({
     maxHeight: '18vw',
     width: 'auto',
     [theme.breakpoints.down('sm')]: {
-      maxHeight: '8rem',
+      minHeight: '22vw',
+      maxHeight: '22vw',
+    },
+    [theme.breakpoints.down('xs')]: {
+      minHeight: '30vw',
+      maxHeight: '30vw',
     },
   },
   mediaRow: {
@@ -98,7 +120,8 @@ const useStyles = makeStyles(theme => ({
     maxHeight: '30vw',
     width: 'auto',
     [theme.breakpoints.down('sm')]: {
-      maxHeight: '8rem',
+      minHeight: '36vw',
+      maxHeight: '36vw',
     },
   },
 }));

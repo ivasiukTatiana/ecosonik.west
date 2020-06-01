@@ -1,6 +1,5 @@
 .App-header {
-  height: 9vh;
-  /*background-color: rgba(160, 170, 190, 0.95);*/
+  /*height: 5vw;*/
   background: radial-gradient(at top, rgba(90, 124, 155, 0.9), rgba(229, 230, 199, 0.9));
   position: sticky;
   top: 0;
@@ -22,7 +21,6 @@
   border-radius: 50%;
   margin-top: 0.6rem;
   margin-bottom: -1rem;
-  /*margin-left: -2.5rem;*/
   padding: 1.8rem 0;
   color: #fc0;
   box-shadow: 5px 5px 8px rgb(35, 42, 51);
@@ -54,6 +52,7 @@
 nav {
   position: relative;
   z-index: 9;
+  height: 5vw;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -74,19 +73,12 @@ nav .Link:hover{
   box-shadow: 1px 2px 1px #000038;
 }
 
-/*@media screen and (max-width: 1280px) {
-  .Logo {
-    margin-left: -1rem;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .Logo {
-    margin-left: -1.5rem;
-  }
-}*/
 @media screen and (max-width: 960px) {
   .Logo {
     margin-left: 0.8rem;
+  }
+  nav {
+    height: 6vw;
   }
 }
 @media screen and (max-width: 820px) {
@@ -117,12 +109,16 @@ nav .Link:hover{
   }
   nav {
     margin-bottom: 0rem;
+    height: 8vw;
   }
   nav .Link:first-child{
     display: none;
   }
 }
 @media screen and (max-width: 560px) {
+  nav {
+    height: 9vw;
+  }
   nav .Link{
     margin-right: 0.5rem;
     padding: 0.5rem;
@@ -142,6 +138,9 @@ nav .Link:hover{
   .Logo span:last-child {
     margin-right: -3.1rem;
     margin-top: -0.4rem;
+  }
+  nav {
+    height: 12vw;
   }
   nav .Link{
     margin-left: 0;
