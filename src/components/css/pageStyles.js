@@ -341,7 +341,7 @@ const pageStyles = makeStyles( theme => ({
   promoContainer: {
     position: 'absolute',
     width: '35vw',
-    height: 'calc(100vw - 64px)',
+    height: 'calc(100vw - 48px)',
     maxHeight: '1280px',
     overflowY: 'scroll',
     overflowX: 'hidden',
@@ -359,14 +359,14 @@ const pageStyles = makeStyles( theme => ({
     transformOrigin: 'top left',
     [theme.breakpoints.down('md')]: {
       width: '37vw',
-      height: 'calc(100vw - 32px)',      
+      //height: 'calc(100vw - 40px)',      
     },
-    [theme.breakpoints.down('sm')]: {
-      width: '44vw',
-      height: 'calc(100vw - 16px)',      
-    },
-    [theme.breakpoints.down('xs')]: {
-      width: '60vw',    
+    [theme.breakpoints.down('1025')]: {
+      position: 'relative',
+      width: 'calc(100vw - 24px)',
+      height: 'auto',
+      overflow: 'auto',
+      transform: 'none',  
     },
   },
   promoContent: {
@@ -374,21 +374,29 @@ const pageStyles = makeStyles( theme => ({
     whiteSpace: 'nowrap',
     color: '#fff',
     transform: 'rotate(90deg) translateY(-35vw)',
-    transformOrigin: 'top left',
+    transformOrigin: 'top left',    
     [theme.breakpoints.down('md')]: {
       transform: 'rotate(90deg) translateY(-37vw)',      
     },
-    [theme.breakpoints.down('sm')]: {
-      transform: 'rotate(90deg) translateY(-44vw)',      
-    },
-    [theme.breakpoints.down('xs')]: {
-      transform: 'rotate(90deg) translateY(-60vw)',      
+    [theme.breakpoints.down('1025')]: {
+      transform: 'none',
+      paddingTop: 0,
+      paddingBottom: '1.5vw',
     },
   },
   promo: {  
     display: 'inline-block',  
     marginRight: '2vw',
     whiteSpace: 'normal',
+    [theme.breakpoints.down('1025')]: {
+      width: '37vw',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '44vw',
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '60vw',    
+    },
   },
 }));
 

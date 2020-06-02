@@ -105,7 +105,7 @@ const useStyles = makeStyles(theme => ({
   media: {
     minHeight: '18vw',
     maxHeight: '18vw',
-    width: 'auto',
+    width: 'auto', 
     [theme.breakpoints.down('sm')]: {
       minHeight: '22vw',
       maxHeight: '22vw',
